@@ -2,7 +2,7 @@
 title: ""
 description: Presentación de la materia PRSI II
 hide:
-    # - navigation
+    - navigation
 ---
 
 
