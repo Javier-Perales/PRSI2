@@ -52,7 +52,7 @@ nav:
 
 plugins:
   - search
-#  - with-pdf
+
 
 # --- Extensiones de Markdown ---
 markdown_extensions:
