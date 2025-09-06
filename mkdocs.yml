@@ -38,17 +38,17 @@ theme:
 nav:
   # - 'Programación didáctica': 'programacion.md'
   - 'Presentación asignatura': 'index.md'
-  - 'M1. Del Dato al Modelo (IA)':
+  - 'P1. Del Dato al Modelo (IA)':
     - 'Sprint 1: Datos que hablan': 'M1/m1f1.md'
     - 'Sprint 2: Creación de modelos': 'M1/m1f2.md'
     - 'Sprint 3: Analisis de Sesgos': 'M1/m1f3.md'
-  - 'M2: Del Modelo a la App':
-    - 'Sprint 1: Setup y Fundamentos': 'FM2/m2f1.md'
-    - 'Sprint 2: Streamlit': 'M2/m2f2.md'
-    - 'Sprint 3-4: Integración del modelo': 'M2/m2f3.md'
-    - 'Sprint 5: Personalización': 'M2/m2f4.md'
-  - 'M3: El Cerebo Digital': []
-  - 'M4: Redes y Servicios': []
+  - 'P2: Del Modelo a la App': []
+  #  - 'Sprint 1: Setup y Fundamentos': 'FM2/m2f1.md'
+  #  - 'Sprint 2: Streamlit': 'M2/m2f2.md'
+  #  - 'Sprint 3-4: Integración del modelo': 'M2/m2f3.md'
+  #  - 'Sprint 5: Personalización': 'M2/m2f4.md'
+  - 'P3: El Cerebo Digital': []
+  - 'P4: Redes y Servicios': []
 
 plugins:
   - search
