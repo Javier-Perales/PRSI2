@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="En equipos, utilizarán "Teachable Machine" de Google para resolver pequeños retos. Deberán crear sus propios conjuntos de datos (imágenes, sonidos, poses) para entrenar modelos que clasifiquen objetos, reconozcan gestos o identifiquen sonidos. El objetivo es comprender el proceso de entrenamiento, la importancia de la calidad del dato y los conceptos de clasificación y validación de un modelo.">
+        <meta name="description" content="Apuntes y materiales para la asignatura PRSI II.">
       
       
         <meta name="author" content="Javier Perales">
@@ -753,7 +753,7 @@
 <p><img alt="Programación por patrones" class="center" src="assets/patterns.png" width="80%" /></p>
 <p>Es muy similar a la programación informática tradicional, pero es simplemente una forma diferente de pensar en ello. Este nuevo paradigma se llama <strong>aprendizaje automático</strong>, y se vuelve tremendamente poderoso cuando se usa para resolver problemas donde es imposible descubrir las reglas. Por ejemplo, ¿podrías saber la edad de una persona simplemente mirando la retina de su ojo? <sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> Quizás un oftalmólogo podría detectar ciertas enfermedades, pero no la edad de la persona. Incluso, si pudieras, ¿cómo lo expresarías en reglas?</p>
 <h2 id="4-la-importancia-de-los-datos">4. La importancia de los datos</h2>
-<p>Entonces, con muchos datos, podríamos hacer una comparación de patrones, para encontrar la respuesta a un problema. Con este método podemos llegar de combinación de datos y respuestas se puede llegar mucho más lejos que lo que un humano podría llegar. </p>
+<p>Entonces, con muchos datos, podríamos hacer una comparación de patrones, para encontrar la respuesta a un problema. Con este método podemos llegar de combinación de datos y respuestas se puede llegar mucho más lejos que lo que un humano podría llegar.</p>
 <p>Esto es por ejemplo lo que hizo Google, creando un software que detectaba enfermedades y estimaba la edad de una persona a partir de una imagen de su retina, con unos márgenes de error muy bajos <a href="https://research.google/blog/developing-an-aging-clock-using-deep-learning-on-retinal-images/">Google Research</a> ¿Puedes obtener el tamaño del <em>datasheet</em> que utilizaron?</p>
 <p>Como intuimos, se deben necesitar muchos datos para poder entrenar el modelo de IA. Pero, <strong>¿sirve cualquier conjunto de datos?</strong></p>
 <p>Si ponemos como ejemplo la siguiente imagen, y pidieramos que reconocieras el zapato, no tendriamos ningún problema, pero si te pido que me digas ¿cómo lo has hecho? ¿Qué características has tenido en cuenta? ¿Cómo has llegado a la conclusión de que es un zapato? tendrías problema en responder, ya que en tu mente, tienes la experiencia y simplemente sabes que lo es. </p>
@@ -770,25 +770,29 @@
 <p>El objetivo de esta actividad es reflexionar si las máquina "piensan" y si las decisiones que toman son siempre justas.</p>
 <ol>
 <li>¿Creeis que una máquina que supere el Test de Turing puede considerarse que "piensa" como un humano? ¿Por qué?</li>
-<li>¿Hemos hablado de la importancia de los datos para entrenar un modelo de IA? ¿Qué problemas pueden surgir si los datos no son representativos o tienen sesgos? En el siguiente <a href="https://www.bbc.com/mundo/noticias-45823470">artículo</a> se expone una IA que penalizaba los currículums de las mujeres, ¿por qué creéis que la IA aprendió a hacer eso? ¿de quién es la culpa?</li>
+<li>¿Hemos hablado de la importancia de los datos para entrenar un modelo de IA? ¿Qué problemas pueden surgir si los datos no son representativos o tienen sesgos? En el siguiente <a href="https://www.bbc.com/mundo/noticias-45823470">artículo BBC</a> se expone una IA que penalizaba los currículums de las mujeres, ¿por qué creéis que la IA aprendió a hacer eso? ¿de quién es la culpa?</li>
 <li>Buscad otro ejemplo, real o inventado, donde un algoritmo podría tomar una decisión injusta por culpa de los datos con los que fue entrenado.</li>
 <li>¿De qué manera puede la IA a ayudar a crear una sociedad más justa e igualitaria?</li>
 <li>¿Y de qué manera puede aumentar las desigualdades si no se diseña con cuidado?</li>
 </ol>
 </div>
-<div class="admonition question">
-<p class="admonition-title">AE103(CE1) Entrenando un modelo de IA</p>
-<p>En esta actividad vais a utilizar la herramienta <a href="https://teachablemachine.withgoogle.com/">Teachable Machine</a> de Google para crear un modelo de IA que reconozca diferentes gestos, en concreto, los gestos de "Piedra", "Papel" y "Tijeras".</p>
-<p>El funcionamiento se basa en un proceso intuitivo de tres pasos:</p>
-<ol>
-<li><strong>Recopilar</strong>: El usuario proporciona ejemplos a la máquina para que aprenda. Estos ejemplos se agrupan en "clases" o categorías. Por ejemplo, si queremos que distinga frutas, crearíamos una clase "manzanas" y otra "plátanos". La recolección de datos se puede hacer en tiempo real con una webcam o un micrófono, o subiendo archivos existentes.</li>
-<li><strong>Entrenar</strong>: Con un solo clic, la herramienta analiza todos los ejemplos proporcionados y crea un modelo capaz de encontrar los patrones que diferencian una clase de otra. Este proceso, que puede tardar desde segundos a minutos, queda encapsulado en la plataforma, haciendo invisible la complejidad subyacente.</li>
-<li><strong>Probar y Exportar</strong>: Inmediatamente después del entrenamiento, el modelo se puede probar en tiempo real para ver su eficacia. Una vez satisfecho con el resultado, el modelo se puede exportar para ser utilizado en páginas web, aplicaciones y otros proyectos.</li>
-</ol>
-<p>Podéis utilizar el siguiente video para guiaros en el proceso: <a href="https://youtu.be/bA00XlslUT8?si=vkgrJ4VgpY1MMPTA">Techable Machine</a></p>
-<p><strong>Responde:</strong>
-- ¿Qué tan seguro es el modelo que has creado? ¿Qué factores podrían afectar su precisión? ¿Cómo podrías mejorar el modelo?</p>
-</div>
+<!-->
+!!! question "AE103(CE1) Entrenando un modelo de IA"
+
+    En esta actividad vais a utilizar la herramienta [Teachable Machine](https://teachablemachine.withgoogle.com/) de Google para crear un modelo de IA que reconozca diferentes gestos, en concreto, los gestos de "Piedra", "Papel" y "Tijeras".
+
+    El funcionamiento se basa en un proceso intuitivo de tres pasos:
+
+    1. **Recopilar**: El usuario proporciona ejemplos a la máquina para que aprenda. Estos ejemplos se agrupan en "clases" o categorías. Por ejemplo, si queremos que distinga frutas, crearíamos una clase "manzanas" y otra "plátanos". La recolección de datos se puede hacer en tiempo real con una webcam o un micrófono, o subiendo archivos existentes.
+    2. **Entrenar**: Con un solo clic, la herramienta analiza todos los ejemplos proporcionados y crea un modelo capaz de encontrar los patrones que diferencian una clase de otra. Este proceso, que puede tardar desde segundos a minutos, queda encapsulado en la plataforma, haciendo invisible la complejidad subyacente.
+    3. **Probar y Exportar**: Inmediatamente después del entrenamiento, el modelo se puede probar en tiempo real para ver su eficacia. Una vez satisfecho con el resultado, el modelo se puede exportar para ser utilizado en páginas web, aplicaciones y otros proyectos.
+
+    Podéis utilizar el siguiente video para guiaros en el proceso: [Techable Machine](https://youtu.be/bA00XlslUT8?si=vkgrJ4VgpY1MMPTA)
+
+    **Responde:**
+    - ¿Qué tan seguro es el modelo que has creado? ¿Qué factores podrían afectar su precisión? ¿Cómo podrías mejorar el modelo?
+-->
+
 <h2 id="recursos">Recursos</h2>
 <ul>
 <li><a href="https://youtu.be/5dZ_lvDgevk?si=BYeBlXsaZRXlCyVx">La era de la IA - FrontLine PBS</a></li>
@@ -862,6 +866,8 @@
     
     
       <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
     
   </body>

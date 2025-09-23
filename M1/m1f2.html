@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Apuntes y materiales para la asignatura PRSI II.">
+        <meta name="description" content="Introducción a Teachable Machine de Google. Primeros pasos con Python y Google Colab.">
       
       
         <meta name="author" content="Javier Perales">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Sprint 2: Creación de modelos - PRSI II - Programación, Redes y Sistemas Informáticos II</title>
+        <title>Sprint2. Creación de modelos - PRSI II - Programación, Redes y Sistemas Informáticos II</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sesion-1-perceptron-y-google-colab" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sprint 2: Creación de modelos
+              Sprint2. Creación de modelos
             
           </span>
         </div>
@@ -332,6 +337,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sprint 2: Creación de modelos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="m1f2.html" class="md-nav__link md-nav__link--active">
         
   
@@ -343,6 +361,74 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-1-perceptron-y-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 1. Perceptrón y Google Colab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sesión 1. Perceptrón y Google Colab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-que-son-las-redes-neuronales" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 ¿Qué son las redes neuronales?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-el-perceptron" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 El perceptrón
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-2-3-introduccion-a-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 2, 3: Introducción a Python.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -463,6 +549,65 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-1-perceptron-y-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 1. Perceptrón y Google Colab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sesión 1. Perceptrón y Google Colab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-que-son-las-redes-neuronales" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 ¿Qué son las redes neuronales?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-el-perceptron" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 El perceptrón
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-2-3-introduccion-a-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 2, 3: Introducción a Python.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -479,6 +624,193 @@
 
   <h1>Sprint 2: Creación de modelos</h1>
 
+<p>En el sprint anterior hemos visto los conceptos básicos de Machine Learning. En este segundo sprint vamos a ver cómo crear nuestros propios modelos de Machine Learning utilizando herramientas accesibles y gratuitas.</p>
+<h2 id="sesion-1-perceptron-y-google-colab">Sesión 1. Perceptrón y Google Colab</h2>
+<p>El <strong>aprendizaje automático</strong>, conocido en inglés como <em>Machine Learning</em> (<strong>ML</strong>), es un subcampo de la inteligencia artificial que se centra en el desarrollo de algoritmos y modelos que permiten a las máquinas aprender de los datos y realizar predicciones o tomar decisiones sin ser programadas explícitamente para cada tarea. Podríamos considerar qué es un nuevo paradigma de programación, en el que en lugar de escribir código para resolver un problema, se entrena un modelo con datos relevantes para que aprenda a resolverlo.</p>
+<p>Dentro del <em>Machine Learning</em>, podríamos distinguir tres paradigmas principales de aprendizaje:</p>
+<ol>
+<li>
+<p><strong>Aprendizaje supervisado</strong>: En este paradigma, el modelo se entrena con un conjunto de datos etiquetados, es decir, cada entrada tiene una salida correspondiente conocida. El objetivo es que el modelo aprenda a mapear las entradas a las salidas correctas. Por ejemplo, un modelo de clasificación de imágenes que aprende a identificar diferentes tipos de objetos en fotos etiquetadas.</p>
+</li>
+<li>
+<p><strong>Aprendizaje no supervisado</strong>: En este caso, el modelo se entrena con datos no etiquetados y debe encontrar patrones o estructuras subyacentes en los datos por sí mismo. Un ejemplo común es el clustering, donde el modelo agrupa datos similares sin conocer las categorías de antemano. 
+Las plataformas de comercio electrónico utilizan esta técnica para ver tus hábitos de navegación y compra, agrupándote con otros usuarios que comparten intereses similares. Esto ayuda a crear una experiencia de compra personalizada, mostrándote productos que coincidan con lo que te gusta, sin que nadie le diga al sistema en qué categorías caes.</p>
+</li>
+<li>
+<p><strong>Aprendizaje por refuerzo</strong>: Aquí, el modelo aprende a tomar decisiones mediante la interacción con un entorno. Recibe recompensas o castigos en función de sus acciones y ajusta su comportamiento para maximizar las recompensas a lo largo del tiempo. Este paradigma es común en juegos y robótica. Ejemplos de aprendizaje por refuerzo incluyen; juegos de estrategia como StarCraft o ajedrez, donde los jugadores de IA aprenden a través de la experiencia y la retroalimentación.Y vehículos autónomos que aprenden a navegar en entornos complejos mediante la interacción con el entorno y la retroalimentación recibida.</p>
+</li>
+</ol>
+<h3 id="11-que-son-las-redes-neuronales">1.1 ¿Qué son las redes neuronales?</h3>
+<p>Las <strong>redes neuronales</strong> son un conjunto de algoritmos inspirados en la estructura y funcionamiento del cerebro humano, diseñados para reconocer patrones y aprender de los datos. Están compuestas por capas de nodos (o "neuronas") qu7e procesan la información y transmiten señales a través de conexiones ponderadas.</p>
+<p><img alt="Red neuronal" class="center" src="assets/red_neuronal.jpg" width="60%" /></p>
+<p style="text-align: center"><em>Esquema red neuronal. <a href=https://www.idecor.gob.ar/introduccion-a-las-redes-neuronales-convolucionales-para-clasificacion-de-imagenes/>Fuente IDECOR</a></em></p>
+
+<p>Las redes neuronales artificiales de más de una capa se conocen como <strong>redes neuronales profundas</strong> o <strong>Deep Learning</strong>. Estas redes son capaces de aprender representaciones jerárquicas de los datos, lo que las hace especialmente efectivas para tareas complejas como el reconocimiento de imágenes, el procesamiento del lenguaje natural y la traducción automática.</p>
+<p>Podríamos pensar que la red neuronal es como una red de filtros. Pensando en el reconocimiento de datos, y siguiendo la analogia de la red de filtros, una primera capa detectaría formas simples (líneas, colores), la siguiente combinaría esas formas para detectar patrones más complejos (círculos, cuadrados), y las últimas capas identificarían un objeto completo (un gato, una persona).</p>
+<p>Para entender mejor cómo funcionan las redes neuronales, es útil conocer algunos conceptos clave, empeceomos con un perceptrón simple.</p>
+<h3 id="12-el-perceptron">1.2 El perceptrón</h3>
+<p>El perceptrón no es otra cosa que la red neuronal más simple. Su función es actuar como un algoritmo de clasificación binaria, es decir, un sistema que toma una decisión y da una respuesta de "si" o "no" (representado por 1 o 0).</p>
+<p><img alt="Perceptrón" class="center" src="assets/perceptron.png" width="60%" /></p>
+<p>Expliquemos inicialmente cómo funciona un perceptrón con un ejemplo cotidiano. Imaginemos que el Perceptrón debe decidir si vamos a la playa o no, basándose en tres factores:</p>
+<ul>
+<li><strong><em>x1</em></strong>: ¿Está soleado? (1 para sí, 0 para no)</li>
+<li><strong><em>x2</em></strong>: ¿Es fin de semana? (1 sí, 0 no)</li>
+<li><strong><em>x3</em></strong>: ¿Tenemos trabajo pendiente? (1 sí, 0 no)</li>
+</ul>
+<p>Cada entrada tiene un peso (<strong>w1</strong>​,<strong>w2</strong>​,<strong>w3</strong>​) que representa su importancia. Por ejemplo, "hace sol" (w1​=0.6) puede ser más importante que "ser fin de semana" (w2​=0.4). "Tener trabajo" sería un inhibidor, así que tendría un peso negativo (w3​=−0.8). <em>El</em>Bias<em> (</em>b<em>), también conocido como </em>sesgo<em> o </em>umbral<em>, se podría entender como la predisposición de la persona a ir a la playa, por ejemplo, si le encanta la playa, el sesgo sería un valor muy alto, ya que iría a la playa aunque no se den las condiciones ideales. Si es una persona </em>anti-playa*, el bias sería un número negativo, ya que no iría a la playa aunque se den las condiciones ideales.</p>
+<p>Una vez conocidos los pesos y el sesgo, el Perceptrón realiza una suma ponderada de las entradas: <span class="arithmatex">\(z=(x1​⋅w1​)+(x2​⋅w2​)+(x3​⋅w3​)+b\)</span>.
+Finalmente, una <strong>función de activación</strong> (en el Perceptrón simple, sería una <strong>función escalón</strong>), decide si vamos o no a la playa:,</p>
+<ul>
+<li>Si <span class="arithmatex">\(z&gt;0\)</span>, entonces la salida es 1 (vamos a la playa).</li>
+<li>Si <span class="arithmatex">\(z\leq0\)</span>, entonces la salida es 0 (no vamos a la playa).</li>
+</ul>
+<p>Antes de profundizar en el funcionamiento del perceptrón, es fundamental conocer una herramienta clave: <strong><em>Google Colab</em></strong>. Esta plataforma resulta especialmente útil para estudiantes de bachillerato, ya que permite programar en Python, analizar datos y visualizar resultados de manera sencilla. Google Colab es ideal para proyectos educativos y experimentos prácticos, y se utiliza ampliamente en el aprendizaje de Machine Learning. Ofrece acceso gratuito a recursos computacionales avanzados y un entorno colaborativo donde se pueden crear, compartir y ejecutar cuadernos interactivos, lo que facilita y acelera el proceso de aprendizaje y experimentación en inteligencia artificial.</p>
+<div class="admonition note">
+<p class="admonition-title">Google Colab: Primeros pasos</p>
+<ul>
+<li>Accede a <a href="https://colab.research.google.com/">Google Colab</a>.</li>
+<li>Crea un nuevo cuaderno (notebook).</li>
+</ul>
+<p><img alt="Google Colab" class="center" src="assets/GoogleColab.jpeg" width="80%" />]</p>
+<p><em>Google Colab</em> se basa en <strong><em>Jupyter Notebooks</em></strong>, una herramienta muy popular en la comunidad de ciencia de datos y aprendizaje automático. Permite escribir y ejecutar código Python en un entorno interactivo, combinando código, texto, ecuaciones y visualizaciones en un solo documento.</p>
+<p>Un cuaderno <em>Jupyter</em> se compone de <strong>Celdas</strong> que pueden contener código o texto. </p>
+<ul>
+<li>
+<p>Inserta una celda de texto y escribe como título <code>## Mi primer cuaderno en Google Colab</code>. En la parte derecha de la celda observas un icono de lápiz, que indica que la celda está en modo edición. Haz clic en el icono para salir del modo edición y ver el formato aplicado.
+<img alt="Celda Texto" class="center" src="assets/CeldaTexto.jpeg" width="60%" /></p>
+</li>
+<li>
+<p>En el siguiente enlace tienes un tutoríal básico sobre el lenguaje de marcado <em>Markdown</em>, que es el que se utiliza para dar formato al texto en las celdas de texto de los cuadernos Jupyter: <a href="https://colab.research.google.com/notebooks/markdown_guide.ipynb?hl=es-es">Markdown Guide</a></p>
+</li>
+<li>
+<p>Crea otra celda de texto con un subtítulo de nivel 3 y haz una enumeración de los parámetros del perceptrón que hemos visto (entradas, pesos, sesgo, función de activación).</p>
+</li>
+<li>
+<p>Inserta una celda de tipo texto y escribe la formula de la suma ponderada del perceptrón haciendo uso de la nomenclatura matemática de <em>LaTeX</em> que puedes encontrar en la sección de Ecuaciones del enlace anterior.</p>
+</li>
+<li>Nombra tu cuaderno como "MiPrimerCuaderno.ipynb". Guardalo en tu Google Drive.</li>
+<li>Añade una celda de código y copia el siguiente código para calcular la salida del perceptrón en función de las entradas, pesos y sesgo que hemos visto en el ejemplo de ir a la playa. Ejecuta la celda para ver el resultado.</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>    <span class="c1"># Definición de entradas</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Está soleado</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Es fin de semana</span>
+    <span class="n">x3</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># No tenemos trabajo pendiente</span>
+    <span class="c1"># Definición de pesos</span>
+    <span class="n">w1</span> <span class="o">=</span> <span class="mf">0.6</span>  <span class="c1"># Peso para &quot;Está soleado&quot;</span>
+    <span class="n">w2</span> <span class="o">=</span> <span class="mf">0.4</span>  <span class="c1"># Peso para &quot;Es fin de semana&quot;</span>
+    <span class="n">w3</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.8</span> <span class="c1"># Peso para &quot;No tenemos trabajo pendiente&quot;</span>
+    <span class="c1"># Definición del sesgo</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="mf">0.2</span>   <span class="c1"># Sesgo</span>
+    <span class="c1"># Cálculo de la suma ponderada</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">x1</span> <span class="o">*</span> <span class="n">w1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x2</span> <span class="o">*</span> <span class="n">w2</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x3</span> <span class="o">*</span> <span class="n">w3</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="c1"># Función de activación (función escalón)</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Salida del perceptrón (1: Vamos a la playa, 0: No vamos a la playa):&quot;</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+</code></pre></div>
+- Guarda el cuaderno en tu Google Drive.</p>
+</div>
+<!--
+El Perceptrón realiza una suma ponderada de las entradas: z=(x1​⋅w1​)+(x2​⋅w2​)+(x3​⋅w3​)+b, donde b es un sesgo (bias) o umbral. 
+Sus componentes claves son:
+
+- **Entradas ($x_i$)**: Son los datos que se introducen en el perceptrón. Cada entrada representa una característica del dato que se está clasificando. 
+- **Pesos ($w_i$)**: No todas las entradas tienen la misma importancia. Los pesos son valores asignados a cada entrada que indican su relevancia en la decisión final. Un peso alto significa que esa entrada es muy importante, mientras que un peso bajo indica que tiene poca influencia.
+- **Suma ponderada**: Es el resultado de multiplicar cada entrada por su peso correspondiente y luego sumar todos esos productos. Esta suma determina la activación del perceptrón:
+  $\text{Suma Ponderada} = \sum_{i=1}^{n} x_{i} w_{i}$
+- **Umbral, sesgo o bias ($t$)**: Es un valor que se suma a la suma ponderada antes de aplicar la función de activación. El umbral ayuda a ajustar la sensibilidad del perceptrón y permite que el modelo se adapte mejor a los datos.
+<!--- **Función de activación**: Es una función matemática que toma la suma ponderada (más el umbral) como entrada y produce una salida. La función de activación más común para un perceptrón es la **función escalón**, que devuelve 1 si la suma ponderada es mayor o igual al umbral, y 0 en caso contrario. Pero también se pueden usar otras funciones como la sigmoide o ReLU (Rectified Linear Unit). 
+
+![Funciones de activación](./assets/fun_activacion.png){ .center width=80% }
+-->
+
+<h2 id="sesion-2-3-introduccion-a-python">Sesión 2, 3: Introducción a Python.</h2>
+<p>Python es un lenguaje de programación muy popular debido a su simplicidad y versatilidad. Es ampliamente utilizado en ciencia de datos, desarrollo web, automatización y, por supuesto, en Machine Learning. Algunas de las características que hacen que Python sea ideal para principiantes incluyen:</p>
+<ul>
+<li><strong>Sintaxis sencilla</strong>: La sintaxis de Python es clara y fácil de leer, lo que facilita el aprendizaje para los principiantes.</li>
+<li><strong>Gran comunidad</strong>: Python tiene una comunidad activa que ofrece una gran cantidad de recursos, tutoriales y bibliotecas.</li>
+<li><strong>Bibliotecas para Machine Learning</strong>: Python cuenta con numerosas bibliotecas especializadas en Machine Learning, como TensorFlow, Keras, Scikit-learn y PyTorch, que facilitan la implementación de modelos complejos.</li>
+<li><strong>Entornos interactivos</strong>: Herramientas como Jupyter Notebooks y Google Colab permiten a los usuarios escribir y ejecutar código en un entorno interactivo, lo que es ideal para el aprendizaje y la experimentación.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Primeros pasos con Python en Google Colab</p>
+<p>Vais a trabajar de forma individual en un cuaderno interactivo de Google Colab llamado "Introducción a Python". Este cuaderno contiene explicaciones y 12 pequeños ejercicios prácticos distribuidos en seis bloques temáticos: operadores, listas, cadenas, condicionales, bucles y funciones.   </p>
+<ol>
+<li>Abre un nuevo cuaderno en Google Colab.</li>
+<li>Crea una celda de texto y escribe el título <code># Introducción a Python</code>.</li>
+<li>Vamos a crear una sección de nivel 2 para cada uno de los bloques temáticos. Crea una celda de texto y escribe <code>## Operadores</code>.</li>
+<li>A continuación, crea una celda de código e implementa los ejercicios del bloque de operadores. Puedes consultar el cuaderno de referencia <a href="https://colab.research.google.com/github/data-psl/lectures2020/blob/master/notebooks/01_python_basics.ipynb#scrollTo=qyLSwlxnJqXX">Python basics - Google Colab</a>.</li>
+<li>Repite el proceso para los otros cinco bloques temáticos: listas, cadenas, condicionales, bucles y funciones.</li>
+<li>Guarda el cuaderno en tu Google Drive con el nombre "Introducción a Python.ipynb".</li>
+</ol>
+<p><strong>OPERADORES ARITMÉTICOS</strong></p>
+<p>Los operadores aritméticos nos permiten realizar cálculos matemáticos.</p>
+<ul>
+<li>
+<p><strong>Actividad 1 (Operadores): Calculadora de Área y Perímetro</strong>. 
+  Crea un programa que calcule el área y el perímetro de un rectángulo. Define dos variables, base y altura, con los valores que tú elijas. Luego, muestra los resultados por pantalla con un mensaje claro (ej. "El área del rectángulo es: X").</p>
+</li>
+<li>
+<p><strong>Actividad 2 (Operadores): Conversor de Temperatura</strong>
+  Escribe un programa que convierta una temperatura de grados Celsius a Fahrenheit. La fórmula es: F=(C×9/5)+32. Asigna un valor a una variable celsius y muestra el resultado en Fahrenheit.</p>
+</li>
+</ul>
+<p><strong>LISTAS</strong></p>
+<p>Las listas son colecciones ordenadas y modificables de elementos. Se definen con corchetes [] y los elementos se separan por comas.</p>
+<ul>
+<li><strong>Actividad 3 (Listas): La Lista de la Compra</strong>. Crea una lista llamada lista_compra con tres productos que necesites comprar. Añade un cuarto producto al final de la lista. Elimina el segundo producto de la lista. Muestra la lista final por pantalla.</li>
+<li><strong>Actividad 4 (Listas): Calculadora de Nota Media</strong>. Crea una lista con 5 notas numéricas (de 0 a 10). Calcula la nota media y muéstrala por pantalla. Pista: puedes usar las funciones sum() para sumar los elementos y len() para saber cuántos elementos hay.</li>
+</ul>
+<p><strong>CADENAS</strong></p>
+<p>Las cadenas son secuencias de caracteres, como palabras o frases. Se definen con comillas simples ' o dobles ".</p>
+<ul>
+<li>
+<p><strong>Actividad 5: Creador de Saludos</strong>. Define dos variables de tipo cadena, una para un nombre y otra para una ciudad. Concaténalas para crear una frase que diga "Hola, [nombre] de [ciudad]. ¡Bienvenido/a a Python!".</p>
+</li>
+<li>
+<p><strong>Actividad 6: Contador de Vocales</strong>. Dada una cadena de texto, cuenta cuántas veces aparece la vocal 'a' (mayúscula o minúscula). Pista: convierte primero toda la cadena a minúsculas con el método <code>.lower()</code>. Para contar, puedes usar el método <code>.count()</code>.</p>
+</li>
+</ul>
+<p><strong>CONDICIONALES</strong></p>
+<p>Los condicionales (<code>if</code>, <code>elif</code>, <code>else</code>) nos permiten ejecutar un bloque de código solo si se cumple una determinada condición.</p>
+<ul>
+<li><strong>Actividad 7: ¿Par o Impar?</strong>. Escribe un programa que, dado un número, determine si es par o impar. Si el resto de dividir el número entre 2 es 0, es par. De lo contrario, es impar. Muestra un mensaje apropiado en cada caso.</li>
+<li><strong>Actividad 8: Sistema de Calificación</strong>. Crea un programa que, dada una nota numérica (de 0 a 10), indique si el alumno ha "Aprobado" (si la nota es 5 o superior) o "Suspendido" (si es menor de 5).</li>
+</ul>
+<p><strong>BUCLES</strong></p>
+<p>Los bucles nos permiten repetir un bloque de código varias veces. Los más comunes son el bucle for (para recorrer elementos) y el bucle while (mientras se cumpla una condición).</p>
+<ul>
+<li><strong>Actividad 9: La Tabla de Multiplicar</strong>. Escribe un programa que muestre la tabla de multiplicar del número 7 (del 1 al 10). Usa un bucle <code>for</code> y la función <code>range()</code>.</li>
+<li><strong>Actividad 10: Suma de Elementos de una Lista</strong>. Dada una lista de números, utiliza un bucle <code>for</code> para sumar todos sus elementos y muestra el total. No utilices la función <code>sum()</code>.</li>
+</ul>
+<p><strong>FUNCIONES</strong></p>
+<p>Las funciones son bloques de código reutilizables que realizan una tarea específica. Se definen con <code>def</code> y pueden recibir parámetros y devolver resultados.</p>
+<ul>
+<li>
+<p><strong>Actividad 11: Saludo Personalizado</strong>. Crea una función llamada <code>saludar</code> que reciba un nombre como parámetro y muestre por pantalla un saludo personalizado, como "¡Hola, [nombre]! Que tengas un gran día.". Llama a la función con tu propio nombre.</p>
+</li>
+<li>
+<p><strong>Actividad 12: Calculadora de Factorial</strong>. Crea una función que calcule el factorial de un número. El factorial de un número n (escrito como n!) es la multiplicación de todos los números enteros desde 1 hasta n. Por ejemplo, 5! = 1 * 2 * 3 * 4 * 5 = 120.</p>
+</li>
+</ul>
+</div>
+<!--
+
+## Sesión 4:
+
+## Sesión 5:
+
+## Sesión 6:
+
+## Sesión 7:
+
+## Sesión 8:
+
+-->
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li><a href="https://youtu.be/pCy4yPzcCqs?si=lkKWg4wjUMyDdfxp">El Perceptón ¡explicado! (demo interactivo)</a></li>
+<li><a href="https://colab.research.google.com/github/data-psl/lectures2020/blob/master/notebooks/01_python_basics.ipynb#scrollTo=ASpVhol9ZXI0">Python basics - Google Colab</a></li>
+</ul>
 
 
 
@@ -486,6 +818,8 @@
 
 
 
+  
+  
 
 
 
@@ -538,6 +872,8 @@
     
     
       <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
     
   </body>
