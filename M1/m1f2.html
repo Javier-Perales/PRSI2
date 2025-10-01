@@ -427,6 +427,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sesion-5-perceptron-en-python-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 5: Perceptron en Python I
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recursos" class="md-nav__link">
     <span class="md-ellipsis">
       Recursos
@@ -610,6 +619,15 @@
   <a href="#sesion-4-fundamentos-de-numpy" class="md-nav__link">
     <span class="md-ellipsis">
       Sesión 4: Fundamentos de Numpy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-5-perceptron-en-python-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 5: Perceptron en Python I
     </span>
   </a>
   
@@ -837,6 +855,99 @@ Para empezar a trabajar con NumPy, primero debe instalar la biblioteca e importa
 <li><a href="https://colab.research.google.com/github/data-psl/lectures2020/blob/master/notebooks/01_python_basics.ipynb#scrollTo=qyLSwlxnJqXX">Numpy Python Basics - Colab</a></li>
 <li><a href="https://numpy.org/doc/stable/user/quickstart.html">NumPy Quickstart Tutorial</a></li>
 </ul>
+</div>
+<h2 id="sesion-5-perceptron-en-python-i">Sesión 5: Perceptron en Python I</h2>
+<p>Vamos a implementar un perceptrón simple en Python utilizando <em>Numpy</em> y <em>Matplotlib</em> para visualizar los resultados. El perceptrón será capaz de aprender a clasificar puntos en un espacio bidimensional, por lo que recibirá como entrada <em>x1</em> y <em>x2</em>, que corresponderán a las coordenadas de los puntos en un plano cartesiano.</p>
+<p><img alt="Perceptrón" class="center" src="assets/perceptron2x.png" width="60%" /></p>
+<p>Si el perceptrón devuelve un valor negativo, clasificaremos el punto en la clase 0 (por ejemplo, color azul). Si devuelve un valor positivo, lo clasificaremos en la clase 1 (color naranja).</p>
+<p><img alt="grafica datos" class="center" src="assets/2clases.png" width="50%" /></p>
+<p>Como vimos anteriormente, para que el perceptrón tome una decisión, deberá ajustar los parámetros de los pesos(<em>w1 , w2</em>) y el sesgo (<em>b</em>). Esto es es la idea del problema a resolver y a continuación vamos a ver como funciona internamente el perceptrón.</p>
+<div class="admonition note">
+<p class="admonition-title">AC - Perceptron en Python 1</p>
+<ol>
+<li>Crea un nuevo cuaderno en Google Colab y nómbralo "Perceptron en Python".</li>
+<li>Importa las bibliotecas necesarias: <code>numpy</code> como <code>np</code> para cálculos numéricos y <code>matplotlib.pyplot</code> como <code>plt</code> para visualización.</li>
+<li>Copia y pega el siguiente código y ejecutalo.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># Datos estáticos para la Clase 0</span>
+    <span class="n">class_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+        <span class="p">[</span><span class="mf">0.1745</span><span class="p">,</span> <span class="mf">0.6976</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2799</span><span class="p">,</span> <span class="mf">0.7828</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.4983</span><span class="p">,</span> <span class="mf">1.2015</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.8281</span><span class="p">,</span> <span class="mf">1.0315</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.7770</span><span class="p">,</span> <span class="mf">1.5834</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.4316</span><span class="p">,</span> <span class="mf">0.8576</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.4897</span><span class="p">,</span> <span class="mf">1.2523</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.6931</span><span class="p">,</span> <span class="mf">1.3653</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.8953</span><span class="p">,</span> <span class="mf">1.6119</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0863</span><span class="p">,</span> <span class="mf">1.8986</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.2721</span><span class="p">,</span> <span class="mf">1.8596</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.3435</span><span class="p">,</span> <span class="mf">2.4287</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">1.7224</span><span class="p">,</span> <span class="mf">2.3023</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.7081</span><span class="p">,</span> <span class="mf">2.4461</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.9125</span><span class="p">,</span> <span class="mf">2.7663</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.9785</span><span class="p">,</span> <span class="mf">1.7225</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">1.1105</span><span class="p">,</span> <span class="mf">1.9444</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.4924</span><span class="p">,</span> <span class="mf">2.2265</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.7377</span><span class="p">,</span> <span class="mf">2.4571</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.0123</span><span class="p">,</span> <span class="mf">0.7481</span><span class="p">]</span>
+    <span class="p">])</span>
+
+    <span class="c1"># Clase 1 (roja)</span>
+    <span class="n">class_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+        <span class="p">[</span><span class="mf">0.2869</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9575</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.1711</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4289</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.4639</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4998</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.6413</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1982</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.7431</span><span class="p">,</span> <span class="mf">0.0401</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.1584</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9995</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.452</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5633</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.7490</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2185</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.7854</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0175</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0898</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0683</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.1785</span><span class="p">,</span> <span class="mf">0.4474</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.6701</span><span class="p">,</span> <span class="mf">0.7713</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">1.6723</span><span class="p">,</span> <span class="mf">1.3858</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.8800</span><span class="p">,</span> <span class="mf">1.2988</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.1344</span><span class="p">,</span> <span class="mf">0.2818</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.2138</span><span class="p">,</span> <span class="mf">0.6139</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">1.3835</span><span class="p">,</span> <span class="mf">0.5055</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.5458</span><span class="p">,</span> <span class="mf">1.0895</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.9452</span><span class="p">,</span> <span class="mf">1.3496</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.0134</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0373</span><span class="p">]</span>
+    <span class="p">])</span>
+
+
+    <span class="c1"># Dibuja los puntos de cada clase</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">class_0</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">class_0</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Clase 0&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">class_1</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">class_1</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Clase 1&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Añade una leyenda para identificar las clases</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="c1"># Muestra la gráfica</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Los datos de los arrays <code>class_0</code> y <code>class_1</code> representan las coordenadas (x1, x2) de los puntos en el espacio bidimensional. Cada punto en <code>class_0</code> pertenece a la clase 0 (color azul) y cada punto en <code>class_1</code> pertenece a la clase 1 (color naranja).</li>
+<li>La función <code>plt.scatter()</code> se utiliza para dibujar los puntos en la gráfica. Recuerda que <code>class_0[:, 0]</code> obtiene los valores de la primera columna (x1) y <code>class_0[:, 1]</code> obtiene los valores de la segunda columna (x2). Igualmente para <code>class_1</code>.</li>
+<li>La función <code>plt.legend()</code> añade una leyenda a la gráfica para identificar las clases.</li>
+<li>Finalmente, <code>plt.show()</code> muestra la gráfica con los puntos de ambas clases.</li>
+</ul>
+<p>Recursos:
+- <a href="https://matplotlib.org/stable/tutorials/pyplot.html">Documentación de Matplotlib.pyplot</a>.</p>
+</div>
+<p>Una vez entendida la estructura de datos para almacenar los puntos de cada clase, vamos a implementar la lógica del perceptrón.</p>
+<div class="admonition note">
+<p class="admonition-title">AC - Perceptron en Python 2</p>
+<p>Continuando con el cuaderno "Perceptron en Python", añade una nueva celda de código y copia el siguiente código para implementar la lógica del perceptrón. Ejecuta la celda para ver los resultados.</p>
+<p><strong>Modifica los parámetros <span class="arithmatex">\(w_1\)</span>, <span class="arithmatex">\(w_2\)</span> hasta obtener una buena clasificación de los puntos.</strong></p>
+<div class="highlight"><pre><span></span><code>   <span class="c1"># Function &quot;activación (f)&quot; </span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">f_activacion</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">w1</span> <span class="o">*</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">w2</span> <span class="o">*</span> <span class="n">x2</span> <span class="o">+</span> <span class="n">b</span>
+        <span class="c1"># Función de activación  if z &gt;= 0, devolver 1, sino devolver 0</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">z</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+
+
+    <span class="c1"># Modifica las variables a valores deseados</span>
+    <span class="n">w1</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">w2</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Evalua la clasificación para la class_0</span>
+    <span class="n">aciertos_class_0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">punto</span> <span class="ow">in</span> <span class="n">class_0</span><span class="p">:</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">f_activacion</span><span class="p">(</span><span class="n">punto</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">punto</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">z</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Class 0 cuando f_activación devuelve 0</span>
+            <span class="n">aciertos_class_0</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Evalua la clasificación para la class_1</span>
+    <span class="n">aciertos_class_1</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">punto</span> <span class="ow">in</span> <span class="n">class_1</span><span class="p">:</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">f_activacion</span><span class="p">(</span><span class="n">punto</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">punto</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">z</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># Class 1 cuando f_activación devuelve 1</span>
+            <span class="n">aciertos_class_1</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Cálculo de porcentajes de aciertos</span>
+    <span class="n">total_class_0</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">class_0</span><span class="p">)</span>
+    <span class="n">total_class_1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">class_1</span><span class="p">)</span>
+    <span class="n">tasa_aciertos_class_0</span> <span class="o">=</span> <span class="n">aciertos_class_0</span> <span class="o">/</span> <span class="n">total_class_0</span>
+    <span class="n">tasa_aciertos_class_1</span> <span class="o">=</span> <span class="n">aciertos_class_1</span> <span class="o">/</span> <span class="n">total_class_1</span>
+
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-Tasa aciertos para clase 0: </span><span class="si">{</span><span class="n">aciertos_class_0</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">tasa_aciertos_class_0</span><span class="w"> </span><span class="o">*</span><span class="mi">100</span><span class="si">}</span><span class="s2">%)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-Tasa aciertos para clase 0: </span><span class="si">{</span><span class="n">aciertos_class_1</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">tasa_aciertos_class_1</span><span class="o">*</span><span class="mi">100</span><span class="si">}</span><span class="s2">%)&quot;</span><span class="p">)</span>
+</code></pre></div>
 </div>
 <!--
 ## Sesión 7:
