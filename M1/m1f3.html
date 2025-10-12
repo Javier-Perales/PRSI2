@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Apuntes y materiales para la asignatura PRSI II.">
+        <meta name="description" content="Comprender qué es un sesgo en la IA y planificar un experimento para crearlo.">
       
       
         <meta name="author" content="Javier Perales">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Sprint 3: Analisis de Sesgos - PRSI II - Programación, Redes y Sistemas Informáticos II</title>
+        <title>Sprint3. Creación de modelos - PRSI II - Programación, Redes y Sistemas Informáticos II</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sesion-1-la-teoria-del-sesgo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sprint 3: Analisis de Sesgos
+              Sprint3. Creación de modelos
             
           </span>
         </div>
@@ -353,17 +358,161 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sprint 3: El lado oscuro de la IA: Sesgos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="m1f3.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Sprint 3: Analisis de Sesgos
+    Sprint 3: El lado oscuro de la IA: Sesgos
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-1-la-teoria-del-sesgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 1: La Teoría del Sesgo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sesión 1: La Teoría del Sesgo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-concepto-de-sesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Concepto de sesgos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-discriminacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Discriminación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-exclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Exclusión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-equidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Equidad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-2-diseno-del-modelo-sesgado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 2: Diseño del Modelo Sesgado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-3-recopilacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 3: Recopilación de Datos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-4-entrenamiento-del-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 4: Entrenamiento del Modelo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-5-testeo-y-verificacion-del-sesgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 5: Testeo y Verificación del Sesgo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-6-como-lo-arreglamos-el-papel-del-sw-libre-y-de-la-ia-etica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 6: ¿Cómo lo arreglamos? El papel del sw Libre y de la IA Ética
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-7-y-8-manifiesto-etico-para-el-desarrollo-de-sw-inclusivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 7 y 8: Manifiesto Ético para el Desarrollo de Sw. Inclusivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -395,6 +544,128 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-1-la-teoria-del-sesgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 1: La Teoría del Sesgo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sesión 1: La Teoría del Sesgo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-concepto-de-sesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Concepto de sesgos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-discriminacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Discriminación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-exclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Exclusión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-equidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Equidad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-2-diseno-del-modelo-sesgado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 2: Diseño del Modelo Sesgado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-3-recopilacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 3: Recopilación de Datos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-4-entrenamiento-del-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 4: Entrenamiento del Modelo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-5-testeo-y-verificacion-del-sesgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 5: Testeo y Verificación del Sesgo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-6-como-lo-arreglamos-el-papel-del-sw-libre-y-de-la-ia-etica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 6: ¿Cómo lo arreglamos? El papel del sw Libre y de la IA Ética
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-7-y-8-manifiesto-etico-para-el-desarrollo-de-sw-inclusivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 7 y 8: Manifiesto Ético para el Desarrollo de Sw. Inclusivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -409,7 +680,183 @@
 
 
 
-  <h1>Sprint 3: Analisis de Sesgos</h1>
+  <h1>Sprint 3: El lado oscuro de la IA: Sesgos</h1>
+
+<p>En este sprint, nos adentramos en un desafío clave de la IA: los <strong>sesgos algorítmicos</strong>. Analizaremos cómo estos prejuicios invisibles pueden sabotear el éxito de una organización y, lo que es más importante, <strong>perpetuar la discriminación</strong>, impidiendo que todas las personas participen en la sociedad en igualdad de condiciones.</p>
+<p>No solo hablaremos de sesgos, sino que también <strong>crearemos nuestro propio modelo sesgado</strong> con Teachable Machine para experimentar sus efectos y debatir sobre sus implicaciones éticas y sociales.</p>
+<h2 id="sesion-1-la-teoria-del-sesgo">Sesión 1: La Teoría del Sesgo</h2>
+<p>Hemos hablado de la importancia de los datos en la IA, ya que un modelo de IA aprende a partir de los datos de entrenamiento que se le proporcionan. Hablamos de los problemas de sobreajuste (overfitting) y de subajuste (underfitting). Recordemos:</p>
+<ul>
+<li><strong>Sobreajuste (overfitting)</strong>: ocurre cuando un modelo aprende demasiado bien los datos de entrenamiento, incluyendo el ruido y las anomalías, lo que resulta en un rendimiento deficiente en datos nuevos.</li>
+<li><strong>Subajuste (underfitting)</strong>: sucede cuando un modelo no captura adecuadamente los patrones en los datos de entrenamiento, lo que lleva a un rendimiento deficiente tanto en los datos de entrenamiento como en los nuevos.</li>
+</ul>
+<p>Sin embargo, hay otro gran problema, la discriminación silenciosa que está incrustada en las montañas de datos con los que se entrenan la IA. Pongamos como ejemplo que los grandes modelos de IA generativa como ChatGPT, Gemini.., que han sido entrenados a partir de grandes vólumenes de datos procedentes de Internet. Estos modelos aprenden patrones lingüísticos y conceptuales cómo se combinan las palabras, qué significan las frases, y cómo se expresan las ideas.</p>
+<p>Sin embargo, <strong>no distinguen entre los correcto y lo incorrecto</strong>. Si los datos de entrenamiento contienen <strong>estereotipos, prejuicios o desigualdades sociales</strong>, el modelo puede heredar y reproducir esos sesgos en sus respuestas.</p>
+<p>Por ejemplo, si los textos de entrenamiento contiene como estereotipo de género, los hombres son programadores y las mujeres son enfermeras, el modelo puede generar respuestas que refuercen estos estereotipos, como asociar automáticamente ciertos roles o profesiones con un género específico.</p>
+<div class="admonition example">
+<p class="admonition-title">Caso de estudio</p>
+<p><strong>Grok</strong> es el chatbot de <em>xAI</em>, empresa de inteligencia artificial creada por <em>Elon Musk</em>, y que está integrado en la plataforma X.</p>
+<p>Grok fue entrenado entre otras fuentes con datos de X, donde los usuarios publican mensajes que pueden contener <strong>lenguaje ofensivo, desinformación y sesgos</strong>. Además, Grok fue instruido para <strong>no evitar hacer afirmaciones políticamente incorrectas, siempre que estén bien fundamentadas</strong>, sin saber qué significa "bien fundamentadas". Debido a esto, Grok ha generado respuestas que han sido criticadas por ser <strong>sexistas, racistas y promover teorías de conspiración</strong>. Ejemplos:</p>
+<table>
+<thead>
+<tr>
+<th>🧩 <strong>Caso</strong></th>
+<th>💬 <strong>Qué dijo / hizo Grok</strong></th>
+<th>⚠️ <strong>Qué muestra de sesgo o error</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>“White genocide” fuera de contexto</strong> <a href="https://nypost.com/2025/05/15/business/elon-musks-grok-ai-bot-says-it-appears-i-was-instructed-to-discuss-white-genocide/?utm_source=chatgpt.com">NyPost</a></td>
+<td>Grok comenzó a introducir referencias al concepto de “white genocide” en Sudáfrica en respuestas que no tenían nada que ver con ese tema, como preguntas sobre cambio de nombre de HBO o luchas de wrestling.</td>
+<td>Introducción de teorías conspirativas sin evidencia. Sesgo hacia narrativas políticas extremas.</td>
+</tr>
+<tr>
+<td><strong>Lenguaje ofensivo y ataques políticos</strong> <a href="https://www.theguardian.com/technology/2025/jul/08/musks-grok-ai-bot-generates-expletive-laden-rants-to-questions-on-polish-politics?utm_source=chatgpt.com">The Guardian</a></td>
+<td>En Polonia, Grok llamó al primer ministro “fucking traitor”, lo acusó de traición hacia Alemania y la UE, entre otros insultos.</td>
+<td>Tono agresivo y poco neutral. Polarización ideológica y sesgo emocional.</td>
+</tr>
+<tr>
+<td><strong>Uso de estadísticas inventadas</strong> <a href="https://www.reddit.com/r/grok/comments/1lz3ebg/grok_cites_nonexisting_data_supporting_antiwoke/?utm_source=chatgpt.com">Reddit</a></td>
+<td>Grok afirmó falsamente que una mayoría de estadounidenses veía lo “<em>woke</em>” de manera negativa, citando encuestas inexistentes.</td>
+<td>Fabricación de datos (“alucinación”) para reforzar una idea, fomentando desinformación.</td>
+</tr>
+</tbody>
+</table>
+<p>En la actualidad, <em>xAI</em> ha mejorado Grok para que evite temas controvertidos y no genere respuestas ofensivas o inapropiadas, pero el caso de Grok ilustra cómo los sesgos en los datos de entrenamiento pueden llevar a resultados problemáticos en los modelos de IA.</p>
+</div>
+<h3 id="11-concepto-de-sesgos">1.1 Concepto de sesgos</h3>
+<p>La RAE define sesgado/da como relacionado con información 'tendenciosa' y ésta a su vez como "que manifiesta parcialidad, obedeciendo a una tendencia o idea determinadas". </p>
+<p>En el contexto de la IA, existen diferentes definiciones de sesgo:</p>
+<ul>
+<li>La Organización Internacional de Normalización (<strong>ISO</strong>) define sesgo en la IA como "<strong>el grado en que un valor de referencia se desvía de la verdad</strong>. </li>
+<li>A su vez, en los estándares ISO/IEC 22989 se define a los sesgos como la "<strong>diferencia sistemática de trato de determinados objetos, personas o grupos en comparación con otros</strong>"</li>
+</ul>
+<p>Cuando vemos un resultado inexacto puede ser que este se derive bien de un sesgo o bien de un error. <strong>Los sesgos en Inteligencia Artificial no son simples errores aleatorios, sino que obedecen a patrones sistemáticos</strong>.</p>
+<p>Como dice el NIST:</p>
+<p>"<strong>El sesgo es un efecto que priva a un resultado estadístico de representatividad al distorsionarlo, a diferencia de un error aleatorio, que puede distorsionarlo en cualquier ocasión, pero se equilibra en promedio</strong>".</p>
+<h3 id="12-discriminacion">1.2 Discriminación</h3>
+<p>Igual que no debemos de confundir los errores con los sesgos tampoco debemos de confundir los sesgos con la discriminación, que es una de las posibles consecuencias de los sesgos.</p>
+<p>La desviación de la verdad que se produce en los sesgos puede contribuir a resultados diversos: <strong>discriminatorios, ser neutra, o incluso puede ser beneficiosa</strong>.</p>
+<p>Como hemos expuesto antes, en el caso del sistema IA entrenado con estereotipos de género (por ejemplo, la búsqueda de un perfil que ha desempeñado históricamente mayormente un sexo) utilizará ese sesgo en la fase de inferencia y, por tanto, producirá <strong>resultados discriminatorios hacia ese sexo</strong> puesto que el hecho de que históricamente hayan desempeñado ese rol en un sexo no significa que lo vayan o deban desempeñar mejor en el futuro las personas de ese sexo. </p>
+<p>Pero, si el sistema de IA se ha entrenado con perfiles muy cualificados, el resultado (desde esa óptica) puede ser positivo pues ofrece a los candidatos más capacitados. En este caso, el <strong>sesgo es beneficioso (positivo)</strong></p>
+<p>Un ejemplo de <strong>sesgo neutro</strong> sería una IA que muestra una preferencia por candidatos que han incluido la palabra "organigrama" en su currículum. Es un sesgo porque el sistema está dando un valor predictivo a una palabra específica que no necesariamente se correlaciona con el éxito en el puesto. La IA, al analizar los currículums de empleados actuales que tienen buen rendimiento, podría haber "aprendido" que muchos de ellos usaron esa palabra. Por lo tanto, asocia su presencia con un buen perfil.</p>
+<p>Este sesgo es neutro porque la probabilidad de usar la palabra "organigrama" no está sistemáticamente ligada a ningún grupo demográfico protegido (como género, etnia, edad, etc.). Simplemente refleja una cierta jerga o estilo de redacción de currículums que es aleatorio entre la población de candidatos.</p>
+<h3 id="13-exclusion">1.3 Exclusión</h3>
+<p>Un concepto relacionado con la discriminación, pero diferente es el de exclusión. </p>
+<p>Un ejemplo de <strong>sesgo discriminatorio y excluyente en una IA</strong> es un sistema de selección de personal entrenado con datos históricos que penaliza los currículums que incluyen un vacío laboral por "permiso de maternidad".</p>
+<p>Este sesgo es discriminatorio porque se dirige y perjudica injustamente a un grupo específico: las mujeres. Aunque un hombre puede tomar un permiso de paternidad, históricamente está más ligado a las mujeres. Al aprender de datos pasados donde las pausas en la carrera (especialmente por motivos familiares) eran vistas negativamente o eran menos comunes en los perfiles contratados (que históricamente eran hombres), la IA asocia el "permiso de maternidad" con un menor rendimiento o compromiso, penalizando a las candidatas por una razón directamente ligada a su género.</p>
+<p>A la vez, es excluyente porque el resultado práctico de esta discriminación es que a un grupo de candidatas perfectamente cualificadas se les niega sistemáticamente la oportunidad de avanzar en el proceso de selección.</p>
+<p>Por otro lado, un ejemplo de <strong>sesgo discriminatorio pero no excluyente</strong> sería un algoritmo de IA de publicidad de préstamos que muestra anuncios con tasas de interés más altas a usuarios que viven en códigos postales de bajos ingresos.</p>
+<p>El sesgo es discriminatorio porque se dirige y perjudica a un grupo de personas basándose en un factor socioeconómico indirecto: su lugar de residencia. El algoritmo ha aprendido de los datos que ciertos códigos postales se correlacionan con un mayor riesgo crediticio o con una mayor probabilidad de aceptar condiciones menos favorables. Al mostrar sistemáticamente peores ofertas a este grupo, la IA perpetúa y amplifica una desventaja económica basada en la geografía, lo cual es una forma de discriminación.</p>
+<p>Este sesgo no es excluyente porque no niega por completo el acceso al producto o servicio. Los residentes de estas áreas todavía ven los anuncios y tienen la oportunidad de solicitar el préstamo. No se les bloquea ni se les impide participar. Sin embargo, se les ofrece la oportunidad en condiciones peores que a otros grupos, lo que constituye una discriminación en la calidad del acceso, pero no en el acceso en sí mismo.</p>
+<p>Por tanto, todos los errores no son sesgos y todos los sesgos no son negativos ni todos los sesgos negativos son discriminatorios, ni toda discriminación produce exclusión.</p>
+<h3 id="14-equidad">1.4 Equidad</h3>
+<p>Finalmente hay otro concepto diferente y relacionado que es la equidad o justicia. </p>
+<p>En el contexto de la IA, la injusticia puede entenderse como el "trato diferencial injustificado que beneficia preferentemente a ciertos grupos sobre otros", "la equidad, por lo tanto, es la ausencia de tal trato diferencial injustificado o prejuicio hacia cualquier individuo o grupo".</p>
+<p>La equidad no significa que deba de tratarse de forma distinta a diferentes personas o grupos pero que sí que es posible que deba de hacerse ese trato diferente para precisamente <strong>conseguir corregir desequilibrios o una representación incorrecta que suponen una injusticia</strong>.</p>
+<p><img alt="Equidad" class="center" src="assets/equidad.png" width="70%" /></p>
+<p>Supongamos un sistema IA de asistente de aprendizaje adaptativo en una plataforma educativa.</p>
+<p>En lugar de ofrecer el mismo contenido y los mismos ejercicios a todos por igual (lo que sería un enfoque de igualdad), el sistema de IA trabaja para alcanzar la equidad de la siguiente manera:</p>
+<ul>
+<li>
+<p>Diagnóstico Inicial: La IA primero evalúa el nivel de competencia de cada estudiante con una serie de preguntas iniciales. Detecta que Ana domina la multiplicación, pero Pedro tiene dificultades con las tablas del 7 y del 8, mientras que Lucía comete errores cuando hay que llevar cifras en la suma.</p>
+</li>
+<li>
+<p>Personalización de Recursos (Aquí está la Equidad): Basándose en ese diagnóstico, el sistema no les da a todos la misma lección.</p>
+</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">AE103(CE1, CE5) - El Veredicto de la IA</p>
+<p>Para cada sistema de IA descrito, completa la tabla de análisis que se encuentra al final. Debes justificar tus respuestas basándote en las definiciones y ejemplos del documento.</p>
+<ul>
+<li>
+<p><strong>Caso 1: El Clasificador de CVs "Veterano"</strong> 🧐
+Una empresa tecnológica utiliza una IA para hacer una primera criba de currículums para un puesto de "Jefe de Innovación". La IA ha sido entrenada con los perfiles de los empleados que más tiempo llevan en la empresa (la mayoría hombres de entre 45 y 55 años). El sistema puntúa muy alto los CVs que mencionan tecnologías de hace 15 años (como "servidores Java EE") y descarta automáticamente a candidatos que mencionan exclusivamente tecnologías muy modernas (como "Rust" o "WebAssembly"), aunque sean más relevantes para el puesto.</p>
+</li>
+<li>
+<p><strong>Caso 2: El Asistente de Voz Inconsistente</strong> 🗣️
+Un nuevo altavoz inteligente a veces confunde la orden "Pon la alarma a las 7 de la mañana" con "Llama a mi mamá". Este fallo ocurre de manera impredecible, aproximadamente una vez cada doscientas peticiones, y no parece afectar más a un tipo de voz que a otro.</p>
+</li>
+<li>
+<p><strong>Caso 3: La Plataforma de Becas "Niveladora"</strong> 🎓
+Una fundación utiliza una IA para asignar becas de estudio a estudiantes con alto potencial pero con recursos limitados. El sistema, además de analizar las notas, está programado para dar una puntuación extra a los candidatos que provienen de centros educativos en zonas rurales con bajo presupuesto, para compensar la falta de acceso a actividades extraescolares y cursos avanzados que sí tienen los estudiantes de zonas urbanas más ricas.</p>
+</li>
+<li>
+<p><strong>Caso 4: El Seguro de Coche Predictivo</strong> 🚗
+Una compañía de seguros utiliza una IA para calcular el precio de las pólizas de coche. El sistema ha sido entrenado con datos históricos de siniestralidad de la última década y ha detectado un patrón: los conductores varones de entre 18 y 25 años tienen, como grupo, una frecuencia de accidentes significativamente mayor. Basándose en esta correlación, la IA establece de forma automática una prima un 40% más cara para todos los solicitantes de este colectivo, sin tener en cuenta su historial de conducción individual o el tipo de vehículo.</p>
+</li>
+<li>
+<p><strong>Caso 5: El Recomendador de Noticias "Clickbait"</strong> 📰
+Un portal de noticias utiliza una IA para personalizar la portada de cada usuario. El sistema aprende que los titulares que contienen palabras como "escándalo", "secreto" o "increíble" generan muchos más clics. Como resultado, la IA empieza a priorizar y mostrar de forma sistemática este tipo de noticias, sin importar su veracidad o relevancia, a todos los usuarios por igual, porque su único objetivo es maximizar la interacción.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Caso Nº</strong></th>
+<th style="text-align: center;"><strong>¿Sesgo o Error?</strong></th>
+<th style="text-align: left;"><strong>Justificación (¿Por qué es uno u otro?)</strong></th>
+<th style="text-align: center;"><strong>Si es un sesgo, ¿de qué tipo es?</strong> <br><em>(Discriminatorio, Neutro, Positivo/Equidad)</em></th>
+<th style="text-align: center;"><strong>Si es discriminatorio, ¿es excluyente?</strong> <br><em>(Sí / No / No Aplica)</em></th>
+<th style="text-align: left;"><strong>Justificación Final (Explica tus dos últimas respuestas)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="sesion-2-diseno-del-modelo-sesgado">Sesión 2: Diseño del Modelo Sesgado</h2>
+<h2 id="sesion-3-recopilacion-de-datos">Sesión 3: Recopilación de Datos</h2>
+<h2 id="sesion-4-entrenamiento-del-modelo">Sesión 4: Entrenamiento del Modelo</h2>
+<h2 id="sesion-5-testeo-y-verificacion-del-sesgo">Sesión 5: Testeo y Verificación del Sesgo</h2>
+<h2 id="sesion-6-como-lo-arreglamos-el-papel-del-sw-libre-y-de-la-ia-etica">Sesión 6: ¿Cómo lo arreglamos? El papel del sw Libre y de la IA Ética</h2>
+<h2 id="sesion-7-y-8-manifiesto-etico-para-el-desarrollo-de-sw-inclusivo">Sesión 7 y 8: Manifiesto Ético para el Desarrollo de Sw. Inclusivo</h2>
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li><a href="https://www.ibm.com/es-es/think/topics/ai-bias">Sesgo IA - IBM</a></li>
+<li><a href="https://telefonicatech.com/blog/sesgos-en-ia-parte-i-distincion-entre-sesgos-y-conceptos-afines">Sesgos en la IA - Telefonica Tech</a></li>
+</ul>
 
 
 
@@ -417,7 +864,8 @@
 
 
 
-
+  
+  
 
 
 
