@@ -1,0 +1,257 @@
+// question: 0  name: Switch category to $course$/top/S1+S2
+$CATEGORY: $course$/top/S1+S2
+
+
+// question: 8702548  name: Bucles 1
+::Bucles 1::[html]<p>¿Qué instrucción en Python muestra la tabla del 7 usando un bucle for?</p>{
+	=[moodle]for i in range(1,11)\: print(7*i)
+	~%-100%[moodle]for i in range(10)\: print(i*7)
+	~%-100%[moodle]while i <\= 10\: print(7*i)
+	=[moodle]repeat 10 times\: print(7*i)
+}
+
+
+// question: 8702562  name: Cadenas 1
+::Cadenas 1::[html]<p>¿Cuál es el operador que se utiliza para concatenar cadenas en Python?</p>{
+	=[moodle]+
+	~%-100%[moodle]&
+	~%-100%[moodle]concat()
+	~%-100%[moodle]join
+}
+
+
+// question: 8702544  name: Cadenas 2
+::Cadenas 2::[html]<p>Si tenemos el texto \= "Programación", ¿qué instrucción devuelve cuántas letras "a" contiene?</p>{
+	=[moodle]"Programación".lower().count("a")
+	~%-100%[moodle]"Programación".count("a")
+	~%-100%[moodle]count("a", "Programación")
+	~%-100%[moodle]"Programación".count()
+}
+
+
+// question: 8702529  name: Componentes del Perceptrón - Bias
+::Componentes del Perceptrón - Bias::¿Cuál es la función del sesgo o bias (b) en el perceptrón?{
+	=Ajustar la sensibilidad del perceptrón y desplazar la frontera de decisión.
+	~%-100%Multiplicar cada entrada para obtener la suma ponderada.
+	~%-100%Asegurarse de que la salida siempre sea 1.
+	~%-100%Contar el número de entradas del modelo.
+}
+
+
+// question: 8702528  name: Componentes del Perceptrón - Pesos
+::Componentes del Perceptrón - Pesos::En un perceptrón, ¿qué representan los pesos (w)?{
+	=La importancia o relevancia de cada entrada en la decisión final.
+	~%-100%Los datos de entrada que se introducen en el modelo.
+	~%-100%La predisposición del modelo a dar una respuesta positiva.
+	~%-100%El resultado final de la clasificación.
+}
+
+
+// question: 8702523  name: Concepto de Machine Learning
+::Concepto de Machine Learning::¿qué es el aprendizaje automático (Machine Learning)?{
+	=Un subcampo de la IA que permite a las máquinas aprender de los datos sin ser programadas explícitamente.
+	~%-100%Un tipo de hardware especializado en ejecutar algoritmos complejos.
+	~%-100%Un lenguaje de programación utilizado exclusivamente para crear robots.
+	~%-100%Un paradigma que requiere escribir código explícito para cada tarea que la máquina debe resolver.
+}
+
+
+// question: 8702518  name: Concepto de Overfitting
+::Concepto de Overfitting::¿Qué problema se describe en el texto con el término "Overfitting" (sobreajuste)?{
+	=El modelo de IA se ajusta demasiado a los datos de entrenamiento y no puede generalizar correctamente a nuevos datos.
+	~%-100%La falta de datos suficientes para poder entrenar el modelo de IA.
+	~%-100%El uso de un lenguaje de programación inadecuado para la IA.
+	~%-100%Cuando un modelo de IA tarda demasiado tiempo en ser entrenado.
+}
+
+
+// question: 8702560  name: Condicionales 1
+::Condicionales 1::[html]<p>¿Qué condición permite comprobar si un número es par?</p>{
+	=[moodle]if numero % 2 \=\= 0\:
+	~%-100%[moodle]if numero / 2 \=\= 0\:
+	~%-100%[moodle]if numero % 2 \= 0\:
+	~%-100%[moodle]if numero \=\= 2\:
+	~%-100%[moodle]if numero % 2
+}
+
+
+// question: 8702516  name: Diferencia de AlphaGo Zero
+::Diferencia de AlphaGo Zero::¿Qué característica fundamental distinguió a AlphaGo Zero (2017) de su predecesor AlphaGo?{
+	=Aprendió a jugar al Go únicamente a partir de las reglas del juego, sin estudiar partidas humanas.
+	~%-100%Fue el primer programa en derrotar a un campeón mundial de Go.
+	~%-100%Utilizaba la "fuerza bruta" para calcular millones de jugadas por segundo.
+	~%-100%Fue desarrollado por IBM para competir en Jeopardy!.
+}
+
+
+// question: 8702513  name: Era Exponencial
+::Era Exponencial::¿Cuál es la idea fundamental de la "era exponencial"?{
+	=El ritmo del cambio tecnológico se acelera porque cada nueva tecnología se construye sobre las capacidades de la anterior.
+	~%-100%El tiempo necesario para alcanzar un nuevo hito tecnológico es cada vez más largo.
+	~%-100%El progreso tecnológico avanza a un ritmo constante y lineal.
+	~%-100%La inteligencia artificial es la única tecnología que avanza exponencialmente, mientras las demás se estancan.
+}
+
+
+// question: 8702530  name: Función de Activación del Perceptrón
+::Función de Activación del Perceptrón::En un perceptrón simple, ¿Qué función de activación se utiliza para decidir la salida final?{
+	=Una función escalón, que decide 1 si la suma ponderada es mayor a 0 y 0 en caso contrario.
+	~%-100%Una función lineal que devuelve el valor exacto de la suma ponderada.
+	~%-100%Una función que agrupa los datos en clústeres.
+	~%-100%Una función que calcula la media de las entradas.
+}
+
+
+// question: 8702527  name: Función del Perceptrón
+::Función del Perceptrón::¿Cuál es la función principal de un perceptrón simple?{
+	=Actuar como un algoritmo de clasificación binaria, dando una respuesta de "sí" o "no" (1 o 0).
+	~%-100%Procesar lenguaje natural para traducciones automáticas.
+	~%-100%Generar nuevas imágenes a partir de un conjunto de datos.
+	~%-100%Agrupar usuarios con hábitos de compra similares.
+}
+
+
+// question: 8702557  name: Funciones 1
+::Funciones 1::[html]<p>¿Cuál es la forma correcta de definir una función en Python?</p>{
+	=[moodle]def mi_funcion()\:
+	~%-100%[moodle]function mi_funcion()
+	~%-100%[moodle]definir mi_funcion[]
+	~%-100%[moodle]func mi_funcion\:
+}
+
+
+// question: 8702531  name: Google Colab
+::Google Colab::¿En qué herramienta se basa Google Colab?{
+	=Jupyter Notebooks.
+	~%-100%Microsoft Excel.
+	~%-100%Visual Studio Code.
+	~%-100%TensorFlow.
+}
+
+
+// question: 8702521  name: Importancia de los Datos
+::Importancia de los Datos::¿Qué conclusión se extrae en el texto sobre la relación entre un modelo de IA y los datos utilizados para su entrenamiento?{
+	=Un modelo será tan inteligente como los datos utilizados para entrenarlo.
+	~%-100%La cantidad de datos es el único factor importante, sin importar su variedad.
+	~%-100%Los modelos modernos de IA ya no necesitan grandes cantidades de datos para aprender.
+	~%-100%Los sesgos en los datos no afectan al resultado final del modelo de IA.
+}
+
+
+// question: 8702520  name: Limitación del Perceptrón
+::Limitación del Perceptrón::¿Cuál fue la principal limitación del Perceptrón Mark 1, que llevó a un estancamiento en la investigación de redes neuronales?{
+	=Solo podía ser entrenado para reconocer patrones que fueran separables linealmente, siendo incapaz de aprender patrones más complejos.
+	~%-100%Necesitaba demasiada memoria para almacenar las partidas de ajedrez.
+	~%-100%Era demasiado lento para interactuar en tiempo real con un humano.
+	~%-100%Su hardware era muy costoso y difícil de fabricar en esa época.
+}
+
+
+// question: 8702554  name: Listas 1
+::Listas 1::[html]<p>¿Cuál es la forma correcta de definir una lista en Python con tres productos\: pan, leche y huevos? </p>{
+	=[moodle]lista_compra \= ["pan", "leche", "huevos"]
+	~%-100%[moodle]lista_compra \= "pan", "leche", "huevos"
+	~%-100%[moodle]lista_compra \= \{"pan", "leche", "huevos"\}
+	~%-100%[moodle]lista_compra \= ("pan", "leche", "huevos")
+}
+
+
+// question: 8702555  name: Listas 2
+::Listas 2::[html]<p>¿Qué función de Python devuelve el número de elementos de una lista?</p>{
+	=[moodle]len()
+	~%-100%[moodle]size()
+	~%-100%[moodle]count()
+	~%-100%[moodle]length()
+}
+
+
+// question: 8702515  name: Logro de Deep Blue
+::Logro de Deep Blue::¿Qué hito histórico logró el superordenador Deep Blue de IBM en 1997?{
+	=Fue el primer sistema de IA en derrotar a un campeón mundial de ajedrez, Garry Kasparov, en una partida oficial.
+	~%-100%Ganó el concurso de televisión Jeopardy! comprendiendo el lenguaje natural.
+	~%-100%Superó la capacidad humana en el reconocimiento de imágenes en el reto ImageNet.
+	~%-100%Aprendió a jugar al Go sin necesidad de estudiar partidas humanas.
+}
+
+
+// question: 8702519  name: Logro de Watson
+::Logro de Watson::¿En qué demostró su capacidad el sistema de IA Watson de IBM en el año 2011?{
+	=En comprender preguntas en lenguaje natural y generar respuestas precisas en el concurso de televisión Jeopardy!.
+	~%-100%En derrotar al campeón del mundo de ajedrez.
+	~%-100%En clasificar imágenes con una precisión superior a la de los humanos.
+	~%-100%En demostrar 38 de los 52 teoremas de "Principia Mathematica".
+}
+
+
+// question: 8702540  name: NumPy 1
+::NumPy 1::¿Qué instrucción se utiliza para importar la librería NumPy con el alias habitual?{
+	=%import numpy as np
+	~%-100%import np as numpy
+	~%-100%include numpy
+	~%-100%from numpy import all
+}
+
+
+// question: 8702546  name: Operadores 1
+::Operadores 1::[html]<p>¿Qué operador aritmético se utiliza en Python para calcular el resto de una división?</p>{
+	=[moodle]%
+	~%-100%[moodle]/
+	~%-100%[moodle]//
+	~<p>divmod</p>
+}
+
+
+// question: 8702550  name: Paradigma de Aprendizaje No Supervisado
+::Paradigma de Aprendizaje No Supervisado::[html]<p>¿Cuál de los siguientes es un ejemplo de aprendizaje no supervisado mencionado en los apuntes?</p>{
+	=[moodle]El clustering, donde un modelo agrupa datos similares sin conocer las categorías previamente.
+	~%-100%[moodle]La clasificación de imágenes de objetos en fotos ya etiquetadas.
+	~%-100%[moodle]Un vehículo autónomo que aprende a navegar interactuando con el entorno.
+	~%-100%[moodle]Un sistema de IA que aprende a jugar al ajedrez a través de la experiencia.
+}
+
+
+// question: 8702524  name: Paradigma de Aprendizaje Supervisado
+::Paradigma de Aprendizaje Supervisado::¿Qué caracteriza al aprendizaje supervisado?{
+	=El modelo se entrena con un conjunto de datos etiquetados, donde cada entrada tiene una salida conocida.
+	~%-100%El modelo encuentra patrones en datos no etiquetados por sí mismo.
+	~%-100%El modelo aprende a base de recibir recompensas o castigos por sus acciones.
+	~%-100%El modelo se utiliza exclusivamente para juegos y robótica.
+}
+
+
+// question: 8702517  name: Paradigmas de Programación
+::Paradigmas de Programación::¿Cuál es la diferencia clave entre la programación tradicional y el aprendizaje automático (machine learning)?{
+	=La programación tradicional aplica reglas a los datos para obtener respuestas, mientras que el aprendizaje automático usa datos y respuestas para descubrir las reglas.
+	~%-100%El aprendizaje automático no requiere datos, solo reglas lógicas.
+	~%-100%La programación tradicional es más potente para problemas donde es imposible descubrir las reglas.
+	~%-100%El aprendizaje automático es un método más antiguo que la programación tradicional.
+}
+
+
+// question: 8702522  name: Pionero de la IA
+::Pionero de la IA::¿Qué programa, considerado el primero de IA en 1956, fue pionero en demostrar que las computadoras podían emular aspectos del pensamiento humano, como demostrar teoremas?{
+	=Logic Theorist.
+	~%-100%Deep Blue.
+	~%-100%Perceptrón Mark 1.
+	~%-100%AlphaGo.
+}
+
+
+// question: 8702514  name: Prueba de Turing
+::Prueba de Turing::¿Cuál es el objetivo principal de la Prueba de Turing, concebida en 1950?{
+	=Determinar si un evaluador humano puede distinguir entre una máquina y otro humano a través de sus respuestas.
+	~%-100%Medir la velocidad de cálculo de una computadora.
+	~%-100%Demostrar que una máquina posee conciencia o comprensión real.
+	~%-100%Probar la capacidad de una máquina para demostrar teoremas lógicos.
+}
+
+
+// question: 8702526  name: Redes Neuronales Profundas
+::Redes Neuronales Profundas::¿Cómo se conocen las redes neuronales artificiales que tienen más de una capa?{
+	=Redes neuronales profundas o Deep Learning.
+	~%-100%Perceptrones simples.
+	~%-100%Modelos de aprendizaje por refuerzo.
+	~%-100%Algoritmos de clustering.
+}
+
+
