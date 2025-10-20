@@ -467,11 +467,86 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#hiperparametros-de-entrenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hiperparámetros de Entrenamiento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hiperparámetros de Entrenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lotes-batch-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lotes (batch size)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cantidad-de-epocas-epochs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cantidad de épocas (epochs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasa-de-aprendizaje-learning-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasa de aprendizaje (learning rate)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#graficas-de-entrenamiento" class="md-nav__link">
     <span class="md-ellipsis">
       Gráficas de Entrenamiento
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Gráficas de Entrenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#precision-por-epoca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precisión por época
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precision-por-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precisión por clase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matriz-de-confusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matriz de confusión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -627,11 +702,86 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#hiperparametros-de-entrenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hiperparámetros de Entrenamiento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hiperparámetros de Entrenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lotes-batch-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lotes (batch size)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cantidad-de-epocas-epochs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cantidad de épocas (epochs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasa-de-aprendizaje-learning-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasa de aprendizaje (learning rate)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#graficas-de-entrenamiento" class="md-nav__link">
     <span class="md-ellipsis">
       Gráficas de Entrenamiento
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Gráficas de Entrenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#precision-por-epoca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precisión por época
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precision-por-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precisión por clase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matriz-de-confusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matriz de confusión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -884,20 +1034,27 @@ Un portal de noticias utiliza una IA para personalizar la portada de cada usuari
 </div>
 <h2 id="sesion-3-entrenamiento-del-modelo">Sesión 3: Entrenamiento del Modelo</h2>
 <p>Una vez creada las dos categorías de imágenes, procederemos a entrenar el modelo en Teachable Machine, cargando las imágenes en las categorías correspondientes.</p>
+<h3 id="hiperparametros-de-entrenamiento">Hiperparámetros de Entrenamiento</h3>
 <p>Teachable Machine nos permite ajustar lo que se conocen como hiperparámetros para el entrenamiento.</p>
 <p>En la sección de <em>"Preparación"</em> podemos ajustar:</p>
-<p><strong>Lotes (batch size)</strong>: un <em>lote</em> es una porción del conjunto de datos que se utiliza para entrenar el modelo en una iteración. En lugar de procesar todo el conjunto de datos a la vez, se divide en lotes más pequeños. Esto ayuda a mejorar la eficiencia del entrenamiento y a reducir el uso de memoria.</p>
+<p><img alt="Hiperparámetros" class="center" src="assets/hiperparametros.png" width="30%" /></p>
+<h4 id="lotes-batch-size">Lotes (batch size)</h4>
+<p>Un <em>lote</em> es una porción del conjunto de datos que se utiliza para entrenar el modelo en una iteración. En lugar de procesar todo el conjunto de datos a la vez, se divide en lotes más pequeños. Esto ayuda a mejorar la eficiencia del entrenamiento y a reducir el uso de memoria.</p>
 <p>Si tenemos un conjunto de datos de entrenamiento de 10 imágenes y establecemos un tamaño de lote de 3. Si definimos un tamaño de lote de 3, el modelo procesará 3 imágenes a la vez en cada iteración, lo que significa que habrá 4 iteraciones para completar una época (las primeras tres iteraciones procesarán 3 imágenes cada una, y la última iteración procesará la imagen restante)</p>
-<p><strong>Cantidad de épocas (epochs)</strong>: una <em>época</em> se refiere a una pasada completa por todo el conjunto de datos de entrenamiento. Durante una época, el modelo ve y aprende de todas las muestras en el conjunto de datos una vez.</p>
+<h4 id="cantidad-de-epocas-epochs">Cantidad de épocas (epochs)</h4>
+<p>Una <em>época</em> se refiere a una pasada completa por todo el conjunto de datos de entrenamiento. Durante una época, el modelo ve y aprende de todas las muestras en el conjunto de datos una vez.</p>
 <p>Si tenemos un conjunto de datos de 10 imágenes y establecemos el número de épocas en 5, el modelo pasará por todas las 10 imágenes 5 veces durante el proceso de entrenamiento. Esto significa que habrá un total de 50 presentaciones de imágenes al modelo (10 imágenes x 5 épocas). </p>
 <div class="admonition note">
 <p class="admonition-title">Lotes y Épocas</p>
-<p>Si tenemos un set de entrenamiento de 100 datos y usamos un <em>batch_size=20</em>, entonces:
-- Tendremos 100/20= 5 lotes.
-- Por lo que en cada época (iteración de entrenamiento) el modelo procesará 5 lotes.
-- Con cada lote presentado se hará una actualización de los parámetros del modelo (pesos y sesgos).</p>
+<p>Si tenemos un set de entrenamiento de 100 datos y usamos un <em>batch_size=20</em>, entonces:</p>
+<ul>
+<li>Tendremos 100/20= 5 lotes.</li>
+<li>Por lo que en cada época (iteración de entrenamiento) el modelo procesará 5 lotes.</li>
+<li>Con cada lote presentado se hará una actualización de los parámetros del modelo (pesos y sesgos).</li>
+</ul>
 </div>
-<p><strong>Tasa de aprendizaje (learning rate)</strong>: determina la magnitud de los ajustes que el modelo hace en cada paso. Es, en esenciam la velocidad a la que aprende.</p>
+<h4 id="tasa-de-aprendizaje-learning-rate">Tasa de aprendizaje (learning rate)</h4>
+<p>Determina la magnitud de los ajustes que el modelo hace en cada paso. Es, en esencia, la velocidad a la que aprende.</p>
 <p>Es un valor, normalmente entre 0.0 y 1.0, que controla cuán drásticamente el modelo cambia sus parámetros después de revisar un lote de datos durante el entrenamiento.</p>
 <p>Hay que buscar un equilibrio:</p>
 <ul>
@@ -906,21 +1063,25 @@ Un portal de noticias utiliza una IA para personalizar la portada de cada usuari
 </ul>
 <h3 id="graficas-de-entrenamiento">Gráficas de Entrenamiento</h3>
 <p>Una vez entrenado el modelo, Teachable Machine nos muestra unas gráficas que nos permiten analizar el rendimiento del modelo durante el entrenamiento.</p>
-<ul>
-<li>
-<p><strong>Precisión por época</strong>. Mide qué tan <strong>bien</strong> el modelo está clasificando las imágenes correctamente en cada época de entrenamiento. Un valor alto cercano a 1.0 (100%) indica que el modelo está haciendo predicciones correctas la mayoría de las veces.</p>
-</li>
-<li>
-<p><strong>Pérdida por época</strong>. Mide que tan <strong>mal</strong> lo está haciendo el modelo. Un valor bajo cercano a 0.0 indica que el modelo está cometiendo pocos errores en sus predicciones.</p>
-</li>
-</ul>
-<p>Estas gráficas son la herramienta perfecta para diagnosticar el <strong>sobreajuste (overfitting)</strong> y el <strong>subajuste (underfitting)</strong>.</p>
-<p><strong>Precisión por clase</strong></p>
-<ul>
-<li><strong>Matriz de confusión</strong>. Esta tabla es un diagnóstico detallado de los aciertos y errores del modelo <strong>para cada categoría</strong>. Es extremadamente útil para ver <strong>dónde se está equivocando</strong> el modelo.</li>
-</ul>
+<h4 id="precision-por-epoca">Precisión por época</h4>
+<p>Mide qué tan <strong>bien</strong> el modelo está clasificando las imágenes correctamente en cada época de entrenamiento. Un valor alto cercano a 1.0 (100%) indica que el modelo está haciendo predicciones correctas la mayoría de las veces.</p>
+<p><img alt="Precisión por época" class="center" src="./assets/precisionporepoca.png" width="60%" /></p>
+<p>En la gráfica de precisión por época, vemos que el modelo ha mejorado su precisión a medida que avanzaba el entrenamiento. Se observa cómo ambas líneas (azul y naranja) suben verticalmente en las primeras 2-3 épocas, lo que indica que el modelo aprende increíblemente rápido.</p>
+<p>La línea azul 'acc' representa el rendimiento del modelo con las imágenes de entrenamiento, mientras que la línea naranja 'test acc' mide el rendimiento con las imágenes de prueba (no vistas durante el entrenamiento).</p>
+<p>Se puede concluir que hay un ligero sobreajuste (overfitting), lo cual es completamente normal. El problema vendría si existiera una gran brecha entre ambas líneas, lo que indicaría que el modelo está memorizando los datos de entrenamiento en lugar de aprender patrones generales.</p>
+<p>Otra elemento a destacar es que el entrenamiento es tan eficiente que después de la época 10, el modelo ya no mejora más. Las 40 épocas restantes no aportan un aprendizaje adicional significativo. Lo que significa que el modelo ha alcanzado su máximo rendimiento con los datos proporcionados.</p>
+<h4 id="precision-por-clase">Precisión por clase</h4>
+<p>Muestra qué tan bien el modelo está clasificando las imágenes en cada categoría específica (Profesional y No Profesional) durante el entrenamiento.</p>
+<p><img alt="Precisión por clase" class="center" src="assets/precisionporclase.png" width="40%" /></p>
+<p>El modelo reconoce muy bien las imágenes de la clase "<em>NoProfesional</em>". No ha cometido ningún error en esa categoría, lo que sugiere que el modelo ha aprendido muy bien a reconocer las características de esa clase.</p>
+<p>En la clase "<em>Profesional</em>" hay un pequeño problema. De las 5 imágenes de prueba, el modelo solo ha acertado 4. 1 imagen ha sido clasificada como "NoProfesional".</p>
+<h4 id="matriz-de-confusion">Matriz de confusión</h4>
+<p>Esta tabla es un diagnóstico detallado de los aciertos y errores del modelo <strong>para cada categoría</strong>. Es extremadamente útil para ver <strong>dónde se está equivocando</strong> el modelo.</p>
 <p>Las <strong>filas</strong> representan la clase real de las imágenes. Las <strong>columnas</strong> representan la clase que el modelo ha predicho.</p>
 <p>En un modelo perfecto, todos los números estarían en la diagonal principal (de arriba a la izquierda a abajo a la derecha), lo que significa que el 100% de las imágenes de la clase "Profesional" fueron predichas como "Profesional".</p>
+<p><img alt="Matriz de confusión" class="center" src="assets/matrizconfusion.png" width="50%" /></p>
+<p>En esta gráfica se observa que se probaron 5 imágenes que eran "<em>Profesional</em>". El modelo predijo correctamente 4 de ellas (el 4 en la diagonal), pero 1 fue clasificada erróneamente como "<em>NoProfesional</em>" (el 1 fuera de la diagonal).</p>
+<p>De la categoría "<em>NoProfesional</em>", se probaron 7 imágenes que eran "<em>No Profesional</em>", y el modelo predijo correctamente las 7 (el 7 en la diagonal).</p>
 <h2 id="sesion-5-testeo-y-verificacion-del-sesgo">Sesión 5: Testeo y Verificación del Sesgo</h2>
 <h2 id="sesion-6-como-lo-arreglamos-el-papel-del-sw-libre-y-de-la-ia-etica">Sesión 6: ¿Cómo lo arreglamos? El papel del sw Libre y de la IA Ética</h2>
 <h2 id="sesion-7-y-8-manifiesto-etico-para-el-desarrollo-de-sw-inclusivo">Sesión 7 y 8: Manifiesto Ético para el Desarrollo de Sw. Inclusivo</h2>
