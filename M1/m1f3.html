@@ -565,6 +565,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sesion-78-debate-y-reflexion-etica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 7,8: Debate y Reflexión Ética
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recursos" class="md-nav__link">
     <span class="md-ellipsis">
       Recursos
@@ -776,6 +785,15 @@
   <a href="#sesion-56-testeo-y-verificacion-del-sesgo" class="md-nav__link">
     <span class="md-ellipsis">
       Sesión 5,6: Testeo y Verificación del Sesgo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-78-debate-y-reflexion-etica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 7,8: Debate y Reflexión Ética
     </span>
   </a>
   
@@ -1068,33 +1086,85 @@ Un portal de noticias utiliza una IA para personalizar la portada de cada usuari
 <li><a href="https://nappy.co/">Nappy</a>: Ofrece imágenes de personas negras y mestizas.</li>
 </ul>
 </div>
-<!--
-
-Sesión 7: ¿Cómo lo Arreglamos? El Papel del Software Libre.
-
-    Actividad (30 min): Se plantea cómo podrían "arreglar" su modelo (la respuesta es: con un dataset más diverso y representativo).
-
-    Conexión con Saberes (30 min): Se introduce el concepto de "Comunidades de desarrollo de software libre". Se debate:
-
-        ¿Cómo ayuda la transparencia (poder ver el código o incluso los datos de entrenamiento) a detectar sesgos?
-
-        ¿Cómo el tener equipos de desarrollo más diversos puede prevenir que se introduzcan estos sesgos desde el principio?
-
-        Se menciona que modelos como MobileNet (el que usa Teachable Machine por debajo) son a menudo de código abierto, lo que permite a la comunidad estudiarlos y mejorarlos.
-
-Sesión 8: Conclusiones y Manifiesto de IA Ética.
-
-    Actividad (60 min): Como proyecto final del sprint, la clase entera colabora para redactar un "Manifiesto para el Desarrollo de Software Inclusivo". Este documento recogerá los aprendizajes del sprint en forma de buenas prácticas.
-
-        Ej: "Nuestros datos de entrenamiento deben reflejar la diversidad de la sociedad".
-
-        Ej: "Debemos testear nuestros modelos con casos que desafíen nuestras asunciones".
-
-    Esta actividad final consolida el aprendizaje, fomenta el trabajo en equipo y genera un resultado tangible que demuestra la adquisición de la competencia CE5.
-## Sesión 6: ¿Cómo lo arreglamos? El papel del sw Libre y de la IA Ética
-
-## Sesión 7 y 8: Manifiesto Ético para el Desarrollo de Sw. Inclusivo
--->
+<h2 id="sesion-78-debate-y-reflexion-etica">Sesión 7,8: Debate y Reflexión Ética</h2>
+<p>Analiza las siguientes cuestiones relacionadas con los peligros de la IA. Identifica el riesgo y establece un principio para mitigarlo.</p>
+<div class="admonition question">
+<p class="admonition-title">AE105.1(CE5) - Combatir el sesgo y Promover la Equidad</p>
+<p>Como hemos visto los modelos de IA aprenden a partir de millones de datos que se recogen de diversas fuentes, los cuales son un registro de nuestro comportamiento y decisiones pasadas, (búsquedas en Google, "likes" en redes, compras en Amazon, sentencias judiciales...). Al entrenar una IA con estos datos, le estamos enseñando a replicar todos los prejuicios y estereotipos invisibles que ya existían en nuestra sociedad, pudiendo generar lo que se conoce como <strong>discriminación algorítmica</strong>.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=WCjdbu88z88">Sesgos de la IA</a></li>
+</ul>
+<p>Solución de ejemplo:</p>
+<p><strong>Riesgo identificado</strong>: La discriminación algorítmica. La IA puede perpetuar y amplificar los prejuicios sociales existentes.</p>
+<p><strong>Principio para mitigar el riesgo</strong>: Auditorías regulares de los modelos de IA para identificar y corregir sesgos, asegurando que los datos de entrenamiento sean diversos y representativos.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">AE105.2(CE5) - Transparencia</p>
+<p>Muchas empresas están tomando decisiones importantes basadas en modelos de IA, como la concesión de préstamos, la selección de candidatos para empleos o la evaluación de riesgos médicos. Sin embargo, estos modelos a menudo son cajas negras, lo que significa que <strong>sus procesos internos son opacos y difíciles de entender</strong>. Esto puede llevar a decisiones injustas o erróneas que afectan negativamente a las personas.</p>
+<ul>
+<li><a href="https://www.rtve.es/play/videos/telediario-1/peligro-inteligencia-artificial-sesgos/6831619/">RTVE - El peligro de una IA con sesgos</a></li>
+</ul>
+<p>¿Riesgo identificado? ¿Principio para mitigar el riesgo?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">AE105.3(CE5) - Respetar la Creación Humana y los Derechos de Autor</p>
+<p>La mayoría de los <strong>modelos generativos de IA</strong> se entrenan con cantidades masivas de datos públicos extraídos de Internet. En concreto:</p>
+<ul>
+<li>Datos abiertos: Portales gubernamentales, bibliotecas digitales, bases de datos científicas y repositorios públicos, cuya información es posible usar legalmente para entrenamiento.</li>
+<li>Internet en general: Páginas web, blogs, wikis, foros, artículos periodísticos, y plataformas de preguntas y respuestas, recolectados mediante técnicas de scraping o acceso a bases masivas tipo <a href="https://commoncrawl.org/">Common Crawl</a>.</li>
+<li>Libros y publicaciones digitalizadas, sobre todo aquellas que están en dominio público o para las que se adquiere una licencia de uso.</li>
+<li>Redes sociales y comunidades online, con datos públicos o anonimizados extraídos de plataformas como Twitter, Reddit, Stack Exchange, etc.</li>
+<li>Acuerdos específicos con editoriales y medios de comunicación para la integración de contenido noticioso o cultural directamente protegido por derechos de autor</li>
+</ul>
+<p>Por otro lado, muchos de estos <strong>datos no tienen permisos para su uso en entrenamiento de IA</strong>, lo que ha generado controversias legales y éticas sobre la propiedad intelectual y el consentimiento, lo que ha generado<strong>demandas judiciales contra empresas de IA</strong>. Las más conocidas son:</p>
+<ul>
+<li>
+<p><a href="https://www.gettyimages.com/creative-images/legal/stability-ai">Getty Images vs Stability AI</a> La IA de imágenes fue entrenada con millones de fotos de Getty Images con marca de agua. La IA aprendió a replicar su estilo e incluso, a veces, a reproducir una versión distorsionada de la propia marca de agua.</p>
+</li>
+<li>
+<p><a href="https://www.nytimes.com/es/2023/12/27/espanol/new-york-times-demanda-openai-microsoft.html">The New York Times vs. OpenAI (ChatGPT) y Microsoft</a>: El periódico alega que OpenAI copió "palabra por palabra" millones de sus artículos protegidos por copyright para entrenar a ChatGPT, creando un producto que ahora compite directamente con el periódico.</p>
+</li>
+</ul>
+<p>Los creadores alegan que es un robo a escala masiva. Argumentan que sus obras, protegidas por derechos de autor, fueron copiadas sin permiso y sin compensación para crear un producto comercial que les quita el trabajo.</p>
+<p>Las Empresas de IA alegan "Uso Justo" (Fair Use, un concepto legal de EE.UU.). Argumentan que el modelo "aprende" de los datos como lo haría un humano, y que el resultado es una obra "transformativa" y nueva, no una copia.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">AE105.4(CE5) - Privacidad como un Derecho Humano</p>
+<p>Todos tenemos la sensación de que el móvil nos escucha, y aunque muchos estudios de ciberseguridad han demostrado que no es así, lo que sí es cierto es que las empresas recogen una gran cantidad de datos sobre nosotros para luego venderlos o usarlos para influir en nuestras decisiones de compra o incluso en nuestras opiniones políticas.</p>
+<p>No necesitan escucharnos, tienen tanta información sobre nosotros que pueden predecir lo que queremos o de lo que vas a hablar. Para ello hacen uso de Big Data e Inteligencia Artificial. El Big Data recopila y organiza grandes volúmenes de datos, mientras que la IA analiza esos datos para encontrar patrones y hacer predicciones.</p>
+<ol>
+<li>
+<p>Tu Actividad Real (Big Data). Tienen datos sobre:</p>
+<ul>
+<li>Historial de búsquedas en Google.</li>
+<li>Páginas web visitadas.</li>
+<li>Compras online.</li>
+<li>Ubicación GPS.</li>
+<li>Interacciones en redes sociales.</li>
+</ul>
+</li>
+<li>
+<p>Correlación de Datos. Los modelos de IA analizan los datos anteriores para encontrar patrones y correlaciones. Por ejemplo, pueden descubrir que las personas que buscan "restaurantes italianos" a menudo también buscan "películas románticas".</p>
+</li>
+<li>Segmentación Predictiva. Es la consecuencia directa de la correlación de datos. Agrupan a personas según su probabilidad de <strong>comportamiento futuro</strong>.</li>
+</ol>
+<p>Las empresas se justifican diciendo que es para mejorar la experiencia del usuario, pero en realidad es para maximizar sus beneficios a costa de nuestra privacidad y autonomía. Lo peor de todo, es que muchas veces a pesar de ser conscientes de ellos, seguimos usando estos servicios sin cuestionarlos.</p>
+<p>¿Riesgo identificado? ¿Principio?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">AE105.5(CE5) - Manipulación social</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Q91nvbJSmS4&amp;t=28s">Manipulación política - caso Cambridge Analytica</a></li>
+<li><a href="https://www.youtube.com/watch?v=-ZrnCmmNNp4">DeepFakes y desinformación</a></li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">AE105.6(CE5) - Control y Vigilancia Masiva</p>
+<ul>
+<li><a href="https://youtu.be/pZu9N-3yn_M?si=lAIwwuc26phYMlc9">Reconocimiento facial y vigilancia masiva - Sistemas de puntuación social en China</a></li>
+<li><a href="https://www.youtube.com/watch?v=_Hy9eIjkmOM">Identificación biométrica a gran escala en Xinjiang</a></li>
+</ul>
+</div>
 <h2 id="recursos">Recursos</h2>
 <ul>
 <li><a href="https://www.ibm.com/es-es/think/topics/ai-bias">Sesgo IA - IBM</a></li>
