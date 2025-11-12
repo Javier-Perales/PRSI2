@@ -1,0 +1,142 @@
+::Pregunta2:: ¿Qué es un sesgo en la inteligencia artificial según la ISO? {
+= El grado en que un valor de referencia se desvía de la verdad
+~%-100%Un error aleatorio en los datos de entrenamiento
+~%-100%Una técnica para mejorar la precisión del modelo
+~%-100%Una forma de entrenar modelos con menos datos
+}
+
+::Pregunta3:: ¿Qué tipo de sesgo es aquel que no afecta negativamente ni positivamente a ningún grupo? {
+= Sesgo neutro
+~%-100%Sesgo positivo
+~%-100%Sesgo discriminatorio
+~%-100%Sesgo excluyente
+}
+
+
+::Pregunta:: ¿Qué es el sobreajuste (overfitting) en un modelo de IA?
+{
+~%-100%Cuando el modelo no puede clasificar correctamente los datos de prueba
+~%-100%Cuando el modelo se entrena con datos sesgados
+=Cuando el modelo aprende demasiado bien los datos de entrenamiento, incluyendo ruido y anomalías
+~%-100%Cuando el modelo no aprende lo suficiente de los datos
+}
+
+::Pregunta:: ¿Qué tipo de sesgo se produce cuando una IA favorece a candidatos que usan la palabra 'organigrama' en su currículum?
+{
+~%-100%Sesgo discriminatorio
+~%-100%Sesgo excluyente
+=Sesgo neutro
+~%-100%Sesgo positivo
+}
+
+::Pregunta:: ¿Qué organización define el sesgo en IA como 'el grado en que un valor de referencia se desvía de la verdad'?
+{
+~%-100%ONU
+~%-100%NIST
+~%-100%IEEE
+=ISO (Organización Internacional de Normalización)
+}
+
+::Pregunta:: ¿Qué representa la línea azul 'acc' en la gráfica de precisión por época en Teachable Machine?
+{
+=El rendimiento del modelo con las imágenes de entrenamiento
+~%-100%La tasa de error del modelo
+~%-100%El rendimiento del modelo con las imágenes de prueba
+~%-100%La cantidad de datos procesados por época
+}
+
+::Pregunta:: ¿Qué es una época (epoch) en el entrenamiento de un modelo de IA?
+{
+~%-100%Una prueba del modelo con datos nuevos
+=Una pasada completa por todo el conjunto de datos de entrenamiento
+~%-100%Una actualización de los parámetros del modelo
+~%-100%Una iteración sobre un lote de datos
+}
+
+::Pregunta:: ¿Qué tipo de sesgo se produce cuando una IA penaliza currículums con permiso de maternidad?
+{
+~%-100%Sesgo positivo
+~%-100%Sesgo aleatorio
+~%-100%Sesgo neutro
+=Sesgo discriminatorio y excluyente
+}
+
+::Pregunta:: ¿Qué es la tasa de aprendizaje (learning rate) en el entrenamiento de un modelo?
+{
+=La magnitud de los ajustes que el modelo hace en cada paso
+~%-100%La cantidad de datos procesados por segundo
+~%-100%La precisión del modelo en los datos de prueba
+~%-100%El número de épocas por lote
+}
+
+::Pregunta:: ¿Qué representa una matriz de confusión en el entrenamiento de un modelo?
+{
+~%-100%Un conjunto de datos de prueba
+~%-100%Una gráfica de precisión por época
+~%-100%Una lista de hiperparámetros
+=Una tabla que muestra los aciertos y errores del modelo por categoría
+}
+
+::Pregunta:: ¿Qué tipo de sesgo se considera positivo en un sistema de IA?
+{
+~%-100%Cuando el sesgo discrimina a un grupo social
+=Cuando el sesgo ofrece resultados beneficiosos, como seleccionar candidatos más cualificados
+~%-100%Cuando el sesgo se basa en errores de programación
+~%-100%Cuando el sesgo es aleatorio
+}
+
+::Pregunta:: ¿Qué significa equidad en el contexto de la IA?
+{
+=Ausencia de trato diferencial injustificado o prejuicio hacia cualquier individuo o grupo
+~%-100%Evitar el uso de datos personales en el entrenamiento
+~%-100%Aplicar el mismo algoritmo a todos los usuarios
+~%-100%Tratar a todos por igual sin excepciones
+}
+
+::Pregunta:: ¿Qué es un lote (batch) en el entrenamiento de un modelo?
+{
+~%-100%Un conjunto de hiperparámetros
+=Una porción del conjunto de datos utilizada en una iteración de entrenamiento
+~%-100%Una métrica de evaluación del modelo
+~%-100%Una categoría de imágenes
+}
+
+::Pregunta:: ¿Qué tipo de sesgo se produce cuando una IA muestra anuncios con tasas más altas a personas de bajos ingresos?
+{
+~%-100%Sesgo positivo
+~%-100%Sesgo neutro
+=Sesgo discriminatorio pero no excluyente
+~%-100%Sesgo aleatorio
+}
+
+::Pregunta:: ¿Qué es la discriminación algorítmica?
+{
+~%-100%Cuando una IA comete errores aleatorios
+~%-100%Cuando una IA se entrena con pocos datos
+~%-100%Cuando una IA no puede clasificar bien los datos
+=Cuando una IA perpetúa prejuicios y estereotipos sociales existentes
+}
+
+::Pregunta:: ¿Qué representa la línea naranja 'test acc' en la gráfica de precisión por época?
+{
+~%-100%La cantidad de datos procesados por lote
+=El rendimiento del modelo con las imágenes de prueba
+~%-100%El rendimiento del modelo con los datos de entrenamiento
+~%-100%La tasa de error del modelo
+}
+
+::Pregunta:: ¿Qué ocurre si la tasa de aprendizaje es demasiado alta?
+{
+~%-100%El modelo se vuelve más preciso
+~%-100%El modelo aprende muy lentamente
+=El modelo puede no converger bien y saltarse el óptimo
+~%-100%El modelo se entrena con más datos
+}
+
+::Pregunta:: ¿Qué es un sesgo según el NIST?
+{
+~%-100%Una desviación sin consecuencias
+=Un efecto que priva a un resultado estadístico de representatividad al distorsionarlo
+~%-100%Una técnica para mejorar la precisión del modelo
+~%-100%Un error aleatorio que afecta a los datos
+}
