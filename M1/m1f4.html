@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Apuntes y materiales para la asignatura PRSI II.">
+        <meta name="description" content="En esta actividad, el alumnado se enfrentará al reto de construir una aplicación real de Machine Learning en Python para resolver un problema de clasificación de imágenes "Perro/Gato". Para ello deberá utilizar la librería TensorFlow/Keras. El proyecto abarcará el ciclo de vida completo del sw. de IA; recolección y preparación del datasheet, definición de la arquitectura del modelo, entrenamiento y evaluación crítica de su rendimiento.">
       
       
         <meta name="author" content="Javier Perales">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Sprint 4: Del modelo a la aplicación - PRSI II - Programación, Redes y Sistemas Informáticos II</title>
+        <title>Sprint4. Del modelo a la aplicación - PRSI II - Programación, Redes y Sistemas Informáticos II</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sprint 4: Del modelo a la aplicación
+              Sprint4. Del modelo a la aplicación
             
           </span>
         </div>
@@ -495,10 +495,6 @@
 
   <h1>Sprint 4: Del modelo a la aplicación</h1>
 
-<p>tin---
-title: Sprint4. Del modelo a la aplicación
-description: En esta actividad, el alumnado se enfrentará al reto de construir una aplicación real de Machine Learning en Python para resolver un problema de clasificación de imágenes "Perro/Gato". Para ello deberá utilizar la librería TensorFlow/Keras. El proyecto abarcará el ciclo de vida completo del sw. de IA; recolección y preparación del datasheet, definición de la arquitectura del modelo, entrenamiento y evaluación crítica de su rendimiento.</p>
-<hr />
 <p>En el sprint anterior, hemos aprendido a entrena modelos usando <em>Teachable Machine</em>. Hemos ajustado sus hiperparámetros y evaluado su rendimiento usando las gráficas generadas automáticamente por la herramienta.</p>
 <p>En este sprint vamos a dar un paso más allá y vamos a construir una aplicación real de Machine Learning en Python para resolver un problema de clasificación de imágenes "Perro/Gato".</p>
 <p>En esta primera aproximación <strong>low-code</strong>, usaremos el modelo entrenado en Teachable Machine y construir la aplicación sobre <em>Google Colab</em>. Nos centraremos en la <strong>inferencia</strong> haciendo uso de TensorFlow/Keras para cargar el modelo y hacer predicciones.</p>
@@ -528,7 +524,7 @@ description: En esta actividad, el alumnado se enfrentará al reto de construir 
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">keras</span>
 
 <span class="c1">#Carga el modelo</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s2">&quot;keras_model.h5&quot;</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">mi_modelo</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s2">&quot;keras_model.h5&quot;</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Carga las etiquetas de las clases</span>
 <span class="n">nombre_clases</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;labels.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
@@ -563,60 +559,67 @@ description: En esta actividad, el alumnado se enfrentará al reto de construir 
 <li><strong>Cambiar tamaño de la imagen para que tenga al menos 224x224 píxeles y luego se recorta desde el centro.</strong></li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">ImageOps</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="o">.</span><span class="n">LANCZOS</span><span class="p">)</span>
+<span class="n">imagen</span> <span class="o">=</span> <span class="n">ImageOps</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">imagen</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="o">.</span><span class="n">LANCZOS</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li><strong>Normalizar los valores de los píxeles (ej. de [0, 255] a [-1, 1]).</strong> Para ello deberemos utilizar la librería <em>Numpy</em> (<code>ìmport numpy as np</code>)</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># Convertimos la imagen en un array NumPy.</span>
-<span class="n">imagen_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Convertimos la imagen en un array NumPy.</span>
+<span class="n">imagen_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">imagen</span><span class="p">)</span>
 </code></pre></div>
-<p>De esta forma, cada píxel de la imagen pasa a representarse como un <strong>número entero</strong> (Los valores estarán entre 0 y 255) dentro de una matriz tridimensional. Recueda que una imagen <em>RGB</em>, cada pixel está codificado por tres valores (<em>Red</em>, <em>Green</em> y <em>Blue</em>). Por tanto, si ejecutamos <code>image_array.shape</code>, saldrá (224,224,3)</p>
+De esta forma, cada píxel de la imagen pasa a representarse como un <strong>número entero</strong> (Los valores estarán entre 0 y 255) dentro de una matriz tridimensional. Recueda que una imagen <em>RGB</em>, cada pixel está codificado por tres valores (<em>Red</em>, <em>Green</em> y <em>Blue</em>). Por tanto, si ejecutamos <code>image_array.shape</code>, saldrá (224,224,3)</p>
+<p>Podríamos obtener las dimensiones del array usando: 'print(imagen_array.shape)', el resultado sería (224, 224, 3). Esto indica que tenemos una matriz tridimensional de 224 filas, 224 columnas y en cada celda hay 3 valores (canales RGB).</p>
 <p>Para convertir los números enteros de la matriz a un rango entre -1 y +1 que es lo que espera el modelo preentrenado de <em>Teachable Machine</em>, dividiremos el valor de cada celda entre <code>127.5</code>. Lo que nos generará un valor real entre 0 y 2. </p>
 <p>Por último. para desplazar el valor entre -1 y +1, le restaremos -1 a cada valor de la celda.</p>
 <p>Debemos tener en cuenta, que <code>image_array</code> inicial contiene valores enteros, por lo que debemos como primer paso antes de ejecutar cualquier operación aplicarle un <em>casting</em> de tipo y convertirlos en numeros reales.</p>
 <div class="highlight"><pre><span></span><code><span class="n">normalizada_imagen_array</span> <span class="o">=</span> <span class="p">(</span><span class="n">imagen_array</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">/</span> <span class="mf">127.5</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 </code></pre></div>
 </div>
-<!--!!! note "Fase 4: Predicción"
+<div class="admonition note">
+<p class="admonition-title">Fase 4: Predicción</p>
+<p>Normalmente, las IAs no procesan imágenes "una a una", sino en lotes. Aunque solo tengamos una foto, debemos meterla en un array de 1 hueco. Ese hueco, a su vez, debe contener la imagen pre-procesada.</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Crear un array para un lote de 1 imagen. ndarray = N-Dimensional Array</span>
+<span class="n">lote_imagenes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</code></pre></div>
+Ahora, metemos la imagen pre-procesada en el lote:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lote_imagenes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">normalizada_imagen_array</span>
+</code></pre></div>
+<p>Para clasificar la imagen preprocesada, usamos el método <code>predict()</code> del modelo cargado en la <em>Fase 1</em> ('mi_modelo').</p>
+<p><code>predict</code> está diseñado para procesar conjuntos de datos a la vez. Por eso, necesita recibir una lista (un lote), aunque esa lista solo tenga un elemento (la foto en la posición 0).</p>
+<div class="highlight"><pre><span></span><code><span class="n">resultados</span><span class="o">=</span> <span class="n">mi_modelo</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">lote_imagenes</span><span class="p">)</span>
+</code></pre></div>
+<p>La función <code>predict</code> devuelve por cada elemento que contiene 'lote_imagenes' un array de números que representan la probabilidad de que la imagen pertenezca a cada clase. En nuestro caso, al tener dos clases y solo una imagen resultados tendrá la forma [[0.98, 0.02]].</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Fase 5: Post-procesamiento</p>
+<p>En esta fase se busca el índice del número más alto en el array devuelto por el modelo (en [0.98, 0.02] sería el índice 0). Se usa el índice para buscar en la lista de etiquetas (labels.txt) y se muestra la etiqueta correspondiente (ej. "Perro").</p>
+<p>Para ello, usaremos la función <code>argmax()</code> de Numpy. Esta función devuelve el índice que ocupa el valor máximo en un array.</p>
+<div class="highlight"><pre><span></span><code><span class="n">indice</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">resultados</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div>
+<p>Con este índice, podemos obtener la etiqueta correspondiente de la lista de etiquetas cargada en la Fase 1.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">etiqueta</span> <span class="o">=</span> <span class="n">nombre_clases</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La imagen es de clase: &quot;</span><span class="p">,</span> <span class="n">etiqueta</span><span class="p">)</span>
+</code></pre></div>
+y la probabilidad asociada:</p>
+<div class="highlight"><pre><span></span><code><span class="n">probabilidad</span> <span class="o">=</span> <span class="n">resultados</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">indice</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Con una probabilidad de: &quot;</span><span class="p">,</span> <span class="n">probabilidad</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">A106 Exportación de un modelo desde Teachable Machine</p>
+<p>Siguiendo los pasos anteriores, crea un cuaderno de <em>Google Colab</em> que implemente las fases de inferencia para el modelo entrenado en <em>Teachable Machine</em>. <strong>Recuerda seleccionar el entorno de ejecución con GPU</strong>.</p>
+<p>Indica en Google Colab todos los pasos realizados y comenta el código para explicar cada fase.</p>
+<p>Para cargar el modelo de la fase 1, es recomendable subir el modelo y las imágenes de testeo al Drive descomprimido, y montar el drive en Google Colab. Seleccionar el archivo y copiar la ruta desde el menú contextual.</p>
+</div>
 
 
 
---- 
-    Fase 4: Predicción
-
-        Se usa el método .predict().
-
-        El modelo recibe la imagen pre-procesada.
-
-        El modelo devuelve un array de números (ej. [0.98, 0.02]).
-
-    Fase 5: Post-procesamiento
-
-        El código "humano" interpreta ese array.
-
-        Se busca el índice del número más alto (en [0.98, 0.02] sería el índice 0).
-
-        Se usa ese índice para buscar en la lista de etiquetas (labels.txt).
-
-        Resultado: Se muestra la etiqueta correspondiente (ej. "Perro").
-
-
-!!! question "A106. Exportación de un modelo desde Teachable Machine"
-
-    Siguiendo los pasos anteriores, crea un cuaderno de *Google Colab* que implemente las fases de inferencia para el modelo entrenado en *Teachable Machine*. **Recuerda seleccionar el entorno de ejecución con GPU**.
-
-    Indica en Google Colab todos los pasos realizados y comenta el código para explicar cada fase.
-
-    Para cargar el modelo de la fase 1, es recomendable subirlo el modelo al drive descomprimido, y montar el drive en Google Colab. Seleccionar el archivo y copiar la ruta desde el menú contextual.
-
--->
 
 
 
 
-
-
+  
+  
 
 
 
