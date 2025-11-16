@@ -650,30 +650,30 @@ y la probabilidad asociada:</p>
 <span class="n">predicciones_incorrectas</span> <span class="o">=</span> <span class="p">[]</span>
 </code></pre></div>
 4. Ahora deberíamos recorrer el array <code>lista_archivos</code> y para cada imagen, ejecutar las fases de inferencia vistas en la sección anterior. </p>
-<p>```python
-for nombre_archivo in lista_archivos:
-    if cat in nombre_archivo:
-        etiqueta_esperada = "gato"
-    elif dog in nombre_archivo:
-        etiqueta_esperada = "perro"
-    else:
-        continue  # Saltar archivos que no sean de gatos o perros</p>
-<pre><code>total_predicciones += 1
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">nombre_archivo</span> <span class="ow">in</span> <span class="n">lista_archivos</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">nombre_archivo</span><span class="p">:</span>
+        <span class="n">etiqueta_esperada</span> <span class="o">=</span> <span class="s2">&quot;gato&quot;</span>
+    <span class="k">elif</span> <span class="n">dog</span> <span class="ow">in</span> <span class="n">nombre_archivo</span><span class="p">:</span>
+        <span class="n">etiqueta_esperada</span> <span class="o">=</span> <span class="s2">&quot;perro&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">continue</span>  <span class="c1"># Saltar archivos que no sean de gatos o perros</span>
 
-ruta_imagen = os.path.join("&lt;TEST_CARPETA_PATH&gt;", nombre_archivo)
+    <span class="n">total_predicciones</span> <span class="o">+=</span> <span class="mi">1</span>
 
-# Aquí obtendriamos la predicción del modelo llamando a una función que 
-# implemente las fases de inferencia
-etiqueta_predicha, probabilidad = predecir_imagen(ruta_imagen)
+    <span class="n">ruta_imagen</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;&lt;TEST_CARPETA_PATH&gt;&quot;</span><span class="p">,</span> <span class="n">nombre_archivo</span><span class="p">)</span>
 
-if etiqueta_predicha == etiqueta_esperada:
-    aciertos += 1
-    media_probabilidad_aciertos += probabilidad
-else:
-    info_error= {"archivo": nombre_archivo, "prediccion": etiqueta_predicha, 
-         "probabilidad": probabilidad}
-    predicciones_incorrectas.append(info_error)
-</code></pre>
+    <span class="c1"># Aquí obtendriamos la predicción del modelo llamando a una función que </span>
+    <span class="c1"># implemente las fases de inferencia</span>
+    <span class="n">etiqueta_predicha</span><span class="p">,</span> <span class="n">probabilidad</span> <span class="o">=</span> <span class="n">predecir_imagen</span><span class="p">(</span><span class="n">ruta_imagen</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">etiqueta_predicha</span> <span class="o">==</span> <span class="n">etiqueta_esperada</span><span class="p">:</span>
+        <span class="n">aciertos</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">media_probabilidad_aciertos</span> <span class="o">+=</span> <span class="n">probabilidad</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">info_error</span><span class="o">=</span> <span class="p">{</span><span class="s2">&quot;archivo&quot;</span><span class="p">:</span> <span class="n">nombre_archivo</span><span class="p">,</span> <span class="s2">&quot;prediccion&quot;</span><span class="p">:</span> <span class="n">etiqueta_predicha</span><span class="p">,</span> 
+             <span class="s2">&quot;probabilidad&quot;</span><span class="p">:</span> <span class="n">probabilidad</span><span class="p">}</span>
+        <span class="n">predicciones_incorrectas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">info_error</span><span class="p">)</span>
+</code></pre></div>
 </div>
 
 
