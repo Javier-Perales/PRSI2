@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sesion-1-fases-de-inferencia" class="md-skip">
+        <a href="#sesion-12-fases-de-inferencia" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -420,9 +420,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sesion-1-fases-de-inferencia" class="md-nav__link">
+  <a href="#sesion-12-fases-de-inferencia" class="md-nav__link">
     <span class="md-ellipsis">
-      Sesión 1. Fases de inferencia
+      Sesión 1,2. Fases de inferencia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-34-evaluacion-en-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 3,4: Evaluación en lote
     </span>
   </a>
   
@@ -469,9 +478,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sesion-1-fases-de-inferencia" class="md-nav__link">
+  <a href="#sesion-12-fases-de-inferencia" class="md-nav__link">
     <span class="md-ellipsis">
-      Sesión 1. Fases de inferencia
+      Sesión 1,2. Fases de inferencia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-34-evaluacion-en-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 3,4: Evaluación en lote
     </span>
   </a>
   
@@ -498,7 +516,7 @@
 <p>En el sprint anterior, hemos aprendido a entrena modelos usando <em>Teachable Machine</em>. Hemos ajustado sus hiperparámetros y evaluado su rendimiento usando las gráficas generadas automáticamente por la herramienta.</p>
 <p>En este sprint vamos a dar un paso más allá y vamos a construir una aplicación real de Machine Learning en Python para resolver un problema de clasificación de imágenes "Perro/Gato".</p>
 <p>En esta primera aproximación <strong>low-code</strong>, usaremos el modelo entrenado en Teachable Machine y construir la aplicación sobre <em>Google Colab</em>. Nos centraremos en la <strong>inferencia</strong> haciendo uso de TensorFlow/Keras para cargar el modelo y hacer predicciones.</p>
-<h2 id="sesion-1-fases-de-inferencia">Sesión 1. Fases de inferencia</h2>
+<h2 id="sesion-12-fases-de-inferencia">Sesión 1,2. Fases de inferencia</h2>
 <p>En esta sección aprederemos las fases de inferencia en un modelo de Machine Learning y cómo implementarlas en Python usando TensorFlow/Keras.</p>
 <div class="admonition note">
 <p class="admonition-title">Fase 1. Cargar el modelo</p>
@@ -606,10 +624,56 @@ y la probabilidad asociada:</p>
 </code></pre></div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">A106 Exportación de un modelo desde Teachable Machine</p>
+<p class="admonition-title">A106.1 Exportación de un modelo desde Teachable Machine</p>
 <p>Siguiendo los pasos anteriores, crea un cuaderno de <em>Google Colab</em> que implemente las fases de inferencia para el modelo entrenado en <em>Teachable Machine</em>. <strong>Recuerda seleccionar el entorno de ejecución con GPU</strong>.</p>
 <p>Indica en Google Colab todos los pasos realizados y comenta el código para explicar cada fase.</p>
 <p>Para cargar el modelo de la fase 1, es recomendable subir el modelo y las imágenes de testeo al Drive descomprimido, y montar el drive en Google Colab. Seleccionar el archivo y copiar la ruta desde el menú contextual.</p>
+</div>
+<h2 id="sesion-34-evaluacion-en-lote">Sesión 3,4: Evaluación en lote</h2>
+<p>En esta sección, evaluaremos el rendimiento del modelo en un conjunto de datos de prueba. El objetivo es automatizar la inferencia para todas las imagenes que se encuentren en una carpeta y generar como salida un informe con las predicciones realizadas. </p>
+<div class="admonition note">
+<p class="admonition-title">Preparación del Lote y refactorizar el codigo (1ª parte)</p>
+<ol>
+<li>En Google Drive, debemos tener una carpeta <code>test</code> que contiene las imágenes de prueba.</li>
+<li>Vamos a crear una variable que contenga un array con el nombre de cada imagen de prueba. Para ello, usaremos la librería <code>os</code> de Python.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">lista_archivos</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;&lt;TEST_CARPETA_PATH&gt;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Si imprimimos <code>lista_archivos</code>, veremos que contiene el nombre de cada imagen en la carpeta de prueba <code>print(lista_archivos)</code>.</p>
+<ol>
+<li>Vamos a inicializar contadores para llevar la cuenta de aciertos y errores.</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><span class="n">total_predicciones</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">aciertos</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">media_probabilidad_aciertos</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="c1"># predicciones incorrectas contendrá una lista con los nombres de las imágenes mal clasificadas</span>
+<span class="n">predicciones_incorrectas</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div>
+4. Ahora deberíamos recorrer el array <code>lista_archivos</code> y para cada imagen, ejecutar las fases de inferencia vistas en la sección anterior. </p>
+<p>```python
+for nombre_archivo in lista_archivos:
+    if cat in nombre_archivo:
+        etiqueta_esperada = "gato"
+    elif dog in nombre_archivo:
+        etiqueta_esperada = "perro"
+    else:
+        continue  # Saltar archivos que no sean de gatos o perros</p>
+<pre><code>total_predicciones += 1
+
+ruta_imagen = os.path.join("&lt;TEST_CARPETA_PATH&gt;", nombre_archivo)
+
+# Aquí obtendriamos la predicción del modelo llamando a una función que 
+# implemente las fases de inferencia
+etiqueta_predicha, probabilidad = predecir_imagen(ruta_imagen)
+
+if etiqueta_predicha == etiqueta_esperada:
+    aciertos += 1
+    media_probabilidad_aciertos += probabilidad
+else:
+    info_error= {"archivo": nombre_archivo, "prediccion": etiqueta_predicha, 
+         "probabilidad": probabilidad}
+    predicciones_incorrectas.append(info_error)
+</code></pre>
 </div>
 
 
