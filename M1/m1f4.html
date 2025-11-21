@@ -429,11 +429,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sesion-34-evaluacion-en-lote" class="md-nav__link">
+  <a href="#sesion-3456-evaluacion-en-lote" class="md-nav__link">
     <span class="md-ellipsis">
-      Sesión 3,4: Evaluación en lote
+      Sesión 3,4,5,6: Evaluación en lote
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-78-publicacion-de-resultados-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 7,8: Publicación de resultados (Github)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sesión 7,8: Publicación de resultados (Github)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-repositorio-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Repositorio (Repo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-confirmacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit (Confirmación)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rama-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rama (Branch)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-google-colab-a-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      De Google Colab a GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -487,11 +538,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sesion-34-evaluacion-en-lote" class="md-nav__link">
+  <a href="#sesion-3456-evaluacion-en-lote" class="md-nav__link">
     <span class="md-ellipsis">
-      Sesión 3,4: Evaluación en lote
+      Sesión 3,4,5,6: Evaluación en lote
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-78-publicacion-de-resultados-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 7,8: Publicación de resultados (Github)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sesión 7,8: Publicación de resultados (Github)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-repositorio-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Repositorio (Repo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-confirmacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit (Confirmación)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rama-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rama (Branch)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-google-colab-a-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      De Google Colab a GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -629,10 +731,10 @@ y la probabilidad asociada:</p>
 <p>Indica en Google Colab todos los pasos realizados y comenta el código para explicar cada fase.</p>
 <p>Para cargar el modelo de la fase 1, es recomendable subir el modelo y las imágenes de testeo al Drive descomprimido, y montar el drive en Google Colab. Seleccionar el archivo y copiar la ruta desde el menú contextual.</p>
 </div>
-<h2 id="sesion-34-evaluacion-en-lote">Sesión 3,4: Evaluación en lote</h2>
+<h2 id="sesion-3456-evaluacion-en-lote">Sesión 3,4,5,6: Evaluación en lote</h2>
 <p>En esta sección, evaluaremos el rendimiento del modelo en un conjunto de datos de prueba. El objetivo es automatizar la inferencia para todas las imagenes que se encuentren en una carpeta y generar como salida un informe con las predicciones realizadas. </p>
-<div class="admonition note">
-<p class="admonition-title">Preparación del Lote y refactorizar el codigo (1ª parte)</p>
+<div class="admonition question">
+<p class="admonition-title">A106.2 Preparación del Lote y refactorizar el codigo (1ª parte)</p>
 <ol>
 <li>En Google Drive, debemos tener una carpeta <code>test</code> que contiene las imágenes de prueba.</li>
 <li>Vamos a crear una variable que contenga un array con el nombre de cada imagen de prueba. Para ello, usaremos la librería <code>os</code> de Python.</li>
@@ -674,6 +776,93 @@ y la probabilidad asociada:</p>
              <span class="s2">&quot;probabilidad&quot;</span><span class="p">:</span> <span class="n">probabilidad</span><span class="p">}</span>
         <span class="n">predicciones_incorrectas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">info_error</span><span class="p">)</span>
 </code></pre></div>
+<ol>
+<li>Deberás desarrollar la función <code>predecir_imagen(ruta_imagen)</code> que implemente las fases de inferencia vistas en la sección anterior. Esta función debe recibir la ruta de una imagen, procesarla y devolver la etiqueta predicha y la probabilidad asociada.</li>
+</ol>
+</div>
+<h2 id="sesion-78-publicacion-de-resultados-github">Sesión 7,8: Publicación de resultados (<em>Github</em>)</h2>
+<p>Finalmente, vamos a calcular las métricas de rendimiento del modelo y generar un informe con los resultados obtenidos. Para ello, usaremos los contadores inicializados en la sección anterior y generaremos un informe que publicaremos en un repositorio de GitHub, el cual nos servirá como portafolio de proyectos.</p>
+<div class="admonition question">
+<p class="admonition-title">A106.3 - Cálculo de métricas y generación del informe</p>
+<ol>
+<li>Calculamos la precisión del modelo y la probabilidad media de aciertos.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">precision</span> <span class="o">=</span> <span class="n">aciertos</span> <span class="o">/</span> <span class="n">total_predicciones</span> <span class="k">if</span> <span class="n">total_predicciones</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+<span class="n">media_probabilidad_aciertos</span> <span class="o">/=</span> <span class="n">aciertos</span> <span class="k">if</span> <span class="n">aciertos</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">1</span>
+</code></pre></div>
+<ol>
+<li>Generamos el informe con los resultados obtenidos.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">informe</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Informe de Evaluación del Modelo</span>
+
+<span class="s2">Total de predicciones: </span><span class="si">{</span><span class="n">total_predicciones</span><span class="si">}</span>
+<span class="s2">Aciertos: </span><span class="si">{</span><span class="n">aciertos</span><span class="si">}</span>
+<span class="s2">Precisión: </span><span class="si">{</span><span class="n">precision</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span>
+<span class="s2">Probabilidad media de aciertos: </span><span class="si">{</span><span class="n">media_probabilidad_aciertos</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span>
+
+<span class="s2">Predicciones incorrectas:</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">for</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">predicciones_incorrectas</span><span class="p">:</span>
+    <span class="n">informe</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;Archivo: </span><span class="si">{</span><span class="n">error</span><span class="p">[</span><span class="s1">&#39;archivo&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">, Predicción: </span>
+        <span class="p">{</span><span class="n">error</span><span class="p">[</span><span class="s1">&#39;prediccion&#39;</span><span class="p">]},</span> <span class="n">Probabilidad</span><span class="p">:</span> <span class="p">{</span><span class="n">error</span><span class="p">[</span><span class="s1">&#39;probabilidad&#39;</span><span class="p">]:</span><span class="mf">.2</span><span class="o">%</span><span class="p">}</span>\<span class="n">n</span><span class="s2">&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">informe</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Github surgió como  una plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git. Permite a los desarrolladores trabajar juntos en proyectos, gestionar cambios en el código fuente y colaborar de manera eficiente.</p>
+<p>En nuestro caso, vamos a usar GitHub para publicar el cuaderno <em>Jupyter</em> generado con <em>Google Colab</em> y compartir nuestro proyecto con la comunidad. Básicamente, utilizaremos GitHub como <strong>portafolio profesional</strong>.</p>
+<div class="admonition question">
+<p class="admonition-title">A106.4 - Publicación en GitHub</p>
+<p>Para conectar Google Colab con GitHub, necesitas dominar solo tres términos básicos. No necesitas memorizar comandos complejos todavía, solo entender la lógica:</p>
+<h4 id="el-repositorio-repo">El Repositorio (Repo)</h4>
+<p>Es como una "carpeta de proyecto". Contiene todos los archivos de tu proyecto (código, imágenes, documentación) y, lo más importante, el historial de cambios de cada archivo.</p>
+<p><strong>- Crea un repositorio con un nombre suficientemente significativo, relacionado con el contenido.</strong></p>
+<p>En la creación del repositiorio, indica una descripción breve del proyecto y selecciona la opción de inicializar el repositorio con un archivo <strong>README.md</strong>.</p>
+<p>El archivo <code>README.md</code> es un archivo de texto en formato Markdown que sirve como la página principal de tu repositorio. Aquí puedes describir el propósito del proyecto, cómo usarlo, cómo contribuir, etc. En nuestro caso, lo usaras para realizar una descripción general del proyecto que has desarrollado en Google Colab.</p>
+<p>Los repositorios pueden ser <strong>públicos</strong> (cualquiera puede verlos) o <strong>privados</strong> (solo tú y las personas que invites pueden verlos). Para un portafolio profesional, generalmente querrás que sean públicos. </p>
+<h4 id="commit-confirmacion">Commit (Confirmación)</h4>
+<p>Un <em>commit</em> no es solo "guardar". Es sacar una fotografía exacta de tu código en un momento concreto.</p>
+<p>Cada <em>commit</em> tiene un identificador único y debe llevar un mensaje explicativo (ej: "Añadida función para calcular números primos").</p>
+<h4 id="rama-branch">Rama (Branch)</h4>
+<p>Esto nos permite "viajar en el tiempo": si rompes algo hoy, puedes volver a la foto exacta de ayer. Esto es parte de las herramientas de mantenimiento y optimización de software.</p>
+<p>magina una línea de tiempo. La línea principal se llama <strong>main</strong>.</p>
+<p>Todos los cambios que aprobemos irán a esta rama principal. Por ahora, trabajaremos siempre sobre la rama main para mantener nuestro portfolio sencillo y lineal.</p>
+<h4 id="de-google-colab-a-github">De Google Colab a GitHub</h4>
+<p>Google Colab tiene una integración nativa que facilita enormemente la gestión documental. </p>
+<p>El proceso conceptual que realizaremos en cada práctica es el siguiente:</p>
+<ul>
+<li>Codificación: Creas y pruebas tu código Python en los cuadernos de Google Colab .</li>
+</ul>
+<p>Vinculación: En el menú de Colab, seleccionas Archivo &gt; Guardar una copia en GitHub.</p>
+<ul>
+<li>
+<p>Autorización: La primera vez, tendrás que dar permiso a Google para escribir en tu GitHub.</p>
+</li>
+<li>
+<p>Publicación (El <em>Commit</em>):</p>
+<ul>
+<li>
+<p>Seleccionas tu repositorio.</p>
+</li>
+<li>
+<p>Escribes el mensaje del <em>commit</em>.</p>
+</li>
+<li>
+<p>Marcas la opción "Incluir un enlace a Colaboratory". Esto crea un botón en tu GitHub para que cualquiera (incluido yo para corregir) pueda abrir y ejecutar tu código con un clic.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Publicamos el informe en un repositorio de GitHub.</p>
+</li>
+<li>
+<p>Crea un nuevo repositorio en GitHub.</p>
+</li>
+<li>Sube el cuaderno de Google Colab y el informe generado.</li>
+<li>Añade una descripción detallada del proyecto, incluyendo los pasos seguidos, las fases de inferencia implementadas y los resultados obtenidos.</li>
+</ul>
 </div>
 
 
