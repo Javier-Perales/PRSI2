@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category">
+<category>
+<text>$course$/A106-A107 Sprint 4</text>
+</category>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_01_Keras_Definicion</text>
+  </name>
+  <questiontext format="html">
+    <text>Según el documento, ¿qué es Keras?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Una biblioteca de alto nivel que actúa como una interfaz amigable para construir y entrenar modelos de IA.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Una plataforma de hardware desarrollada por Google para ejecutar modelos de aprendizaje automático.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Un formato de exportación exclusivo para aplicaciones móviles y microcontroladores.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Una librería de Python utilizada exclusivamente para el pre-procesamiento de imágenes.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_02_Formatos_Exportacion</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Cuál es el formato estándar para usar el modelo exportado en Python o proyectos de IA según el texto?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Keras (.h5)</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>TensorFlow.js</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>TensorFlow Lite</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>ONNX</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_03_Compile_False</text>
+  </name>
+  <questiontext format="html">
+    <text>Al cargar el modelo con `keras.models.load_model`, ¿por qué se utiliza el parámetro `compile=False`?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Porque evita que Keras intente compilar el modelo, lo cual no es necesario para la fase de inferencia.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Porque la compilación borraría los pesos entrenados del modelo.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Porque es necesario para activar el modo GPU en Google Colab.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Porque el formato .h5 no soporta modelos compilados.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_04_Compatibilidad_Legacy</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Qué comando se debe ejecutar para garantizar la compatibilidad entre los modelos de Teachable Machine (Keras 2.x) y Google Colab (Keras 3.0)?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>os.environ['TF_USE_LEGACY_KERAS'] = '1'</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>keras.use_version('2.0')</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>import tensorflow as tf2</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>pip install keras==2.0</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_05_Libreria_Imagenes</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Qué librería se utiliza en el código para cargar y manipular imágenes en Python?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>PIL (Python Imaging Library)</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>OpenCV</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Matplotlib</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Scikit-image</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_06_Preprocesamiento_Tamanho</text>
+  </name>
+  <questiontext format="html">
+    <text>En la fase de pre-procesamiento, ¿a qué tamaño debe redimensionarse la imagen para ser compatible con el modelo?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>224x224 píxeles.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>128x128 píxeles.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>512x512 píxeles.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>El tamaño original de la imagen no importa.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_07_Normalizacion</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Cuál es la fórmula correcta para normalizar los valores de los píxeles al rango [-1, 1] según el documento?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>(imagen_array.astype(np.float32) / 127.5) - 1</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>(imagen_array.astype(np.float32) / 255.0)</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>(imagen_array.astype(np.float32) - 127.5) / 127.5</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>(imagen_array.astype(np.float32) / 255.0) - 0.5</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_08_Forma_Array</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Qué dimensiones debe tener el array (lote de imágenes) que se pasa a la función `predict` si procesamos una sola imagen?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>(1, 224, 224, 3)</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>(224, 224, 3)</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>(1, 3, 224, 224)</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>(3, 224, 224, 1)</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_09_Funcion_Argmax</text>
+  </name>
+  <questiontext format="html">
+    <text>En la fase de Post-procesamiento, ¿para qué se utiliza la función `np.argmax(resultados[0])`?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Para devolver el índice que ocupa el valor máximo (la probabilidad más alta) en el array de resultados.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Para calcular la media de todas las probabilidades devueltas.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Para convertir el array de probabilidades en una imagen visible.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Para normalizar los resultados entre 0 y 1.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_10_Libreria_OS</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Qué función de la librería `os` se utiliza para obtener un array con los nombres de los archivos en una carpeta?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>os.listdir()</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>os.path.join()</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>os.walk()</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>os.getfiles()</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_11_GitHub_Commit</text>
+  </name>
+  <questiontext format="html">
+    <text>En el contexto de GitHub, ¿cómo define el documento un "Commit"?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Como una fotografía exacta de tu código en un momento concreto, con un identificador único.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Como una carpeta de proyecto que contiene todos los archivos.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Como una rama paralela para hacer pruebas sin romper el código principal.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Como la acción de desplegar la aplicación en la nube.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_12_README_Proposito</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Cuál es el propósito del archivo `README.md` en un repositorio?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Servir como página principal del repositorio describiendo el propósito del proyecto y cómo usarlo.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Almacenar las dependencias y librerías necesarias para el proyecto.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Guardar el historial de versiones del código fuente.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Contener las credenciales de acceso a la base de datos.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_13_Streamlit_Ventaja</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Cuál es la principal característica de Streamlit mencionada en el texto?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Permite crear la interfaz completa de una aplicación web usando solo Python, sin HTML/CSS/JS.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Es un entorno de desarrollo en la nube basado en Visual Studio Code.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Es una biblioteca para el entrenamiento avanzado de redes neuronales profundas.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Permite editar imágenes directamente en el navegador antes de procesarlas.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_14_Github_Codespaces</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Qué es GitHub Codespaces?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Un entorno de desarrollo en la nube que proporciona un contenedor con Visual Studio Code en el navegador.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Un sistema de control de versiones para gestionar cambios en el código.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Una plataforma de hosting para desplegar aplicaciones web estáticas.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Una librería de Python para crear interfaces gráficas.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_15_Streamlit_Cloud_HTTPS</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Por qué es imprescindible el acceso web HTTPS que proporciona Streamlit Cloud?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Porque es necesario para que los navegadores permitan el acceso a la cámara y el micrófono.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Porque acelera el procesamiento de las imágenes en el servidor.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Porque es obligatorio para instalar las librerías de Python.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Porque permite almacenar las imágenes en una base de datos segura.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_16_Requirements_txt</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Qué función tiene el archivo `requirements.txt` en la carpeta de la aplicación?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Listar todas las librerías de Python que la aplicación necesita para que el servidor las instale.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Contener las etiquetas de clasificación (perro/gato) para el modelo.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Configurar el diseño visual y los colores de la aplicación Streamlit.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Almacenar las claves API para conectar con Google Drive.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_17_Cache_Resource</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Para qué se utiliza el decorador `@st.cache_resource` en la función de carga del modelo?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Para almacenar en caché el modelo y evitar que se recargue cada vez que hay una interacción, mejorando el rendimiento.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Para guardar automáticamente las fotos tomadas por los usuarios en la nube.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Para proteger el modelo contra accesos no autorizados.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Para forzar la actualización del modelo cada vez que se hace un commit en GitHub.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_18_Camera_Input</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Qué función de Streamlit se utiliza para capturar una imagen desde el dispositivo del usuario?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>st.camera_input()</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>st.image_upload()</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>st.take_photo()</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>st.webcam()</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_19_Rama_Main</text>
+  </name>
+  <questiontext format="html">
+    <text>En la gestión de versiones con Git, ¿qué es la rama "main"?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Es la línea principal de tiempo donde van todos los cambios aprobados.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Es una rama temporal que se borra al finalizar el día.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Es el nombre del servidor donde se aloja Streamlit.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Es el archivo que contiene la configuración del repositorio.</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name>
+    <text>S4_20_CI_CD</text>
+  </name>
+  <questiontext format="html">
+    <text>¿Cómo funciona la integración continua básica entre GitHub y Streamlit Cloud descrita en el texto?</text>
+  </questiontext>
+  <answer fraction="100" format="html">
+    <text>Cada vez que se hace un commit en GitHub, Streamlit Cloud detecta el cambio, descarga la versión nueva y reinicia la app.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Hay que entrar manualmente en Streamlit Cloud y pulsar el botón "Update" cada vez que cambiamos código.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Streamlit Cloud modifica directamente el código en el repositorio de GitHub si detecta errores.</text>
+  </answer>
+  <answer fraction="-100" format="html">
+    <text>Es necesario subir los archivos manualmente por FTP al servidor de Streamlit cada vez.</text>
+  </answer>
+</question>
+
+</quiz>
