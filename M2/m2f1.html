@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Apuntes y materiales para la asignatura PRSI II.">
+        <meta name="description" content="En este sprint debemos entender el valor estratégico de la computación en el S.XXI. Analizaremos por qué las GPUs son el nuevo petróleo y cómo la arquitectura del hardware define la capacidad de una IA.">
       
       
         <meta name="author" content="Javier Perales">
@@ -15,6 +15,8 @@
         <link rel="canonical" href="https://javier-perales.github.io/PRSI2/M2/m2f1.html">
       
       
+        <link rel="prev" href="../M1/m1f4.html">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>M2f1 - PRSI II - Programación, Redes y Sistemas Informáticos II</title>
+        <title>Sprint1. Geopolítica del Chip y la IA (Introducción) - PRSI II - Programación, Redes y Sistemas Informáticos II</title>
       
     
     
@@ -75,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sesion-12-geopolitica-del-chip-y-la-ia-introduccion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              M2f1
+              Sprint1. Geopolítica del Chip y la IA (Introducción)
             
           </span>
         </div>
@@ -390,6 +397,128 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    P2. AI Factory
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            P2. AI Factory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sprint 1: Geopolítica del Chip y la IA
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="m2f1.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 1: Geopolítica del Chip y la IA
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-12-geopolitica-del-chip-y-la-ia-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 1,2: Geopolítica del Chip y la IA (Introducción)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -408,6 +537,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-12-geopolitica-del-chip-y-la-ia-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 1,2: Geopolítica del Chip y la IA (Introducción)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -422,65 +568,39 @@
 
 
 
-  <h1>M2f1</h1>
+  <h1>Sprint 1: Geopolítica del Chip y la IA</h1>
 
+<p>Iniciamos un nuevo proyecto de desarrollo enfocado en diseñar una infraestructura que soporte cargas de Inteligencia Artificial (IA). Simularemos un despliegue de hardware sobre una oficina técnica, tomando decisiones sobre CPU/GPU/NPU, redes corporativas y servicios en la nube.</p>
+<p>Los objetivos de este proyecto son:</p>
+<ul>
+<li>Capacidad para seleccionar y dimensionar hardware específico para IA y servidores.</li>
+<li>Diseñar una topología de red escalable que garantice la segmnentación del tráfico y la seguridad.</li>
+<li>Implemntar servicios de red que permita el trabajo colaborativo (Web, BBDD, almacenamiento), asegurando la disponibilidad y el contro de accesos.</li>
+<li>Generar documentación técnica profesional y gestionar estados de incertidumbre mediante trabajo colaborativo.</li>
+</ul>
+<h2 id="sesion-12-geopolitica-del-chip-y-la-ia-introduccion">Sesión 1,2: Geopolítica del Chip y la IA (Introducción)</h2>
+<p>Antes de comprar hardware, debemos entender el valor estratégico de la computación en el S.XXI. Analizaremos por qué las GPUs son el nuevo "petróleo" y cómo la arquitectura del hardware define la capacidad de una IA.</p>
 <hr />
-<p>title: Sprint4. Del modelo a la aplicación
-description: En esta actividad, el alumnado se enfrentará al reto de construir una aplicación real de Machine Learning en Python para resolver un problema de clasificación de imágenes “Perro/Gato”. Para ello deberá utilizar la librería TensorFlow/Keras. El proyecto abarcará el ciclo de vida completo del sw. de IA: recolección y preparación del datasheet, definición de la arquitectura del modelo, entrenamiento y evaluación crítica de su rendimiento.</p>
-<hr />
-<!--
-
-Diagrama de Fases de Inferencia (Usar un Modelo ya entrenado)
-
-Este es el diagrama que describe exactamente el snippet de código que te da Teachable Machine.
-
-    Fase 1: Cargar Recursos
-
-        Cargar el Modelo (el archivo .h5 o la carpeta SavedModel).
-
-        Cargar las Etiquetas (el archivo labels.txt).
-
-    Fase 2: Adquirir Datos Nuevos
-
-        Cargar una imagen (desde un archivo, la webcam, el móvil...).
-
-    Fase 3: Pre-procesamiento
-
-        La imagen DEBE transformarse para ser idéntica a las de entrenamiento.
-
-        Esto incluye:
-
-            Cambiar tamaño (ej. 224x224 píxeles).
-
-            Recortar (si es necesario).
-
-            Normalizar los valores de los píxeles (ej. de [0, 255] a [-1, 1]).
-
-    Fase 4: Predicción
-
-        Se usa el método .predict().
-
-        El modelo recibe la imagen pre-procesada.
-
-        El modelo devuelve un array de números (ej. [0.98, 0.02]).
-
-    Fase 5: Post-procesamiento
-
-        El código "humano" interpreta ese array.
-
-        Se busca el índice del número más alto (en [0.98, 0.02] sería el índice 0).
-
-        Se usa ese índice para buscar en la lista de etiquetas (labels.txt).
-
-        Resultado: Se muestra la etiqueta correspondiente (ej. "Perro").
-
--->
+<p>La industria de los semiconductores se ha convertido en el eje de la economía y la defensa mundial, sustituyendo al petróleo como el recurso más crítico. Esta industria se caracteriza por una cadena de suministro altamente especializada y globalizada, donde ningún país es autosuficiente. El conflicto actual entre EE. UU. y China gira en torno al acceso a la tecnología de fabricación más avanzada (litografía EUV y chips de &lt; 5nm), esencial tanto para la Inteligencia Artificial como para el armamento moderno.</p>
+<div class="admonition note">
+<p class="admonition-title">Guerra de Chips</p>
+<p>Una vez visualizado el siguiente video <a href="https://youtu.be/opNTOyD1Nx0?si=wnorNEsfX2-B_dpY">GUERRA DE CHIPS - El conflicto que puede cambiar el mundo</a>, reflexiona sobre las siguientes cuestiones:</p>
+<ol>
+<li>¿Qué tipos de estructuras empresariales se han formado en la industria de los semiconductores? En concreto, ¿qué papel juegan las empresas "foundries", "fabless"? ¿Existe algún tuipo de barrera de entrada a este mercado?</li>
+<li>¿Por qué los semiconductores actúan como "cuellos de botella" en la economía global? ¿Qué factores contribuyen a su escasez y cómo afecta esto a otras industrias?</li>
+<li>¿Qué entiendes por el conflicto del uso dual de los chips?</li>
+<li>¿Qué es la soberanía tecnológica? ¿qué intentos están realizando EEUU y China para alcanzarla?</li>
+</ol>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
