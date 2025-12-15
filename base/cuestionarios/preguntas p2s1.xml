@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Guerra de Chips - Geopolítica</text>
+    </category>
+    <info format="html">
+      <text><![CDATA[Preguntas sobre geopolítica de semiconductores, TSMC, NVIDIA y el conflicto global.]]></text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- Question: 1  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 01 - Nuevo Petróleo</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Por qué se considera a los semiconductores como el 'nuevo petróleo' del siglo XXI?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Piensa en qué recurso es indispensable para que funcione absolutamente toda la sociedad digital y los sistemas de defensa.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Correcto.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Parcialmente correcto.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Incorrecto.</text>
+    </incorrectfeedback>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque se utilizan principalmente para generar energía eléctrica en centrales.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Los semiconductores consumen energía para procesar información, no son una fuente de combustible primario como el petróleo.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Porque son el recurso esencial que impulsa la economía global y la fuerza militar moderna.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Al igual que el petróleo movió la industria del siglo XX, los chips son la base crítica de toda la tecnología moderna, desde smartphones hasta misiles.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque su extracción de la tierra es tan costosa y contaminante como la del crudo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Aunque requiere recursos, su valor estratégico reside en su capacidad de cálculo, no en su extracción como materia prima bruta.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque su precio en el mercado de valores fluctúa exactamente igual que el barril de Brent.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Aunque ambos son volátiles, su valor estratégico responde a dinámicas de suministro tecnológico y no solo a la oferta energética.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 2  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 02 - Definición Fabless</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En el ecosistema de los semiconductores, ¿qué define a una empresa 'Fabless'?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>El nombre en inglés significa literalmente 'sin fábrica'.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Una empresa que fabrica chips pero no los diseña.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Este modelo corresponde a una 'Foundry' o fundición, que manufactura diseños de terceros.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Una empresa que diseña chips y posee sus propias fábricas para producirlos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Este sería un modelo de Fabricante de Dispositivos Integrados (IDM) como Intel, no 'Fabless'.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Una empresa que diseña el hardware y el software, pero subcontrata la fabricación física.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El término 'Fabless' (sin fábrica) indica que se centran en la propiedad intelectual y el diseño, delegando la manufactura a terceros.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Una empresa que suministra las materias primas como el silicio.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Los proveedores de obleas son parte de la cadena, pero no se denominan 'Fabless', término reservado para diseñadores de arquitectura.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 3  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 03 - Ejemplo Foundry</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué empresa es el ejemplo más destacado de una 'Foundry' pura (que solo fabrica)?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Es una empresa taiwanesa que fabrica más del 90% de los chips más avanzados del mundo.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>NVIDIA</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>NVIDIA es una empresa 'Fabless'; diseña las GPUs pero no tiene fábricas para crearlas físicamente.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Apple</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Apple diseña sus propios chips (Apple Silicon) pero depende totalmente de terceros para su manufactura.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Intel</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Intel diseña y fabrica sus propios chips (IDM), aunque recientemente ha empezado a ofrecer servicios de fundición.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>TSMC</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Taiwan Semiconductor Manufacturing Company (TSMC) es la fundición más grande y avanzada del mundo, fabricando para Apple, NVIDIA y otros.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 4  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 04 - Monopolio Litografía</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué compañía europea tiene el monopolio de las máquinas de litografía ultravioleta extrema (EUV)?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Sus máquinas son las más complejas jamás construidas y son esenciales para continuar la Ley de Moore.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Siemens (Alemania)</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Siemens es un gigante industrial, pero no fabrica las máquinas de litografía necesarias para los chips de vanguardia.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>ASML (Países Bajos)</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>ASML es la única empresa en el mundo capaz de fabricar las máquinas EUV necesarias para imprimir chips de menos de 7 nanómetros.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>ARM (Reino Unido)</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>ARM diseña arquitecturas de procesadores (licencia propiedad intelectual), no fabrica maquinaria industrial.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>STMicroelectronics (Suiza)</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Fabrica semiconductores, pero no la maquinaria de litografía extrema que utilizan otras fundiciones.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 5  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 05 - Importancia Taiwan</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Por qué Taiwán es considerado un punto crítico en la geopolítica mundial?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Se le suele llamar el 'Escudo de Silicio' porque el mundo no puede permitirse que sus fábricas se detengan.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque posee las mayores reservas de silicio en bruto del planeta.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El silicio es abundante en la corteza terrestre; la importancia de Taiwán no es el recurso natural, sino su capacidad industrial.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Porque fabrica la gran mayoría de los chips lógicos más avanzados del mundo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La concentración de la capacidad de fabricación de punta en TSMC hace que cualquier conflicto allí detendría la economía tecnológica global.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque es el único país que diseña software de Inteligencia Artificial.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El diseño de software y IA está liderado principalmente por Estados Unidos y China, no centralizado en Taiwán.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque controla el estrecho marítimo por donde pasa todo el petróleo a China.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Aunque es una ruta comercial importante, la dependencia crítica específica del mundo hacia Taiwán es tecnológica (chips), no petrolera.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 6  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 06 - Estrategia EEUU</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué estrategia principal ha adoptado Estados Unidos recientemente respecto a China y los chips?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>El objetivo es evitar que China utilice tecnología americana para desarrollar armas avanzadas o sistemas de vigilancia.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Vender libremente toda su tecnología para maximizar beneficios.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Al contrario, han priorizado la seguridad nacional sobre los beneficios inmediatos de venta.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Restringir la exportación de chips avanzados y maquinaria de fabricación a China.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Mediante sanciones y controles de exportación, buscan frenar el avance militar y de IA de China limitando su acceso a hardware puntero.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Trasladar todas las fábricas estadounidenses a territorio chino para abaratar costes.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La estrategia actual (CHIPS Act) busca exactamente lo opuesto: traer la fabricación de vuelta a suelo estadounidense (onshoring).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Crear una alianza militar para compartir tecnología nuclear a cambio de chips.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El conflicto se centra en limitar el acceso tecnológico, no en intercambios de tecnología nuclear.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 7  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 07 - Barrera de Entrada</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué concepto describe la dificultad extrema de copiar la tecnología de fabricación de chips?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Incluso con planos robados, se necesita un conocimiento tácito ('know-how') y miles de millones de dólares para replicar una fábrica.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Código Abierto</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El código abierto facilita la copia y colaboración, lo cual es lo opuesto a la tecnología propietaria y secreta de los chips.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Barrera de Entrada</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La inversión multimillonaria y el conocimiento técnico acumulado (know-how) hacen casi imposible que nuevos actores entren rápidamente al mercado.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Obsolescencia Programada</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Esto se refiere a la vida útil de los productos de consumo, no a la dificultad de fabricarlos o copiar su tecnología.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Neutralidad de la Red</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Este es un principio sobre el tráfico de internet, no tiene relación con la manufactura de hardware.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 8  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 08 - Consecuencia Invasion</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál sería una consecuencia inmediata de un bloqueo naval o invasión a Taiwán?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Imagina qué pasaría si de repente desapareciera el fabricante del 90% de los cerebros digitales del mundo.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Un aumento en la producción de chips en Europa para compensar.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Construir fábricas lleva años; Europa no podría compensar la pérdida repentina de la producción taiwanesa.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Una escasez mundial de productos electrónicos y una profunda recesión económica.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Al detenerse TSMC, la producción de coches, móviles, servidores y equipamiento médico se paralizaría globalmente.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La bajada de precios de las tarjetas gráficas y procesadores.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La escasez provocaría un aumento drástico de precios, no una bajada.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>China pasaría a fabricar todos los chips de Apple inmediatamente.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Incluso si China toma las fábricas, operarlas requiere cooperación internacional y suministros que serían bloqueados.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 9  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 09 - Arquitectura Diseño</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué rol juega la arquitectura de diseño (como ARM o x86) en la cadena de valor?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Es el 'lenguaje' base que hablan los procesadores, cuya propiedad intelectual suele pertenecer a empresas occidentales.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Es el conjunto de instrucciones que define cómo funciona el procesador a nivel lógico.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Empresas como ARM diseñan estas 'reglas' básicas que luego otros (como Apple o Qualcomm) usan para diseñar sus chips específicos.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Es la máquina física que imprime los circuitos en el silicio.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Eso es la maquinaria de litografía (hardware), no la arquitectura (diseño lógico).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Es el software final que ve el usuario, como Windows o Android.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La arquitectura es hardware/lógica de bajo nivel, sobre la cual se ejecuta el sistema operativo.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Es el material químico usado para limpiar las obleas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Eso es parte del proceso químico de fabricación, no del diseño lógico del chip.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 10  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 10 - Ley de Moore</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué es la 'Ley de Moore' y por qué es relevante en esta guerra tecnológica?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Habla sobre la velocidad a la que mejora la potencia de los ordenadores y la miniaturización.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Una ley jurídica que prohíbe el monopolio de chips.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No es una ley legal, sino una observación empírica sobre el avance tecnológico.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>La observación de que el número de transistores en un chip se duplica aprox. cada 2 años.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Mantener este ritmo requiere inversiones exponenciales y tecnología que solo unos pocos países poseen, creando la brecha geopolítica.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La teoría de que China superará a EE.UU. en 2030.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es una predicción económica o política, no la definición de la Ley de Moore.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Una norma física que impide hacer chips más pequeños de 10 nanómetros.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Al contrario, la Ley de Moore ha impulsado la reducción muy por debajo de los 10nm, aunque se enfrenta a límites físicos.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 11  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 11 - Debilidad China</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál es la principal debilidad de China en la industria actual de semiconductores?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Pueden diseñar chips avanzados, pero les falta la 'impresora' ultra precisa necesaria para fabricarlos.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Falta de talento en ingeniería y matemáticas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>China gradúa a miles de ingenieros brillantes cada año; su problema no es el capital humano, sino el acceso a herramientas específicas.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Falta de tierras raras y materias primas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>China es, de hecho, el mayor procesador mundial de tierras raras, por lo que esta es una de sus fortalezas.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Incapacidad para fabricar chips de última generación (litografía avanzada) de forma autónoma.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>China depende de maquinaria occidental (como la de ASML) que ahora tiene prohibido comprar, lo que frena su avance hacia los nodos más pequeños.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Escaso mercado interno para vender sus productos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>China es el mayor mercado de consumo de electrónica del mundo.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 12  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 12 - Nanómetro</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué significa el término 'nanómetro' (nm) cuando hablamos de chips (ej. 3nm, 5nm)?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>En esta carrera tecnológica, cuanto más pequeño es este número, más avanzado es el chip.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El tamaño total del procesador físico.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El chip mide milímetros o centímetros; los nanómetros se refieren a estructuras internas.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La distancia que recorre la electricidad en un segundo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Eso es una medida de velocidad, no de longitud o tamaño de fabricación.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>El tamaño característico de los transistores; menor número implica mayor potencia y eficiencia.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Reducir los nanómetros permite meter más transistores en el mismo espacio, aumentando la velocidad y reduciendo el consumo.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El grosor de la oblea de silicio.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Las obleas tienen un grosor estandarizado mucho mayor (micras), no nanómetros.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 13  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 13 - NVIDIA</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué papel juega NVIDIA en la revolución de la Inteligencia Artificial?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Sus chips H100 son el hardware más codiciado por empresas como OpenAI, Google o Microsoft.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Fabrica los cables de fibra óptica para internet.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>NVIDIA se especializa en procesadores, no en infraestructura de red pasiva.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Diseña las GPUs (Unidades de Procesamiento Gráfico) que se usan para entrenar modelos de IA.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Sus chips son los más eficientes para el cálculo paralelo masivo que requiere la IA, dándole una posición dominante.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Es la empresa que ensambla los iPhone en China.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Esa es Foxconn; NVIDIA diseña chips de alto rendimiento.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Desarrolla exclusivamente videojuegos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Aunque nació para gráficos de juegos, su negocio principal hoy es el hardware para centros de datos e IA.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 14  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 14 - Replicar TSMC</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Por qué es tan difícil que otros países repliquen el éxito de TSMC rápidamente?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>No es solo cuestión de dinero; es una mezcla de cultura de precisión, cadena de suministro y décadas de experiencia.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque TSMC tiene una patente sobre el uso del silicio.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El silicio es un material base no patentable; la barrera es la técnica de proceso.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Debido a la extrema complejidad técnica, el coste inmenso y el ecosistema de proveedores especializado.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Requiere décadas de I+D, miles de ingenieros ultra-especializados y una red de proveedores que no se puede construir de la noche a la mañana.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque el clima de Taiwán es único para enfriar las máquinas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El clima no es un factor determinante; las fábricas usan sistemas de climatización controlados artificialmente.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque solo los ciudadanos taiwaneses pueden estudiar ingeniería de chips.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La ingeniería se estudia globalmente, pero la concentración de talento y experiencia práctica en Taiwán es única.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 15  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 15 - Soberania Tecnologica</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué es la 'Soberanía Tecnológica' que buscan Europa y EEUU con sus leyes de chips?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Es el intento de no quedarse 'colgados' si hay una guerra al otro lado del mundo.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La capacidad de controlar internet en sus territorios.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Eso se refiere más a la censura o regulación de datos, no a la fabricación de hardware.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>La capacidad de producir sus propios chips críticos sin depender de Asia.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Buscan reducir la dependencia de proveedores extranjeros vulnerables a conflictos para asegurar sus propias industrias.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Prohibir el uso de tecnología extranjera en los hogares.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No buscan prohibir el consumo, sino asegurar que la producción estratégica esté en casa.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nacionalizar todas las empresas de tecnología.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Buscan incentivar la fabricación privada mediante subvenciones, no expropiar las empresas.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 16  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 16 - Rol Japon</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué componente de la cadena de suministro domina Japón?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Sin estos fluidos y materiales ultra-puros japoneses, las máquinas de ASML no tendrían nada que imprimir.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El diseño de procesadores para móviles.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Ese mercado lo dominan empresas de EEUU (Apple, Qualcomm) o Reino Unido (ARM).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Productos químicos puros y materiales esenciales (fotoresistores, obleas).</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Japón tiene un control casi total sobre ciertos químicos críticos sin los cuales la litografía no funciona.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El ensamblaje final de productos baratos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El ensamblaje final suele realizarse en China o el sudeste asiático.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La extracción de litio.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El litio (para baterías) se extrae principalmente en Sudamérica y Australia.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 17  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 17 - Uso Dual</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál es el uso 'dual' de los chips que preocupa a los gobiernos?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>La misma tecnología que te permite jugar en 4K permite a un misil hipersónico encontrar su objetivo.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que pueden usarse para móviles Android y iPhone a la vez.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La compatibilidad comercial no es una preocupación de seguridad nacional.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que pueden usarse tanto para aplicaciones civiles (juegos, IA) como militares (misiles, ciberataques).</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Un chip potente para IA puede entrenar un chat o guiar un dron autónomo, de ahí el control estricto de su exportación.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que consumen electricidad y generan calor.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es una característica física, no un problema estratégico de uso.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que sirven para hardware y software.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El chip es hardware; el software se ejecuta en él. No es el sentido de 'uso dual' en geopolítica.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 18  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 18 - Escasez Coches</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué ha demostrado la escasez de chips durante la pandemia sobre la industria automotriz?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Un coche de 30.000€ no se puede vender porque le falta una pieza de silicio que cuesta 1€.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que los coches modernos no necesitan chips para funcionar.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Al contrario, las fábricas de coches tuvieron que parar porque les faltaban chips para frenos, motores, etc.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que los coches dependen críticamente de chips antiguos y baratos que pocas fábricas quieren hacer.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Los coches usan muchos chips 'maduros' (tecnología vieja), cuya producción es poco rentable, creando cuellos de botella.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que es fácil sustituir un chip por otro de diferente marca.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Rediseñar la electrónica de un coche para aceptar otro chip lleva meses o años de validación de seguridad.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que los coches eléctricos usan menos chips que los de gasolina.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Los eléctricos usan aún más semiconductores para la gestión de baterías y potencia.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 19  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 19 - RISC-V</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué es la arquitectura RISC-V y por qué interesa a China?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Es como el 'Linux' de los procesadores: libre, abierto y sin dueño único.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Es un nuevo tipo de fábrica robótica.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>RISC-V es una arquitectura de conjunto de instrucciones (diseño lógico), no una fábrica física.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Es una arquitectura de código abierto que no está controlada por empresas occidentales.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Al ser 'open source', permite a China diseñar procesadores sin pagar licencias a empresas de EEUU o Reino Unido (como ARM) y evitar bloqueos.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Es un virus informático diseñado para robar secretos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es un estándar de diseño de procesadores legítimo y colaborativo, no malware.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Es la marca de chips de Huawei.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Huawei usa chips Kirin (basados en ARM) o Ascend, pero RISC-V es un estándar global abierto.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- Question: 20  -->
+  <question type="multichoice">
+    <name>
+      <text>Chips 20 - Objetivo Final</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En resumen, ¿cuál es el objetivo final de la 'Guerra de los Chips'?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>No se trata solo de vender teléfonos, se trata de definir quién será la superpotencia dominante del siglo XXI.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Conseguir que los ordenadores sean más baratos para todos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La guerra comercial suele encarecer los productos, no abaratarlos.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>La supremacía económica y militar a través del control de la computación avanzada.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Quien lidere la computación liderará la IA, la economía digital y el poder militar del futuro.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Eliminar el uso de la tecnología para volver a una sociedad analógica.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Ninguna potencia busca retroceder tecnológicamente, sino avanzar más rápido que el rival.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Fomentar la paz mundial compartiendo todos los secretos industriales.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La dinámica actual es de competencia feroz y proteccionismo, no de colaboración abierta.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>
