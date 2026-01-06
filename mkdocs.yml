@@ -26,12 +26,11 @@ theme:
         icon: material/brightness-4
         name: Cambiar a modo claro
   features:
-  #  - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - search.suggest
-    - content.code.annotate
+  #  - navigation.sections
+     - navigation.expand
+     - navigation.top
+     - search.suggest
+     - content.code.annotate
 
 extra_css:
   - stylesheets/extra.css
@@ -45,7 +44,8 @@ nav:
     - 'Sprint 3: El lado oscuro de la IA': 'M1/m1f3.md'
     - 'Sprint 4: Del modelo a la aplicación': 'M1/m1f4.md'
   - 'P2. AI Factory':
-    - 'Sprint 1: Geopolítica del Chip y la IA': 'M2/m2f1.md' 
+    - 'Sprint 1: Geopolítica del Chip y la IA': 'M2/m2f1.md'
+    - 'Sprint 2: El Cerebro en la oficina': 'M2/m2f2.md' 
   #  - 'Sprint 5: Streamlit': 'M2/m2f2.md'
   #  - 'Sprint 6: Integración del modelo': 'M2/m2f3.md'
   #  - 'Sprint 7: Personalización': 'M2/m2f4.md'
