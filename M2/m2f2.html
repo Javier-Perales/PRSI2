@@ -1,0 +1,1104 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="En este sprint se deberán diseñar los equipos de la oficina, desde los equipos de desarrollo (Standard Dev) hasta las estaciones de entrenamiento (Workstation AI)">
+      
+      
+        <meta name="author" content="Javier Perales">
+      
+      
+        <link rel="canonical" href="https://javier-perales.github.io/PRSI2/M2/m2f2.html">
+      
+      
+        <link rel="prev" href="m2f1.html">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>Sprint2. El Cerebro en la oficina - PRSI II - Programación, Redes y Sistemas Informáticos II</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sesion-1-cpus" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="PRSI II - Programación, Redes y Sistemas Informáticos II" class="md-header__button md-logo" aria-label="PRSI II - Programación, Redes y Sistemas Informáticos II" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PRSI II - Programación, Redes y Sistemas Informáticos II
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sprint2. El Cerebro en la oficina
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="PRSI II - Programación, Redes y Sistemas Informáticos II" class="md-nav__button md-logo" aria-label="PRSI II - Programación, Redes y Sistemas Informáticos II" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+
+    </a>
+    PRSI II - Programación, Redes y Sistemas Informáticos II
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presentación asignatura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    P1. Dato / Modelo / Aplicación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            P1. Dato / Modelo / Aplicación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../M1/m1f1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 1: Datos que hablan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../M1/m1f2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 2: Creación de modelos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../M1/m1f3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 3: El lado oscuro de la IA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../M1/m1f4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 4: Del modelo a la aplicación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    P2. AI Factory
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            P2. AI Factory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="m2f1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 1: Geopolítica del Chip y la IA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sprint 2: El Cerebro en la oficina
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="m2f2.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 2: El Cerebro en la oficina
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-1-cpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 1. CPUs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sesión 1. CPUs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-arquitectura-del-procesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Arquitectura del Procesador
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Arquitectura del Procesador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-x86" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitectura x86
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-arm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitectura ARM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-claves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencias claves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-frecuencia-de-reloj" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Frecuencia de reloj
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-numero-de-nucleos-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Número de núcleos (Cores)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-numero-de-hilos-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Número de Hilos (Threads)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-memoria-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Memoria Caché
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-proceso-de-fabricacion-nm" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Proceso de fabricación (nm)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-tdp-thermal-design-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. TDP (Thermal Design Power)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-compatibilidad-con-memoria-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Compatibilidad con Memoria RAM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-gpu-integrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. GPU Integrada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-1-cpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 1. CPUs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sesión 1. CPUs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-arquitectura-del-procesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Arquitectura del Procesador
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Arquitectura del Procesador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-x86" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitectura x86
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-arm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitectura ARM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-claves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencias claves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-frecuencia-de-reloj" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Frecuencia de reloj
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-numero-de-nucleos-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Número de núcleos (Cores)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-numero-de-hilos-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Número de Hilos (Threads)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-memoria-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Memoria Caché
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-proceso-de-fabricacion-nm" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Proceso de fabricación (nm)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-tdp-thermal-design-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. TDP (Thermal Design Power)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-compatibilidad-con-memoria-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Compatibilidad con Memoria RAM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-gpu-integrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. GPU Integrada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Sprint 2: El Cerebro en la oficina</h1>
+
+<p>Partimos del supuesto de que debeis planificar la infraestructura <em>hardware</em> necesaria de una empresa dedicada al desarrollo de aplicaciones de inteligencia artificial específicas para clientes de diversos sectores. </p>
+<p>En este sprint nos centraremos en identificar y presupuestar los requerimientos de los equipos que se van a utilizar para crear aplicaciones de IA; desde los equipos de desarrollo (Standard Dev) hasta las estaciones de entrenamiento (Workstation AI). </p>
+<p>Para hacer una primera aproximación de los requerimientos vamos a basarnos en el <strong>volumen de datos</strong>, la <strong>complejidad del modelo</strong> y el <strong>tiempo de entrenamiento</strong> de una supuesta aplicación de clasificación de imágenes para identificar diferentes tipos de residuos (plástico, papel, vidrio, orgánico y otros) a partir de imágenes capturadas por cámaras en puntos de recogida.</p>
+<ul>
+<li><strong><em>Dataset.</em></strong> Supongamos que queremos identificar las 5 categorías de residuos a partir de imágenes capturadas por cámaras HD en puntos de recogida. Para que sea fiable, necesitamos al menos 10.000 imágenes por categoría. Si cada imagen en HD ocupa unos 2 MB, el conjunto de datos estaría formado por 50.000 imágenes, lo que supone un tamaño total aproximado de 100 GB.   </li>
+<li><strong>RAM.</strong> Aunque no carguemos las 100GB de golpe, el sistema operativo y las librerías de Python (como TensorFlow o Pandas) consumen mucha memoria. Podemos utilizar la fórmula:<br />
+<code>RAM (GB) = Tamaño del lote del dataset (GB) x 2 + Sistema operativo (GB)</code>  Esta fórmula es una aproximación orientativa.</li>
+<li><strong>Potencia de cálculo</strong>. Las GPUs son esenciales para el entrenamiento de modelos de IA. Si debemos entrenar un modelo en un tiempo razonable (por ejemplo, menos de 5 horas), necesitaremos una GPU potente. Si nuestra GPU potente tarda 3 minutos en realizar una época de entrenamiento y necesitamos 100 épocas, el tiempo total de entrenamiento sería de 300 minutos (5 horas). En el otro extremo, si tenemos una GPU básica que tarda 60 minutos por época, el tiempo total sería de 6000 minutos (100 horas).</li>
+<li><strong>VRAM.</strong>  El tamaño de memoria de la GPU (VRAM) debe ser al menos igual al tamaño del lote del dataset. En la VRAM se almacenan también los modelos y los cálculos intermedios. Si el modelo estándar utilizado para el reconocimiento de imágenes (YOLOv8 Large) ocupa unos 1.2GB y los cálculos intermedios (gradientes y optimizador) ocupan aproximadamente el doble del tamaño del lote, podemos usar la fórmula:<br />
+<code>VRAM (GB) = Tamaño del lote del dataset (GB) + Tamaño del modelo (GB) + Cálculos intermedios (GB)</code>   </li>
+<li><strong>Fuente de alimentación</strong>. Necesitamos una fuente de alimentación que pueda suministrar suficiente potencia para todos los componentes del sistema. Si el consumo pico del sistema (CPU+GPU) es de 700W, se debería añadir +30% de margen de seguridad, por lo que la fuente debería ser de al menos 910W.</li>
+</ul>
+<h2 id="sesion-1-cpus">Sesión 1. CPUs</h2>
+<p>Al analizar un procesador (CPU), hay varios factores clave que debes tener en cuenta para comprender su rendimiento y cómo se adapta a tus necesidades.</p>
+<h3 id="1-arquitectura-del-procesador">1. Arquitectura del Procesador</h3>
+<p>Como introdujimos en el sprint anterior, la arquitectura del procesador se refiere al diseño y la estructura interna del CPU.</p>
+<p>Las arquitectura más conocida por el usuario son x86 (Intel y AMD) y ARM (ampliamente utilizado en dispositivos móviles, desde 2020, <em>Apple</em> ha empezado a utilizar sus propios procesadores basados en ARM para sus portátiles, la serie M (M1, M2, ...))</p>
+<h4 id="arquitectura-x86">Arquitectura x86</h4>
+<ul>
+<li><strong>Diseño CISC</strong> (Complex Instruction Set Computing): Esta arquitectura se caracteriza por un conjunto de instrucciones complejo, lo que permite ejecutar operaciones multifacéticas en una sola instrucción.</li>
+<li>Fabricantes principales: <strong>Intel</strong> y <strong>AMD</strong> son los desarrolladores más destacados de procesadores x86.</li>
+<li>Dispositivos comunes: Predominantemente utilizada en ordenadores de escritorio, portátiles y servidores, donde el rendimiento y la compatibilidad son primordiales.</li>
+</ul>
+<h4 id="arquitectura-arm">Arquitectura ARM</h4>
+<ul>
+<li><strong>Diseño RISC</strong> (Reduced Instruction Set Computing): Se enfoca en un conjunto de instrucciones más simple y eficiente, optimizando el consumo energético y el rendimiento por vatio.</li>
+<li>Fabricantes principales: ARM Holdings licencia su arquitectura a diversos fabricantes, entre ellos <strong>Qualcomm</strong>, <strong>Apple</strong>, <strong>Samsung</strong> y <strong>NVIDIA</strong>.</li>
+<li>Dispositivos comunes: Ampliamente implementada en dispositivos móviles como smartphones y tabletas, así como en sistemas embebidos y, más recientemente, en algunos portátiles y servidores debido a su eficiencia energética.</li>
+</ul>
+<h4 id="diferencias-claves">Diferencias claves</h4>
+<ul>
+<li>Eficiencia energética: Los procesadores ARM suelen consumir menos energía, lo que los hace ideales para dispositivos móviles y aplicaciones donde la duración de la batería es crucial.  </li>
+<li>Rendimiento: Los procesadores x86 ofrecen un alto rendimiento y son compatibles con una amplia gama de aplicaciones de escritorio y servidor.   </li>
+<li>Compatibilidad de software: La arquitectura x86 tiene una larga trayectoria en el mercado de PC, lo que garantiza una amplia compatibilidad con software existente. ARM está ganando terreno, especialmente con sistemas operativos y aplicaciones diseñadas específicamente para su arquitectura.   </li>
+</ul>
+<h3 id="2-frecuencia-de-reloj">2. Frecuencia de reloj</h3>
+<p>La frecuencia de los procesadores se mide en gigahercios (GHz), que representan miles de millones de ciclos por segundo. Un procesador de 3.5 GHz, por ejemplo, ejecuta 3,500 millones de ciclos cada segundo.</p>
+<p>Cuanto mayor es la frecuencia en GHz, más rápido puede ejecutar operaciones, aunque esto no siempre implica mayor rendimiento general (depende de otros factores como la arquitectura del procesador y la eficiencia energética).</p>
+<h3 id="3-numero-de-nucleos-cores">3. Número de núcleos (<em>Cores</em>)</h3>
+<p>Un núcleo es una unidad de procesamiento independiente dentro del procesador. Cuantos más núcleos tenga un procesador, más tareas puede manejar simultáneamente. Procesadores con múltiples núcleos (dual-core, quad-core, octa-core, etc.) son mejores para multitarea y aplicaciones que requieren procesamiento paralelo.</p>
+<div class="admonition warning">
+<p class="admonition-title">Importante</p>
+<p>Con el lanzamiento de los procesadores Intel Core de 12ª Generación (<em>Alder Lake</em>), Intel dio un gran paso adelante en esta filosofía, presentando dos tipos diferentes de núcleos dentro de un mismo procesador.</p>
+<ul>
+<li>Los <strong>P-Cores</strong> se llaman así porque la P viene de Performance, rendimiento en inglés.   </li>
+<li>Los <strong>E-Cores</strong> se llaman así porque la E viene de Efficiency, eficiencia en inglés.  </li>
+<li><strong>LP E-Core</strong>, que sería un núcleo de ultra-bajo consumo.   </li>
+</ul>
+<p>Actualmente, Intel está en la 14ª generación de procesadores, conocida como <strong>Raptor Lake Refresh</strong>, con hasta 24 nucleos (8 P-Cores + 16 E-Cores).</p>
+<p>Intel también tiene otras líneas de procesadores, como los procesadores Intel Xeon para servidores y estaciones de trabajo.  Sin embargo, la línea <strong>Intel Core</strong> es la más conocida y utilizada en ordenadores de sobremesa y portátiles.</p>
+</div>
+<h3 id="4-numero-de-hilos-threads">4. Número de Hilos (Threads)</h3>
+<p>Los hilos son las unidades más pequeñas que gestionan las tareas dentro de un núcleo. Algunos procesadores tienen tecnología de multithreading (como <em>Hyper-Threading de Intel</em>) que permite a un núcleo manejar más de un hilo simultáneamente.</p>
+<p>Más hilos permiten un mejor rendimiento en aplicaciones multitarea y tareas que se benefician del paralelismo, como edición de video o renderizado 3D.</p>
+<p><strong>Solo los P-core tienen hilos</strong></p>
+<h3 id="5-memoria-cache">5. Memoria Caché</h3>
+<p>La caché es una memoria muy rápida integrada en la CPU para almacenar datos e instrucciones de uso frecuente.
+Tipos:</p>
+<ul>
+<li><strong>L1</strong>: Pequeña y ultrarrápida, cercana a los núcleos.</li>
+<li><strong>L2</strong>: Un poco más grande y más lenta que L1.</li>
+<li><strong>L3</strong>: Compartida entre todos los núcleos, más lenta pero de mayor capacidad.</li>
+</ul>
+<p>La caché ayuda a acelerar el acceso a datos y reduce la necesidad de ir a la RAM para obtener información, mejorando el rendimiento general.</p>
+<p><img alt="Jerarquía de memoria cache" class="center" src="assets/jerarquiacache.webp" width="60%" /></p>
+<h3 id="6-proceso-de-fabricacion-nm">6. Proceso de fabricación (<em>nm</em>)</h3>
+<p>Se refiere al tamaño de los transistores en el procesador, medido en nanómetros (nm). Cuanto menor sea el tamaño, más transistores caben en el chip, lo que permite aumentar la eficiencia energética y el rendimiento.</p>
+<p>Los procesadores actuales suelen estar por debajo de 10nm. Intel y AMD utilizan tecnologías de 7nm y 5nm en sus procesadores más recientes.</p>
+<h3 id="7-tdp-thermal-design-power">7. TDP (Thermal Design Power)</h3>
+<p>Medida en vatios, indica la cantidad de calor que el procesador disipa bajo carga máxima.
+Un TDP más alto implica mayor consumo de energía y la necesidad de mejores soluciones de refrigeración. Es relevante para saber qué tipo de sistema de refrigeración necesitarás.</p>
+<h3 id="8-compatibilidad-con-memoria-ram">8. Compatibilidad con Memoria RAM</h3>
+<p>Los procesadores están diseñados para trabajar con ciertos tipos y velocidades de memoria RAM (por ejemplo, DDR4, DDR5).
+Cuanto más rápida y avanzada sea la memoria RAM que soporta, mejor será el rendimiento en tareas intensivas en memoria.</p>
+<h3 id="9-gpu-integrada">9. GPU Integrada</h3>
+<p>La mayoría de los procesadores modernos incluyen una GPU integrada, que es útil para tareas gráficas básicas sin necesidad de una tarjeta gráfica dedicada.</p>
+<div class="admonition question">
+<p class="admonition-title">A201(CE2, CE5) Características de CPUs</p>
+<p>Atendiendo a la información anterior, obtén las características del procesador de tu ordenador de clase, y comparalo con:</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>AMD Ryzen 9 7945HX</th>
+<th>Intel Core i9-13900K</th>
+<th>Ryzen 9 9950X</th>
+<th>Core i9-14900K</th>
+<th>Apple M2 Ultra</th>
+<th>Snapdragon X Elite (X1E-84-100)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Arquitectura</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Frecuencia reloj base</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Frecuencia turbo</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Número de núcleos por tipo</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Hilos</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Caché</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Tecnología fabricación</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>TDP</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Desktop/Mobile</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Compatibilidad RAM</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>GPU</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Otra información</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Puedes hacer uso de los siguientes enlaces:</p>
+<ul>
+<li><a href="https://www.intel.la/content/www/xl/es/products/details/processors.html">Intel</a></li>
+<li><a href="https://www.amd.com/es/products/specifications/processors.html">AMD</a></li>
+<li><a href="https://www.techpowerup.com/cpu-specs/">Intel+AMD</a></li>
+<li><a href="https://www.notebookcheck.net/">Apple+Qualcomm</a></li>
+<li><a href="https://www.apple.com/es/newsroom/2023/06/apple-introduces-m2-ultra/">Apple</a></li>
+<li><a href="https://www.qualcomm.com/laptops/products/snapdragon-x-elite">Qualcomm</a></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.top", "search.suggest", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
