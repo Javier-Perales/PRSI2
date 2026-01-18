@@ -1,0 +1,351 @@
+
+
+::AI_Workstation_PSU::
+Si un sistema de sobremesa tiene un consumo pico (CPU+GPU) de 700W, ¿de cuánto debe ser la fuente de alimentación aplicando el margen de seguridad del +30%? {
+    =Al menos 910W
+    ~%-25%Exactamente 700W
+    ~%-25%Al menos 800W
+    ~%-25%Al menos 1200W
+}
+
+::AI_Workstation_GPU_Time::
+Si una GPU potente tarda 3 minutos por época y necesitamos 100 épocas, ¿cuál es el tiempo total de entrenamiento? {
+    =5 horas (300 minutos)
+    ~%-25%10 horas (600 minutos)
+    ~%-25%3 horas (180 minutos)
+    ~%-25%1 hora (60 minutos)
+}
+
+// --- Bloque 2: Arquitectura y Componentes de CPU (m2f2.md) ---
+
+::CPU_Arch_x86::
+¿Cuál es la característica principal del diseño CISC utilizado en la arquitectura x86 de Intel y AMD? {
+    =Permite ejecutar operaciones complejas en una sola instrucción
+    ~%-25%Utiliza un conjunto de instrucciones simplificado para ahorrar energía
+    ~%-25%Es una arquitectura diseñada exclusivamente para dispositivos móviles
+    ~%-25%No permite la ejecución de aplicaciones de escritorio
+}
+
+::CPU_Cores_Intel::
+En los procesadores Intel Core de sobremesa modernos, ¿qué función tienen los P-Cores? {
+    =Están diseñados para ofrecer el máximo rendimiento (Performance)
+    ~%-25%Se encargan exclusivamente de las tareas de bajo consumo
+    ~%-25%Son núcleos virtuales sin hardware físico
+    ~%-25%Solo se activan cuando el ordenador está en reposo
+}
+
+::CPU_Threads_Logic::
+¿Qué tipo de núcleos en la arquitectura híbrida de Intel son los únicos que disponen de hilos (Threads) adicionales? {
+    =Solo los P-Cores
+    ~%-25%Solo los E-Cores
+    ~%-25%Tanto los P-Cores como los E-Cores
+    ~%-25%Solo los LP E-Cores
+}
+
+::CPU_Cache_L3::
+¿Cuál es la característica principal de la memoria caché L3 en un procesador de sobremesa? {
+    =Es compartida entre todos los núcleos y tiene mayor capacidad que L1 y L2
+    ~%-25%Es la más rápida y pequeña, integrada dentro de cada núcleo
+    ~%-25%Se encuentra fuera del procesador, en la placa base
+    ~%-25%Es una memoria volátil que sustituye a la RAM
+}
+
+::CPU_TDP_Definition::
+¿Qué indica el TDP (Thermal Design Power) medido en vatios en una CPU? {
+    =La cantidad de calor que el procesador disipa bajo carga máxima
+    ~%-25%La velocidad máxima de procesamiento de datos
+    ~%-25%La capacidad total de la memoria caché
+    ~%-25%El número de transistores por nanómetro
+}
+
+
+
+// --- Bloque 3: Innovaciones y Tendencias (Vídeos YouTube) ---
+
+::Intel_200S_K::
+En la nueva nomenclatura de procesadores Intel de sobremesa (Serie 200), ¿qué significa la letra 'K' al final del modelo? {
+    =Que el procesador está desbloqueado para overclocking
+    ~%-25%Que el procesador incluye gráficos integrados de alto rendimiento
+    ~%-25%Que es una versión de bajo consumo para oficinas
+    ~%-25%Que utiliza memoria soldada en el encapsulado
+}
+
+::AMD_Leadership::
+Según los análisis actuales de hardware de sobremesa, ¿en qué área específica se considera a AMD el "líder indiscutible"? {
+    =En eficiencia energética y rendimiento por vatio
+    ~%-25%En compatibilidad con software de oficina antiguo
+    ~%-25%En el precio de las placas base de gama baja
+    ~%-25%En la integración de puertos USB-C frontales
+}
+
+::AMD_Chiplets::
+¿Qué ventaja principal ofrece la arquitectura de "chiplets" de AMD frente al diseño monolítico de Intel en CPUs de sobremesa? {
+    =Facilita la fabricación de procesadores con muchos núcleos a menor coste
+    ~%-25%Reduce la temperatura del procesador a cero grados
+    ~%-25%Elimina la necesidad de utilizar memoria RAM externa
+    ~%-25%Permite que el procesador funcione sin disipador
+}
+
+::AMD_APU_Usage::
+¿En qué situación es más sostenible y eficiente elegir una APU de AMD en un PC de sobremesa? {
+    =Cuando se busca un equipo compacto para tareas generales y juegos ligeros sin GPU dedicada
+    ~%-25%Cuando se necesita entrenar modelos de IA de gran volumen (Big Data)
+    ~%-25%Cuando se requiere la máxima potencia de renderizado 3D profesional
+    ~%-25%Solo si el ordenador no va a estar conectado a internet
+}
+
+::AMD_3D_VCache_Design::
+¿En qué consiste físicamente la tecnología "3D V-Cache" de AMD que se menciona como una "jugada maestra"? {
+    =En soldar memoria caché adicional en vertical sobre los chiplets de los núcleos
+    ~%-25%En utilizar tres capas de ventiladores sobre el silicio
+    ~%-25%En aumentar la frecuencia de reloj a tres veces la base
+    ~%-25%En conectar la CPU directamente a la fuente de alimentación
+}
+
+::AMD_3D_VCache_Benefit::
+¿Qué problema crítico resuelve el diseño de la 3D V-Cache en el gaming de sobremesa? {
+    =Reduce drásticamente la latencia de acceso a datos
+    ~%-25%Aumenta el número de núcleos disponibles para multitarea
+    ~%-25%Permite que el procesador consuma menos de 10W
+    ~%-25%Evita que los juegos necesiten instalación en el disco duro
+}
+
+::AMD_Naming_9::
+En los procesadores AMD Ryzen de sobremesa, ¿qué indica el primer número de la serie (ej. Ryzen 9 9950X)? {
+    =La generación del procesador (arquitectura Zen)
+    ~%-25%El número total de núcleos físicos
+    ~%-25%La cantidad de memoria caché en Gigabytes
+    ~%-25%El año de fabricación del componente
+}
+
+::AMD_Naming_X3D::
+¿Qué indica la terminación "X3D" en un modelo de procesador AMD Ryzen de sobremesa? {
+    =Que incluye la tecnología de caché apilada en 3D para máximo rendimiento en juegos
+    ~%-25%Que el procesador es capaz de proyectar imágenes en tres dimensiones
+    ~%-25%Que tiene tres veces más hilos que la versión estándar
+    ~%-25%Que es una versión diseñada exclusivamente para diseño 3D industrial
+}
+
+::NPU_Definition::
+¿Qué es una NPU (Neural Processing Unit) integrada en los nuevos procesadores de sobremesa? {
+    =Un motor acelerador especializado en tareas de Inteligencia Artificial
+    ~%-25%Una unidad que sustituye por completo a la tarjeta gráfica
+    ~%-25%Un nuevo tipo de puerto para conectar redes neuronales externas
+    ~%-25%Un sistema de seguridad contra virus informáticos
+}
+
+::NPU_Utility_Opinion::
+¿Cuál es la opinión actual sobre la utilidad real de las NPUs en el día a día de un PC de sobremesa? {
+    =Todavía es limitada, ya que falta software que aproveche realmente este hardware
+    ~%-25%Es imprescindible para poder encender el ordenador con Windows 11
+    ~%-25%Ha sustituido por completo la necesidad de tener mucha memoria RAM
+    ~%-25%Solo sirve para mejorar la calidad del audio en las llamadas
+}
+
+// --- Bloque 4: Sistemas y Mantenimiento (Currículo/Gral) ---
+
+
+
+::Manufacturing_Process_nm::
+¿Qué beneficio aporta la reducción de los nanómetros (nm) en el proceso de fabricación de CPUs de sobremesa? {
+    =Permite meter más transistores en el mismo espacio, mejorando eficiencia y rendimiento
+    ~%-25%Aumenta el tamaño físico del procesador para que se enfríe mejor
+    ~%-25%Reduce el precio del procesador de forma proporcional al tamaño
+    ~%-25%Hace que el procesador sea compatible con sistemas operativos antiguos
+}
+
+::RAM_Compatibility::
+Al elegir una CPU moderna de sobremesa (como el i9-14900K o Ryzen 9000), ¿qué factor de memoria es crítico revisar? {
+    =La compatibilidad con el tipo de RAM (DDR4 vs DDR5)
+    ~%-25%El color de los módulos de RAM para que coincidan con la CPU
+    ~%-25%Que la RAM sea de la misma marca que el procesador
+    ~%-25%La longitud del cable de la memoria RAM
+}
+
+::Intel_Desktop_Hierarchy::
+Dentro de la línea de consumo de Intel, ¿cuál es la familia de procesadores más potente para estaciones de trabajo de desarrollo de software? {
+    =Intel Core i9 / Ultra 9
+    ~%-25%Intel Pentium Gold
+    ~%-25%Intel Core i3
+    ~%-25%Intel Celeron
+}
+
+
+
+::P02::
+¿Qué componente es imprescindible para entrenar modelos de inteligencia artificial en un PC de sobremesa en un tiempo razonable?
+{
+=GPU dedicada
+~%-25% Disco duro mecánico
+~%-25% Tarjeta de red
+~%-25% Fuente de alimentación modular
+}
+
+::P03::
+¿Qué factor NO se menciona como criterio para estimar los requisitos hardware del sistema?
+{
+=Sistema operativo utilizado
+~%-25% Volumen de datos
+~%-25% Complejidad del modelo
+~%-25% Tiempo de entrenamiento
+}
+
+
+
+::P05::
+¿Qué arquitectura de CPU es predominante en ordenadores de sobremesa?
+{
+=x86
+~%-25% ARM
+~%-25% RISC-V
+~%-25% MIPS
+}
+
+::P06::
+¿Qué fabricantes son los principales desarrolladores de CPUs x86 para escritorio?
+{
+=Intel y AMD
+~%-25% Apple y Qualcomm
+~%-25% NVIDIA y Samsung
+~%-25% IBM y ARM Holdings
+}
+
+::P07::
+¿Qué significa que una arquitectura sea de tipo CISC?
+{
+=Utiliza instrucciones complejas que realizan varias operaciones
+~%-25% Solo ejecuta una instrucción por ciclo
+~%-25% Está optimizada para bajo consumo
+~%-25% Reduce el número de transistores
+}
+
+::P08::
+¿Qué mide la frecuencia de reloj de un procesador?
+{
+=El número de ciclos por segundo
+~%-25% La cantidad de núcleos
+~%-25% El consumo eléctrico
+~%-25% El tamaño de la caché
+}
+
+::P09::
+¿Qué ventaja principal ofrece un mayor número de núcleos en un procesador?
+{
+=Mejor rendimiento en multitarea y paralelismo
+~%-25% Menor consumo energético
+~%-25% Mayor frecuencia de reloj
+~%-25% Menor generación de calor
+}
+
+::P10::
+En los procesadores Intel modernos, ¿qué tipo de núcleos están orientados a la eficiencia energética?
+{
+=E-Cores
+~%-25% P-Cores
+~%-25% LP Cores
+~%-25% Nano Cores
+}
+
+::P11::
+¿Qué núcleos son los únicos que disponen de hilos (threads)?
+{
+=P-Cores
+~%-25% E-Cores
+~%-25% Todos los núcleos
+~%-25% Ningún núcleo
+}
+
+::P12::
+¿Cuál es la función principal de la memoria caché en la CPU?
+{
+=Reducir accesos a la RAM y acelerar procesos
+~%-25% Aumentar la capacidad de almacenamiento
+~%-25% Sustituir a la memoria RAM
+~%-25% Controlar la temperatura del procesador
+}
+
+::P13::
+¿Qué nivel de caché es más grande pero más lento?
+{
+=L3
+~%-25% L1
+~%-25% L2
+~%-25% Caché virtual
+}
+
+
+
+::P15::
+¿Por qué un proceso de fabricación menor suele ser mejor?
+{
+=Mejora eficiencia energética y rendimiento
+~%-25% Aumenta el tamaño del chip
+~%-25% Reduce la compatibilidad de software
+~%-25% Incrementa el TDP
+}
+
+::P16::
+¿Qué significa TDP en un procesador?
+{
+=La cantidad de calor que debe disipar
+~%-25% La velocidad máxima del reloj
+~%-25% El número de transistores
+~%-25% La potencia de la fuente recomendada
+}
+
+::P17::
+¿Por qué es importante conocer el TDP en un PC de sobremesa?
+{
+=Para elegir una refrigeración adecuada
+~%-25% Para instalar el sistema operativo
+~%-25% Para seleccionar el disco duro
+~%-25% Para configurar la BIOS
+}
+
+::P18::
+¿Qué tipo de memoria RAM soporta un procesador moderno de escritorio?
+{
+=DDR4 o DDR5
+~%-25% SDRAM
+~%-25% DDR2
+~%-25% VRAM
+}
+
+::P19::
+¿Para qué sirve la GPU integrada en un procesador de sobremesa?
+{
+=Para tareas gráficas básicas sin GPU dedicada
+~%-25% Para entrenar modelos de IA
+~%-25% Para reemplazar la CPU
+~%-25% Para aumentar la RAM disponible
+}
+
+
+
+::P21::
+¿Qué componente almacena los modelos y cálculos intermedios durante el entrenamiento?
+{
+=La VRAM de la GPU
+~-%25% La RAM del sistema
+~%-25% El disco duro
+~%-25% La caché L3
+}
+
+::P24::
+¿Qué ventaja destaca AMD con su diseño de chiplets en sobremesa?
+{
+=Mayor escalabilidad y eficiencia de fabricación
+~%-25% Menor frecuencia de reloj
+~%-25% Uso exclusivo de GPUs integradas
+~%-25% Reducción de la memoria caché
+}
+
+::P25::
+¿Qué son las NPUs mencionadas en el vídeo?
+{
+=Unidades especializadas en tareas de IA
+~%-25% Nuevos tipos de núcleos de CPU
+~%-25% Memorias de alta velocidad
+~%-25% Sistemas de refrigeración avanzados
+}
+
