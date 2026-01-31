@@ -1,0 +1,215 @@
+// Bloque: Sistemas Informáticos y Hardware para IA
+
+::P1 Arquitectura CPU:: ¿Qué arquitectura de procesador se caracteriza por un diseño CISC y es predominante en ordenadores de escritorio? {
+    ~%-25%ARM
+    ~%-25%RISC
+    =x86
+    ~%-25%M2 Ultra
+}
+
+::P2 Núcleos Intel:: En los procesadores Intel de 12ª generación en adelante, ¿qué función tienen los E-Cores? {
+    =Eficiencia energética para tareas en segundo plano
+    ~%-25%Máximo rendimiento en aplicaciones pesadas
+    ~%-25%Sustituir por completo a la GPU integrada
+    ~%-25%Gestionar exclusivamente la memoria caché L3
+}
+
+::P3 Memoria Caché:: ¿Cuál es la característica principal de la caché L1 en un procesador? {
+    ~%-25%Es la más lenta pero de mayor capacidad
+    =Es la más pequeña pero la más rápida y cercana al núcleo
+    ~%-25%Se comparte entre todos los núcleos del procesador
+    ~%-25%Es una memoria volátil externa al chip de la CPU
+}
+
+::P4 Tecnología de fabricación:: ¿Qué ventaja principal ofrece reducir el tamaño de los transistores en un chip? {
+    ~%-25%Aumentar el tamaño físico del procesador
+    ~%-25%Reducir el número de hilos de ejecución
+    =Aumentar la eficiencia energética y el rendimiento
+    ~%-25%Eliminar la necesidad de memoria RAM
+}
+
+::P5 TDP:: ¿Qué indica el parámetro TDP de un componente? {
+    =La cantidad de calor que disipa bajo carga máxima (en watios)
+    ~%-25%La velocidad máxima de procesamiento en GHz
+    ~%-25%La capacidad de almacenamiento de datos temporales
+    ~%-25%El voltaje mínimo para que el sistema arranque
+}
+
+
+
+::P7 Tipos de GPU:: ¿Qué marca es la encargada de fabricar la arquitectura "Blackwell"? {
+    ~%-25%AMD
+    ~%-25%Intel
+    =NVIDIA
+    ~%-25%Apple
+}
+
+
+
+::P9 Latencia RAM:: Al comparar memorias RAM, ¿qué significa un número menor en la Latencia CAS (CL)? {
+    ~%-25%Que la memoria es de una generación más antigua
+    =Que el tiempo de respuesta es menor (mejor rendimiento)
+    ~%-25%Que la frecuencia en MHz es necesariamente más alta
+    ~%-25%Que consume más energía por ciclo de reloj
+}
+
+::P10 Sockets Placa Base:: ¿Cómo se denomina el tipo de socket donde los pines están en la placa base y no en el procesador? {
+    ~%-25%PGA
+    =LGA
+    ~%-25%DIMM
+    ~%-25%SATA
+}
+
+// Cuestionario: El Cerebro en la oficina - Infraestructura Hardware para IA
+
+
+::P5:: ¿Cuál es la principal ventaja de la arquitectura ARM? {
+    =Eficiencia energética y optimización del rendimiento por vatio
+    ~%-25%Compatibilidad nativa con todo el software histórico de Windows
+    ~%-25%Capacidad de ejecutar instrucciones CISC complejas
+    ~%-25%Ser la única arquitectura que permite el uso de DDR5
+}
+
+
+::P7:: ¿Qué unidad de la CPU se encarga de gestionar las tareas más pequeñas dentro de un núcleo y solo está presente en los P-cores? {
+    =Hilos (Threads)
+    ~%-25%Caché L3
+    ~%-25%NPU
+    ~%-25%Transistores nm
+}
+
+::P8:: ¿Cuál es la jerarquía de memoria caché que es compartida entre todos los núcleos y tiene mayor capacidad? {
+    =Caché L3
+    ~%-25%Caché L1
+    ~%-25%Caché L2
+    ~%-25%VRAM
+}
+
+
+
+::P10:: ¿Cuál es la función principal de la GPU en el contexto de la inteligencia artificial? {
+    =Manejar procesamiento paralelo intensivo y cálculos complejos
+    ~%-25%Gestionar únicamente la salida de video al monitor
+    ~%-25%Almacenar de forma permanente el dataset de imágenes
+    ~%-25%Controlar la comunicación entre el teclado y el ratón
+}
+
+::P11:: ¿Qué tipo de memoria gráfica se utiliza comúnmente en estaciones de trabajo profesionales por ofrecer un ancho de banda mucho mayor que la GDDR? {
+    =HBM (High Bandwidth Memory)
+    ~%-25%DDR5
+    ~%-25%SO-DIMM
+    ~%-25%SATA
+}
+
+::P12:: En aplicaciones de IA, ¿en qué unidad se suele medir el rendimiento de una GPU? {
+    =FLOPS (Floating Point Operations Per Second)
+    ~%-25%FPS (Frames Per Second)
+    ~%-25%GHz (Gigahercios)
+    ~%-25%MT/s (Mega Transfers per second)
+}
+
+::P13:: ¿Qué núcleos específicos de las GPUs NVIDIA están diseñados para ejecutar cálculos de Inteligencia Artificial? {
+    =Tensor Cores
+    ~%-25%Ray Tracing Cores
+    ~%-25%P-Cores
+    ~%-25%E-Cores
+}
+
+::P14:: ¿Qué diferencia define a un socket de tipo LGA? {
+    =Los pines están en la placa base y el procesador tiene contactos planos
+    ~%-25%Los pines están en el procesador y la placa base tiene agujeros
+    ~%-25%Es exclusivo para portátiles y dispositivos móviles
+    ~%-25%No requiere sistema de refrigeración activo
+}
+
+::P15:: ¿Qué componente de la placa base determina qué tecnologías y características son compatibles? {
+    =El Chipset
+    ~%-25%El VRM
+    ~%-25%El conector SATA
+    ~%-25%El formato E-ATX
+}
+
+::P16:: Para aplicaciones de IA, ¿qué versión de ranura PCIe se recomienda para maximizar el ancho de banda entre GPU y CPU? {
+    =PCIe 5.0
+    ~%-25%PCIe 3.0
+    ~%-25%PCIe 4.0
+    ~%-25%AGP 8x
+}
+
+::P17:: ¿Cuál es el factor de forma de la memoria RAM utilizado comúnmente en ordenadores de sobremesa? {
+    =DIMM
+    ~%-25%SO-DIMM
+    ~%-25%M.2
+    ~%-25%LGA
+}
+
+::P18:: ¿Qué ventaja técnica ofrece la RAM DDR5 frente a la DDR4? {
+    =Mayor velocidad de datos y menor voltaje
+    ~%-25%Mayor latencia real medida en nanosegundos
+    ~%-25%Uso de pines físicos en el módulo en lugar de contactos
+    ~%-25%Capacidad máxima limitada a 16 GB por módulo
+}
+
+::P19:: En la memoria RAM, ¿qué significa el término "CL" (ej. CL30)? {
+    =Latencia CAS, indicando el tiempo de respuesta (a menor número, mejor)
+    ~%-25%Ciclos de Luz, indicando la frecuencia de los LEDs RGB
+    ~%-25%Capacidad Lógica, indicando el tamaño total en GB
+    ~%-25%Clock Low, indicando la velocidad mínima de ahorro de energía
+}
+
+::P20:: ¿Cuáles son los tres principales fabricantes de chips internos de memoria RAM? {
+    =Samsung, SK Hynix y Micron
+    ~%-25%Intel, AMD y NVIDIA
+    ~%-25%Corsair, Kingston y Gigabyte
+    ~%-25%Asus, MSI y Apple
+}
+
+::P21:: ¿Cómo se denominan los perfiles de overclocking de RAM específicos para procesadores AMD? {
+    =EXPO
+    ~%-25%XMP
+    ~%-25%CUDA
+    ~%-25%TDP
+}
+
+
+::P25:: ¿A qué se refiere el "proceso de fabricación" medido en nanómetros (nm)? {
+    =Al tamaño de los transistores en el procesador
+    ~%-25%Al grosor de la placa base
+    ~%-25%A la longitud de los cables de la fuente de alimentación
+    ~%-25%Al tamaño físico del socket del CPU
+}
+
+::P26:: ¿Qué fabricante utiliza los sockets AM4 y AM5 para sus procesadores actuales? {
+    =AMD
+    ~%-25%Intel
+    ~%-25%Apple
+    ~%-25%Qualcomm
+}
+
+::P27:: ¿Qué conectores de salida de video son los más comunes en las GPUs modernas por su capacidad para altas resoluciones? {
+    =HDMI y DisplayPort
+    ~%-25%VGA y DVI
+    ~%-25%S-Video y Euroconector
+    ~%-25%Thunderbolt 2 y VGA
+}
+
+::P28:: ¿Qué se recomienda respecto a la frecuencia de la RAM DDR5 para equipos de IA? {
+    =DDR5-6000 MT/s o superior
+    ~%-25%DDR5-3200 MT/s o inferior
+    ~%-25%No importa la frecuencia si la latencia es CL50
+    ~%-25%Cualquier frecuencia es válida siempre que sea SO-DIMM
+}
+
+::P29:: ¿Qué ocurre si comparamos la latencia CL de DDR4 frente a DDR5? {
+    =DDR5 suele tener números CL más altos, pero rinde mejor por su mayor frecuencia
+    ~%-25%DDR4 es siempre más rápida porque su CL es menor
+    ~%-25%La latencia CL es idéntica en ambos tipos de memoria
+    ~%-25%DDR5 no tiene latencia CAS, solo frecuencia MT/s
+}
+
+::P30:: ¿Qué fabricantes ensamblan tarjetas gráficas utilizando chips de NVIDIA o AMD, añadiendo sus propios sistemas de refrigeración? {
+    =ASUS, MSI o Gigabyte
+    ~%-25%Samsung, SK Hynix o Micron
+    ~%-25%Qualcomm y Apple
+    ~%-25%Intel y Western Digital
+}
