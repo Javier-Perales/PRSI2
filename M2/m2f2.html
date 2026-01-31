@@ -737,9 +737,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52almacenamiento-interno" class="md-nav__link">
+  <a href="#52-almacenamiento-interno" class="md-nav__link">
     <span class="md-ellipsis">
-      5.2Almacenamiento Interno
+      5.2 Almacenamiento Interno
     </span>
   </a>
   
@@ -1020,9 +1020,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52almacenamiento-interno" class="md-nav__link">
+  <a href="#52-almacenamiento-interno" class="md-nav__link">
     <span class="md-ellipsis">
-      5.2Almacenamiento Interno
+      5.2 Almacenamiento Interno
     </span>
   </a>
   
@@ -1593,7 +1593,7 @@ Suele haber confusión al comparar las latencias entre DDR4 y DDR5, ya que las D
 <li><a href="https://youtu.be/fmIHBW__F_M?si=TkSEj3SldTiQAwnS">Memoria RAM ¿Cuál elijo?</a></li>
 </ul>
 <div class="admonition question">
-<p class="admonition-title">A204(CE2, CE5) Memoria RAM compatible con placa base de la actividad A203</p>
+<p class="admonition-title">A204.1(CE2, CE5) Memoria RAM compatible con placa base de la actividad A203</p>
 <p>Selecciona el tipo de memoria RAM compatible con la placa base seleccionada en la actividad A203. Recuerda considerar que es un equipo para desarrollo y entrenamiento de modelos de IA.</p>
 <p>Característica a obtener; <em>Generación de DDR</em>, <em>Velocidad en</em></p>
 <p>Enlaces:</p>
@@ -1632,7 +1632,7 @@ Suele haber confusión al comparar las latencias entre DDR4 y DDR5, ya que las D
 <ul>
 <li><strong>Finalidad</strong>: Sus usos más comunes son la realización de copias de seguridad (backups), la transferencia de archivos pesados entre equipos y la ampliación del espacio de almacenamiento de nuestro ordenador personal o portátil.</li>
 </ul>
-<h3 id="52almacenamiento-interno">5.2Almacenamiento Interno</h3>
+<h3 id="52-almacenamiento-interno">5.2 Almacenamiento Interno</h3>
 <p>El almacenamiento interno se refiere a los dispositivos que están dentro del ordenador y se utilizan para guardar datos de forma permanente. Al igual que el almacenamiento externo, existen dos tipos principales: los discos duros (HDD) y las unidades de estado sólido (SSD), pero en este caso, la conexión se realiza a través de interfaces internas como <strong>SATA</strong> o <strong>NVMe</strong>.</p>
 <p>A continuación os presento un resumen comparativo entre ambos tipos de almacenamiento interno:</p>
 <table>
@@ -1661,7 +1661,7 @@ Suele haber confusión al comparar las latencias entre DDR4 y DDR5, ya que las D
 <td>Actualización económica</td>
 </tr>
 <tr>
-<td><strong>SSD NVMe</strong></td>
+<td><strong>SSD NVMe</strong>(<em>Non-Volatile Memory Express</em>)</td>
 <td>PCIe (x4)</td>
 <td>3000–7000 MB/s</td>
 <td>M.2 NVMe / PCIe</td>
@@ -1671,12 +1671,61 @@ Suele haber confusión al comparar las latencias entre DDR4 y DDR5, ya que las D
 </table>
 <p><img alt="SSD SATA" class="center" src="assets/ssd%20sata%20m2.png" width="40%" />
 <img alt="SSD NVMe" class="center" src="assets/ssd%20NVMe.png" width="40%" /></p>
-<p>Recurso:</p>
+<p><strong>Recurso</strong>:</p>
 <ul>
-<li>[]</li>
+<li><a href="https://youtu.be/sP4uyJLw_nY?si=Uuw6KoaKWLyzmu0Z">SSD vs HDD en 2026</a></li>
+<li><a href="https://youtu.be/twFInGAFw4k?si=fH-US57PoRQAZJC7">Qué SSD comprar</a></li>
 </ul>
 <div class="admonition question">
-<p class="admonition-title">A205(CE2, CE5) Almacenamiento para nuestros equipos de IA</p>
+<p class="admonition-title">A204.2 (CE2, CE5) Almacenamiento interno para nuestros equipos de IA</p>
+<p>Tras haber seleccionado la placa base, CPU, GPU y RAM en las actividades anteriores, selecciona el tipo de almacenamiento interno más adecuado para nuestro equipo de IA. Debes considerar que no todos los datos se acceden igual, por lo que una combinación de varios tipos de almacenamiento puede ser la mejor opción.</p>
+<p>Completa la siguiente tabla seleccionando el tipo de disco más adecuado para cada función, justificando tu elección. Recuerda que sea compatible con tu placa base.</p>
+<table>
+<thead>
+<tr>
+<th>Función del disco</th>
+<th>Datos que contiene</th>
+<th>Requisito crítico</th>
+<th>Modelo recomendado</th>
+<th>Características</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arranque y SO</td>
+<td></td>
+<td>Fiabilidad y Velocidad de carga</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Caché y Modelos</td>
+<td>Pesos de redes neuronales, archivos temporales</td>
+<td>Latencia Mínima y alta velocidad</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Dataset de entrenamiento</td>
+<td>Terabytes de imagenes, audio o texto</td>
+<td>Capacidad masiva y durabilidad</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Características clave a especificar por cada modelo</strong></p>
+<ul>
+<li><strong>Interfaz y Protocolo</strong>: Especificar si es SATA III, PCIe 4.0 o PCIe 5.0, y si usa el protocolo NVMe.</li>
+<li><strong>Velocidad de Lectura/Escritura Secuencial</strong>: Crucial para mover grandes Datasets (IA). Buscar <em>Max Sequential Read/Write</em></li>
+<li><strong>IOPS (Operaciones de Entrada/Salida por Segundo)</strong>: Vital para el Sistema Operativo y el acceso aleatorio a miles de archivos pequeños. Buscar <em>4K Random Read/Write</em>. Suele ser un número acabao en K. Los discos de alto rendimiento suelen ser de unos 1000K IPOS.</li>
+<li><strong>Durabilidad (TBW - Terabytes Written)</strong>: Indica cuánta información se puede escribir antes de que las celdas de memoria fallen. Suele ser un dato que no se encuentra fácilmente. Suele estar en los datos técnicos del fabricante como <em>Endurance</em> o <em>Reliability</em></li>
+<li><strong>MTBF (Mean Time Between Failures)</strong>: Tiempo medio entre fallos, para valorar la fiabilidad del sistema a largo plazo. Se mide en millones de horas (ej. 1.5 M hours). Es clave para la prevención de problemas técnicos</li>
+</ul>
 </div>
 
 
