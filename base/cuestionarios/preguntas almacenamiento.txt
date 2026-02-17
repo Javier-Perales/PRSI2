@@ -1,0 +1,85 @@
+
+
+::ALM_14:: ¿Cuál es la característica principal del almacenamiento secundario? {
+    =Guarda información de forma permanente (no volátil).
+    ~%-25%Es mucho más rápido que la memoria RAM para procesar datos en tiempo real.
+    ~%-25%Se borra automáticamente cada vez que se reinicia el sistema operativo.
+    ~%-25%Solo puede instalarse de forma externa a través de puertos USB.
+}
+
+::ALM_15:: ¿Qué diferencia fundamental de diseño hay entre un HDD y un SSD? {
+    =El HDD usa platos magnéticos giratorios y el SSD usa chips de memoria flash sin partes móviles.
+    ~%-25%El SSD es magnético y el HDD es de estado sólido.
+    ~%-25%El HDD es mucho más rápido pero tiene menos capacidad que el SSD.
+    ~%-25%El SSD consume mucha más energía debido a sus partes mecánicas.
+}
+
+::ALM_16:: ¿Cuál es la velocidad aproximada de transferencia de un HDD conectado por SATA III? {
+    =100–200 MB/s
+    ~%-25%500–550 MB/s
+    ~%-25%3000–7000 MB/s
+    ~%-25%Más de 10.000 MB/s
+}
+
+::ALM_17:: ¿Qué interfaz y protocolo permiten a los SSD alcanzar velocidades de hasta 7000 MB/s? {
+    =Interfaz PCIe y protocolo NVMe.
+    ~%-25%Interfaz SATA III y protocolo USB 4.0.
+    ~%-25%Interfaz Thunderbolt y protocolo DVI.
+    ~%-25%Interfaz M.2 y protocolo Magnético.
+}
+
+::ALM_18:: ¿Cuál es el uso típico recomendado para un SSD SATA según los apuntes? {
+    =Actualización económica de equipos.
+    ~%-25%Arranque de estaciones de trabajo de alto rendimiento (AI).
+    ~%-25%Almacenamiento masivo de terabytes de imágenes.
+    ~%-25%Sustitución de la memoria VRAM de la tarjeta gráfica.
+}
+
+::ALM_19:: En el almacenamiento externo, ¿qué factor determina principalmente la velocidad de lectura y escritura? {
+    =El tipo de conector (USB, Thunderbolt) y la tecnología del disco (HDD/SSD).
+    ~%-25%El color del cable y el tamaño físico de la carcasa.
+    ~%-25%La cantidad de núcleos P-Core del procesador del ordenador.
+    ~%-25%La frecuencia en MHz de los módulos de RAM instalados.
+}
+
+::ALM_20:: ¿Qué indica la métrica TBW en un SSD? {
+    =La durabilidad o cantidad de información que se puede escribir antes de que las celdas fallen.
+    ~%-25%La velocidad máxima de lectura secuencial del dispositivo.
+    ~%-25%El tiempo medio que tarda el disco en arrancar el sistema operativo.
+    ~%-25%La capacidad total de almacenamiento disponible para el usuario.
+}
+
+::ALM_21:: ¿Qué miden los IOPS? {
+    =La velocidad de acceso aleatorio a miles de archivos pequeños, vital para el SO.
+    ~%-25%El consumo de vatios del disco bajo carga máxima.
+    ~%-25%La cantidad de platos magnéticos que tiene un disco duro interno.
+    ~%-25%La distancia en nanómetros entre los transistores del chip de memoria.
+}
+
+::ALM_22:: ¿Para qué función del equipo de IA se considera "crítica" la fiabilidad y velocidad de carga? {
+    =Para el arranque y el Sistema Operativo (SO).
+    ~%-25%Para el almacenamiento del dataset de entrenamiento de varios terabytes.
+    ~%-25%Para la conexión de monitores a través de HDMI.
+    ~%-25%Para la gestión de los ventiladores de la caja del ordenador.
+}
+
+::ALM_23:: ¿Qué tipo de disco se recomienda para "Caché y Modelos" (pesos de redes neuronales)? {
+    =SSD NVMe por su latencia mínima y alta velocidad.
+    ~%-25%HDD de 3.5” por su gran capacidad de rotación.
+    ~%-25%Pendrive USB 2.0 por su portabilidad.
+    ~%-25%SSD SATA por ser la opción más económica.
+}
+
+::ALM_24:: ¿Qué métrica es clave para valorar la fiabilidad del sistema a largo plazo midiendo el tiempo medio entre fallos? {
+    =MTBF (Mean Time Between Failures)
+    ~%-25%IOPS (Input/Output Operations)
+    ~%-25%TDP (Thermal Design Power)
+    ~%-25%CL (CAS Latency)
+}
+
+::ALM_25:: Según los apuntes, ¿qué ventaja ofrece el almacenamiento externo frente al interno? {
+    =La portabilidad y la facilidad para compartir información entre diferentes ordenadores.
+    ~%-25%Una velocidad de transferencia siempre superior a la interfaz NVMe interna.
+    ~%-25%Que no requiere ningún tipo de cable o conexión física para funcionar.
+    ~%-25%Que es el único lugar donde se pueden instalar las librerías de Python.
+}

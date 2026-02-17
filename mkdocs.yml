@@ -46,7 +46,7 @@ nav:
   - 'P2. AI Factory':
     - 'Sprint 1: Geopolítica del Chip y la IA': 'M2/m2f1.md'
     - 'Sprint 2: El Cerebro en la oficina': 'M2/m2f2.md' 
-  #  - 'Sprint 5: Streamlit': 'M2/m2f2.md'
+    - 'Sprint 3: Arquitectura de red': 'M2/m2f3.md'
   #  - 'Sprint 6: Integración del modelo': 'M2/m2f3.md'
   #  - 'Sprint 7: Personalización': 'M2/m2f4.md'
   #- 'P3: El Cerebro Digital': []
