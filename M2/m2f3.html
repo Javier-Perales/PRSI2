@@ -1,0 +1,1268 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="En este sprint se trabajará conceptos de direccionamiento IP, puertos y servicios que son necesarios para el diseño y configuración de RAL.">
+      
+      
+        <meta name="author" content="Javier Perales">
+      
+      
+        <link rel="canonical" href="https://javier-perales.github.io/PRSI2/M2/m2f3.html">
+      
+      
+        <link rel="prev" href="m2f2.html">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>Sprint3. Arquitectura de red - PRSI II - Programación, Redes y Sistemas Informáticos II</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-protocolo-tcpip" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="PRSI II - Programación, Redes y Sistemas Informáticos II" class="md-header__button md-logo" aria-label="PRSI II - Programación, Redes y Sistemas Informáticos II" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PRSI II - Programación, Redes y Sistemas Informáticos II
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sprint3. Arquitectura de red
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="PRSI II - Programación, Redes y Sistemas Informáticos II" class="md-nav__button md-logo" aria-label="PRSI II - Programación, Redes y Sistemas Informáticos II" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+
+    </a>
+    PRSI II - Programación, Redes y Sistemas Informáticos II
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presentación asignatura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    P1. Dato / Modelo / Aplicación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            P1. Dato / Modelo / Aplicación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../M1/m1f1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 1: Datos que hablan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../M1/m1f2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 2: Creación de modelos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../M1/m1f3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 3: El lado oscuro de la IA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../M1/m1f4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 4: Del modelo a la aplicación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    P2. AI Factory
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            P2. AI Factory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="m2f1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 1: Geopolítica del Chip y la IA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="m2f2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 2: El Cerebro en la oficina
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sprint 3: Arquitectura de red
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="m2f3.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 3: Arquitectura de red
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-protocolo-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Protocolo TCP/IP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Protocolo TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-capa-de-interfaz-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Capa de interfaz de red
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-capa-de-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Capa de Internet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Capa de Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-estructura-de-una-direccion-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 Estructura de una dirección IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-identificador-de-red-y-de-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 Identificador de red y de host
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-direcciones-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3 Direcciones especiales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-configuracion-entorno-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.4 Configuración entorno de red
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.4 Configuración entorno de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#13-capa-de-transporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Capa de transporte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-capa-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Capa de aplicación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-direccionamiento-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Direccionamiento IP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-puertos-y-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Puertos y servicios
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-protocolo-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Protocolo TCP/IP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Protocolo TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-capa-de-interfaz-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Capa de interfaz de red
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-capa-de-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Capa de Internet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Capa de Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-estructura-de-una-direccion-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 Estructura de una dirección IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-identificador-de-red-y-de-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 Identificador de red y de host
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-direcciones-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3 Direcciones especiales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-configuracion-entorno-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.4 Configuración entorno de red
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.4 Configuración entorno de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#13-capa-de-transporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Capa de transporte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-capa-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Capa de aplicación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-direccionamiento-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Direccionamiento IP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-puertos-y-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Puertos y servicios
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Sprint 3: Arquitectura de red</h1>
+
+<p>En este sprint presentaremos los protocolos de comunicación que permiten la interconexión en Internet y que constituyen la base de la mayoría de las redes locales. Comprender el funcionamiento de la <strong>pila TCP/IP</strong> es fundamental para ser capaces de analizar las características de las redes existentes y conectarlas de manera segura. Estos conocimientos nos permitirán diseñar y configurar el direccionamiento lógico y la infraestructura de red de la situación de aprendizaje anterior, así como desplegar los servicios en red necesarios para el funcionamiento de nuestra empresa de IA.</p>
+<h2 id="1-protocolo-tcpip">1. Protocolo TCP/IP</h2>
+<p><img alt="Modelo TCP/IP" class="center" src="assets/modelotcpip.jpg" width="60%" /></p>
+<p><a href="https://ccnadesdecero.es/que-es-tcp-ip/">Fuente:ccnadesdesdecero.com</a></p>
+<p>El <strong>modelo TCP/IP</strong> es un conjunto de protocolos de comunicación que se utilizan para interconectar dispositivos en Internet. Este modelo se compone de cuatro capas: la capa de aplicación, la capa de transporte, la capa de Internet y la capa de interfaz de red. Cada capa tiene funciones específicas y protocolos asociados que permiten la comunicación entre dispositivos.</p>
+<p><strong>Internet es un conjunto de redes interconectadas y hetereogeneas</strong>, lo que significa que cada red puede tener su propia arquitectura y protocolos de comunicación. <strong>El éxito del modelo TCP/IP radicó en su capacidad de homogeneizar la comunicación</strong> entre estas redes, permitiendo que dispositivos alojados en redes con arquitecturas diferentes pudieran comunicarse entre sí.</p>
+<h3 id="11-capa-de-interfaz-de-red">1.1 Capa de interfaz de red</h3>
+<p>Es la capa más baja del modelo TCP/IP y se encarga de la transmisión de datos a través de la red física. Estrictamente hablando, esta capa no forma parte del modelo TCP/IP, ya que contiene las características específicas de cada red física.</p>
+<p>En el caso de las redes locales, el protocolo más comúnmente utilizado en esta capa es el <strong>Ethernet</strong>, que define el formato de los paquetes de datos y las reglas para su transmisión a través de la red. </p>
+<p>El direccionamiento de los equipos que forman parte de la red local se realiza mediante <strong>direcciones MAC</strong>, que son identificadores únicos asignados a cada dispositivo por el fabricante. Estas direcciones se utilizan para dirigir los paquetes de datos a su destino dentro de la red local.</p>
+<p>Esta dirección es un identificador de 48 bits que se asigna a cada dispositivo de red y se utiliza para la comunicación a nivel de enlace de datos dentro de la red local.</p>
+<p>La dirección MAC se representa comúnmente en formato hexadecimal, dividida en seis grupos de dos dígitos separados por dos puntos (por ejemplo, <code>00:1A:2B:3C:4D:5E</code>). Las primeras tres partes de la dirección MAC identifican al fabricante del dispositivo, mientras que las últimas tres partes son un identificador único asignado por el fabricante.</p>
+<p>No existe en el mundo dos tarjetas de red con la misma dirección MAC, lo que garantiza que cada dispositivo en una red local pueda ser identificado de manera única.</p>
+<p>Para entender mejor la diferencia entre la dirección MAC y la dirección IP, podemos decir que la dirección MAC es como el número de bastidor de un coche, que es único para cada vehículo, mientras que la dirección IP es como la matrícula del coche, que puede cambiar dependiendo de dónde se encuentre el vehículo.</p>
+<h3 id="12-capa-de-internet">1.2 Capa de Internet</h3>
+<p>El protocolo más importante en esta capa es el <strong>Protocolo de Internet (IP)</strong>, que se encarga de la dirección y el enrutamiento de los paquetes de datos a través de la red. <strong>El protocolo IP utiliza direcciones IP</strong> para identificar los dispositivos en la red y dirigir los paquetes de datos a su destino.</p>
+<p>La comunicación entre dispositivos de distintas redes se realiza por medio de un proceso llamado <strong><a href="https://www.youtube.com/watch?v=7yeC5ohURAg">encapsulación</a></strong>, en el que los datos se envían a través de la red local utilizando direcciones MAC, y luego se encapsulan en paquetes IP para ser enviados a través de Internet.</p>
+<h4 id="121-estructura-de-una-direccion-ip">1.2.1 Estructura de una dirección IP</h4>
+<div class="admonition info">
+<p>La dirección IP es el identificador de cada host dentro de su red de redes. Cada host conectado a una red tiene una
+dirección IP asignada, la cual debe ser distinta a todas las demás direcciones que estén vigentes en ese momento en
+el conjunto de redes visibles por el host. <strong>En el caso de Internet, no puede haber dos ordenadores con 2 direcciones IP
+(públicas) iguales</strong>. Pero <strong>sí podríamos tener dos ordenadores con la misma dirección IP siempre y cuando pertenezcan
+a redes privadas independientes entre sí</strong> (sin ningún camino posible que las comunique)</p>
+</div>
+<p>Las <strong>direcciones IP están formadas por 4 bytes (32 bits)</strong>. Se suelen representar de la forma <code>a.b.c.d</code> donde cada una de
+estas letras representa un byte (8 bits) y su valor puede ir de <code>0</code> a <code>255</code>.</p>
+<p>Se clasifican en clases (A, B, C, D y E) según el rango de direcciones que abarcan. Las clases A, B y C son las utilizadas para redes privadas y públicas.</p>
+<p>Para identificar a qué clase pertenece una IP, nos debemos fijar en que los primeros bits del primer byte.</p>
+<p><img alt="Identificar la clase a la que pertenece una dirección IP" class="center" src="assets/ipbits.png" width="80%" /></p>
+<div class="admonition task">
+<p class="admonition-title">Direccionamiento IP</p>
+<ol>
+<li>
+<p>Identifica la clase a la que pertenecen las siguientes direcciones IP:</p>
+<p>a. 12.168.14.255 <br />
+b. 80.58.12.68  <br />
+c. 172.67.14.92 <br />
+d. 200.255.192.64 <br />
+e. 190.72.90.0    </p>
+</li>
+<li>
+<p>Completa la siguiente tabla indicando el rango de direcciones IP disponibles para cada una de las clases A, B y C:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Clase</th>
+<th>Desde</th>
+<th>Hasta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clase A</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clase B</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clase C</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="122-identificador-de-red-y-de-host">1.2.2 Identificador de red y de host</h4>
+<p>Todas las direcciones IP tienen dos partes diferenciadas: el identificador de red y el identificador de host. La
+separación entre ambas partes viene dada por la <strong>máscara de subred</strong>. La máscara de subred es una dirección IP que indica qué parte de la dirección IP corresponde a la red y qué parte corresponde al host.</p>
+<div class="admonition info">
+<p>Por cada dirección IP, existen dos partes diferenciadas:</p>
+<ul>
+<li><strong>Identificador de red</strong>: Permite identificar a la red a la que pertenece el dispositivo.</li>
+<li><strong>Identificador de host</strong>: Permite identificar al dispositivo dentro de la red.</li>
+</ul>
+</div>
+<p>La máscara de red se representa de la misma forma que una dirección IP, es decir, con 4 bytes separados por puntos. Los bits
+de la máscara que están en <code>1</code> indican la parte de la dirección IP que corresponde a la red, mientras que los bits en <code>0</code> indican la parte que corresponde al host.</p>
+<p>Normalmente, podemos encontrarla representada de dos formas:</p>
+<ul>
+<li>Notación decimal con puntos: <code>255.255.255.0</code> En este caso los primeros 3 bytes están en <code>1</code> y el último en <code>0</code>, por lo que los primeros 24 bits corresponden a la red y los últimos 8 bits al host.</li>
+<li>Notación CIDR (Classless Inter-Domain Routing): <code>/24</code> En este caso, el número indica la cantidad de bits que corresponden a la red. En este caso, los primeros 24 bits corresponden a la red y los últimos 8 bits al host.</li>
+</ul>
+<div class="admonition task">
+<p class="admonition-title">Identificador de red y host</p>
+<p>Dadas las siguientes direcciones IP y sus respectivas máscaras, indica cuál es el identificador de red y cuál es el identificador de host:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Dirección IP</th>
+<th>Máscara de Red</th>
+<th>Identificador de Red (Net ID)</th>
+<th>Identificador de Host (Host ID)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>192.168.1.15</td>
+<td>255.255.255.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>10.0.0.42</td>
+<td>255.0.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>172.16.5.100</td>
+<td>255.255.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>192.168.100.2</td>
+<td>255.255.255.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>8.8.8.8</td>
+<td>255.0.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>172.31.0.1</td>
+<td>/16</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>192.168.0.254</td>
+<td>/24</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>10.25.50.75</td>
+<td>/8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>172.20.200.10</td>
+<td>/16</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>192.0.2.1</td>
+<td>/24</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Direccionamiento de equipos de red</p>
+<p>Relaciona cada dirección IP con la red a la que pertenece. Habrá direcciones IP que no pertenezcan a ninguna de las redes indicadas, en cuyo caso habrá que obtener el identificador de red correspondiente. </p>
+<table>
+<thead>
+<tr>
+<th>Columna A: Direcciones IP (Dispositivos)</th>
+<th>Columna B: Identificadores de Red</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 192.168.1.15 /24</td>
+<td>A. 10.0.0.0 /8</td>
+</tr>
+<tr>
+<td>2. 172.16.50.4 /16</td>
+<td>B. 192.168.1.0 /24</td>
+</tr>
+<tr>
+<td>3. 10.1.1.100 /8</td>
+<td>C. 172.16.0.0/16</td>
+</tr>
+<tr>
+<td>4. 192.168.1.200 /16</td>
+<td>D. 192.168.50.0 /24</td>
+</tr>
+<tr>
+<td>5. 172.16.1.25 /24</td>
+<td>E. 172.20.0.0</td>
+</tr>
+<tr>
+<td>6. 10.254.254.254 /16</td>
+<td>F. 10.0.0.0 /16</td>
+</tr>
+<tr>
+<td>7. 192.168.1.45 /24</td>
+<td></td>
+</tr>
+<tr>
+<td>8. 172.16.100.1 /24</td>
+<td></td>
+</tr>
+<tr>
+<td>9. 10.0.0.5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="123-direcciones-especiales">1.2.3 Direcciones especiales</h4>
+<p>Existen ciertas direcciones IP que tienen un significado especial y no pueden ser asignadas a dispositivos en una red. Algunas de estas direcciones son:</p>
+<ul>
+<li><strong>Dirección de red</strong>: Es la primera dirección de una red y se utiliza para identificar la red en sí misma. Por ejemplo, en la red <code>172.16.14.214/16</code>, la dirección de red es <code>172.16.0.0</code>. La parte de la IP que corresponde al host es <code>0</code>.</li>
+<li><strong>Dirección de broadcast</strong>: Es la última dirección de una red y se utiliza para enviar mensajes a todos los dispositivos de la red. Por ejemplo, en la red <code>172.16.14.214/16</code>, la dirección de broadcast es <code>172.16.255.255</code>. La parte de la IP que corresponde al host es <code>255</code>.</li>
+</ul>
+<div class="admonition task">
+<p class="admonition-title">Número de equipos en una red</p>
+<p>Obtén el número de equipos que se pueden direccionar en las siguientes redes. Recuerda que no se pueden utilizar la dirección de red ni la de broadcast. Por ejemplo, en la red <code>192.168.100.0</code> se puede direccionar a 254 equipos (256 - 2), desde la <code>192.168.100.1</code> hasta la <code>192.168.100.254</code></p>
+<table>
+<thead>
+<tr>
+<th>Dirección IP / Prefijo</th>
+<th>Identificador de red</th>
+<th>Dirección broadcast</th>
+<th>IP de inicio</th>
+<th>IP final</th>
+<th>Nº de hosts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.1.15 /24</td>
+<td>192.168.1.0</td>
+<td>192.168.1.255</td>
+<td>192.168.1.1</td>
+<td>192.168.1.254</td>
+<td>254</td>
+</tr>
+<tr>
+<td>172.16.50.4 /16</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.1.100 /8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>192.168.1.200 /24</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>172.16.0.25 /16</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.254.254.254 /8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>192.168.1.45 /24</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>172.16.100.1 /16</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.0.0.5 /8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>192.168.1.1 /24</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>/16</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10. 192.168.2.1 /24</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="124-configuracion-entorno-de-red">1.2.4 Configuración entorno de red</h2>
+<p>Todos los entornos de red necesitan los siguientes parámetros para funcionar correctamente:</p>
+<ul>
+<li><strong>Dirección IP del dispositivo</strong>.</li>
+<li><strong>Máscara de red</strong>.</li>
+<li><strong>Puerta de enlace predeterminada</strong>.</li>
+<li><strong>Servidores DNS (Domain Name System)</strong>.</li>
+</ul>
+<p>La <strong>dirección IP y la máscara de red</strong> permiten al dispositivo comunicarse con otros dispositivos. Si la configuración de estos parámetros es incorrecta, aunque el dispositivos esté físicamente conectado a la red, no podrá comunicarse con el resto de equipos.</p>
+<p>La <strong>Puerta de enlace o <em>Gateway</em></strong> se refiere a la IP del dispositivo de red que permite a la red local comunicarse con otras redes, como Internet. La puerta de enlace es el router que conecta la red local con el proveedor de servicios de Internet (ISP)</p>
+<p><strong>Servidores DNS (Domain Name System)</strong>. Los servidores DNS son los encargados de traducir los nombres de dominio (como www.ejemplo.com) en direcciones IP. Si no se configuran correctamente, el dispositivo no podrá resolver nombres de dominio y no podrá acceder a sitios web utilizando sus nombres. Existen servidores DNS públicos como los de Google (8.8.8.8 y 8.8.4.4).</p>
+<!--
+!!! task "A203(CE1)- Configuración de parámetros de red"
+
+    Como Agentes Digitalizadores de empresas, debéremos asegurarnos de que los dispositivos de red estén correctamente configurados para garantizar una conectividad óptima.
+
+    1. Suponiendo que cada miembro de vuestro equipo de trabajo tiene un PC, configura el entorno de red de cada uno de ellos en los siguientes casos (IP, Máscara de red, Puerta de enlace, Servidores DNS). En cada uno de los casos, la puerta de enlace será la última dirección IP utilizable de la red (por ejemplo, en la red `172.16.0.0/16`, la puerta de enlace sería `172.16.255.254`).
+
+        a. `192.168.x.0/24` (donde `x` es el número de equipo del agente digitalizador, por ejemplo, si eres el agente 3, tus equipos estarán en la red 192.168.3.0/24)
+
+        b. `172.16.x.0/16` (donde `x` es el número de equipo del agente digitalizador)
+
+        c. `10.x.10.0/24` (donde `x` es el número de equipo del agente digitalizador e `y` vale 1 para el director de comunicación, 2 para el responsable de marketing y 3 para el responsable de ventas)
+
+    2. Indica en cada uno de los casos anteriores, si la red de tu grupo sería visible desde la red de otro grupo. Justifica la respuesta.
+-->
+
+<h3 id="13-capa-de-transporte">1.3 Capa de transporte</h3>
+<h3 id="14-capa-de-aplicacion">1.4 Capa de aplicación</h3>
+<h2 id="2-direccionamiento-ip">2. Direccionamiento IP</h2>
+<h2 id="3-puertos-y-servicios">3. Puertos y servicios</h2>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.top", "search.suggest", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
