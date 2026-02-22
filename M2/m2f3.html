@@ -1179,6 +1179,21 @@ de la máscara que están en <code>1</code> indican la parte de la dirección IP
 <p>La <strong>dirección IP y la máscara de red</strong> permiten al dispositivo comunicarse con otros dispositivos. Si la configuración de estos parámetros es incorrecta, aunque el dispositivos esté físicamente conectado a la red, no podrá comunicarse con el resto de equipos.</p>
 <p>La <strong>Puerta de enlace o <em>Gateway</em></strong> se refiere a la IP del dispositivo de red que permite a la red local comunicarse con otras redes, como Internet. La puerta de enlace es el router que conecta la red local con el proveedor de servicios de Internet (ISP)</p>
 <p><strong>Servidores DNS (Domain Name System)</strong>. Los servidores DNS son los encargados de traducir los nombres de dominio (como www.ejemplo.com) en direcciones IP. Si no se configuran correctamente, el dispositivo no podrá resolver nombres de dominio y no podrá acceder a sitios web utilizando sus nombres. Existen servidores DNS públicos como los de Google (8.8.8.8 y 8.8.4.4).</p>
+<p>Para direccionar redes locales, se utilizan direcciones <strong>IP privadas</strong>, que no se utilizan en Internet. Estas direcciones IP privadas pertenecen a los siguientes rangos:</p>
+<ul>
+<li>Clase A: <code>10.0.0.0/8</code></li>
+<li>Clase B: <code>172.16.0.0/16</code> a <code>172.31.0.0/16</code></li>
+<li>Clase C: <code>192.168.0.0/24</code>a <code>192.168.255.0/24</code></li>
+</ul>
+<div class="admonition task">
+<p class="admonition-title">Direcciones IP privadas</p>
+<p>Responde a las siguientes preguntas:</p>
+<ol>
+<li>¿Cuántas redes privadas de cada clase existen? ¿Cuántos hosts se pueden direccionar en cada una de estas redes privadas?</li>
+<li>¿Por cada una de las redes de clase A, cuántas redes de clase B y de clase C se pueden crear? ¿Cuántos hosts se pueden direccionar en cada una de estas redes?</li>
+<li>¿Por cada una de las redes de clase B, cuántas redes de clase C se pueden crear? ¿Cuántos hosts se pueden direccionar en cada una de estas redes?</li>
+</ol>
+</div>
 <!--
 !!! task "A203(CE1)- Configuración de parámetros de red"
 
