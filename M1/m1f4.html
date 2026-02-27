@@ -1,12 +1,9 @@
-
-<!doctype html>
-<html lang="es" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="es" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="En esta actividad, el alumnado se enfrentará al reto de construir una aplicación real de Machine Learning en Python para resolver un problema de clasificación de imágenes "Perro/Gato". Para ello deberá utilizar la librería TensorFlow/Keras. El proyecto abarcará el ciclo de vida completo del sw. de IA; recolección y preparación del datasheet, definición de la arquitectura del modelo, entrenamiento y evaluación crítica de su rendimiento.">
+        <meta name="description" content="En esta actividad, el alumnado se enfrentará al reto de construir una aplicación real de Machine Learning en Python para resolver un problema de clasificación de imágenes " perro gato". para ello deberá utilizar la librería tensorflow keras. el proyecto abarcará ciclo de vida completo del sw. ia; recolección y preparación datasheet, definición arquitectura modelo, entrenamiento evaluación crítica su rendimiento.">
       
       
         <meta name="author" content="Javier Perales">
@@ -47,7 +44,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -61,7 +58,17 @@
     
     
     
-  </head>
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -99,12 +106,12 @@
     <a href="../index.html" title="PRSI II - Programación, Redes y Sistemas Informáticos II" class="md-header__button md-logo" aria-label="PRSI II - Programación, Redes y Sistemas Informáticos II" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -129,20 +136,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo" aria-label="Cambiar a modo oscuro" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="indigo" aria-label="Cambiar a modo claro" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -158,7 +165,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -167,15 +174,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Buscar">
         
         <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -213,7 +220,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -225,7 +232,7 @@
     <a href="../index.html" title="PRSI II - Programación, Redes y Sistemas Informáticos II" class="md-nav__button md-logo" aria-label="PRSI II - Programación, Redes y Sistemas Informáticos II" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"></path></svg>
 
     </a>
     PRSI II - Programación, Redes y Sistemas Informáticos II
@@ -542,7 +549,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -649,7 +656,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -794,7 +801,7 @@
 <li>TensorFlow (formato estándar <em>Keras</em> o <em>SavedModel</em>) → para usarlo en Python o en proyectos de IA.</li>
 </ul>
 <p>En esta fase, exportaremos el modelo en formato TensorFlow estándar <strong>Keras</strong>. Keras es una biblioteca de alto nivel para el desarrollo de redes neuronales artificiales. En pocas palabras,<strong> Keras es una interfaz amigable para construir y entrenar modelos de IA</strong>.</p>
-<p><img alt="exportar modelo" class="center" src="assets/exportarKeras.png" width="40%" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/exportarKeras.png" data-desc-position="bottom"><img alt="exportar modelo" class="center" src="assets/exportarKeras.png" width="40%"></a></p>
 <p>Se descargará un archivo comprimido (.zip) que contiene:</p>
 <ul>
 <li>El modelo en formato Keras (.h5).</li>
@@ -805,10 +812,10 @@
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">keras</span>
 
 <span class="c1">#Carga el modelo</span>
-<span class="n">mi_modelo</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s2">&quot;keras_model.h5&quot;</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">mi_modelo</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s2">"keras_model.h5"</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Carga las etiquetas de las clases</span>
-<span class="n">nombre_clases</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;labels.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="n">nombre_clases</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"labels.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">nombre_clases</span><span class="p">)</span>
 </code></pre></div>
@@ -816,7 +823,7 @@
 <p>AVISO 👀: Google Colab ha actualizado la librería Keras a la versión 3.0, mientras que Teachable Machine exporta los modelos en formato Keras 2.x. Por tanto, debemos indicar el siguiente parámetro para garantizar la compatibilidad.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="c1"># 1. Activamos el modo legacy (Keras 2)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TF_USE_LEGACY_KERAS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'TF_USE_LEGACY_KERAS'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'1'</span>
 </code></pre></div>
 </div>
 <div class="admonition note">
@@ -825,7 +832,7 @@
 <p>En esta primera aproximación, usaremos imágenes almacenadas en archivos. Deberás cargar la imagen o imagenes que quieras clasificar a Google Colab.</p>
 <p>Para cargar imágenes en Python, usaremos la librería <code>PIL</code> (Python Imaging Library), en concreto la clase <code>Image</code> e <code>ImageOps</code> ('from PIL import Image, ImageOps').</p>
 <p>Ahora estamos en disposición de cargar una imagen desde un archivo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">imagen</span><span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;&lt;IMAGE_PATH&gt;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">imagen</span><span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"&lt;IMAGE_PATH&gt;"</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">"RGB"</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li><code>&lt;IMAGE_PATH&gt;</code> debe ser la ruta al archivo de imagen que quieres cargar.</li>
@@ -845,10 +852,10 @@
 <ul>
 <li><strong>Normalizar los valores de los píxeles (ej. de [0, 255] a [-1, 1]).</strong> Para ello deberemos utilizar la librería <em>Numpy</em> (<code>ìmport numpy as np</code>)</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># Convertimos la imagen en un array NumPy.</span>
+<p></p><div class="highlight"><pre><span></span><code><span class="c1"># Convertimos la imagen en un array NumPy.</span>
 <span class="n">imagen_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">imagen</span><span class="p">)</span>
 </code></pre></div>
-De esta forma, cada píxel de la imagen pasa a representarse como un <strong>número entero</strong> (Los valores estarán entre 0 y 255) dentro de una matriz tridimensional. Recueda que una imagen <em>RGB</em>, cada pixel está codificado por tres valores (<em>Red</em>, <em>Green</em> y <em>Blue</em>). Por tanto, si ejecutamos <code>image_array.shape</code>, saldrá (224,224,3)</p>
+De esta forma, cada píxel de la imagen pasa a representarse como un <strong>número entero</strong> (Los valores estarán entre 0 y 255) dentro de una matriz tridimensional. Recueda que una imagen <em>RGB</em>, cada pixel está codificado por tres valores (<em>Red</em>, <em>Green</em> y <em>Blue</em>). Por tanto, si ejecutamos <code>image_array.shape</code>, saldrá (224,224,3)<p></p>
 <p>Podríamos obtener las dimensiones del array usando: 'print(imagen_array.shape)', el resultado sería (224, 224, 3). Esto indica que tenemos una matriz tridimensional de 224 filas, 224 columnas y en cada celda hay 3 valores (canales RGB).</p>
 <p>Para convertir los números enteros de la matriz a un rango entre -1 y +1 que es lo que espera el modelo preentrenado de <em>Teachable Machine</em>, dividiremos el valor de cada celda entre <code>127.5</code>. Lo que nos generará un valor real entre 0 y 2. </p>
 <p>Por último. para desplazar el valor entre -1 y +1, le restaremos -1 a cada valor de la celda.</p>
@@ -859,10 +866,10 @@ De esta forma, cada píxel de la imagen pasa a representarse como un <strong>nú
 <div class="admonition note">
 <p class="admonition-title">Fase 4: Predicción</p>
 <p>Normalmente, las IAs no procesan imágenes "una a una", sino en lotes. Aunque solo tengamos una foto, debemos meterla en un array de 1 hueco. Ese hueco, a su vez, debe contener la imagen pre-procesada.</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># Crear un array para un lote de 1 imagen. ndarray = N-Dimensional Array</span>
+<p></p><div class="highlight"><pre><span></span><code><span class="c1"># Crear un array para un lote de 1 imagen. ndarray = N-Dimensional Array</span>
 <span class="n">lote_imagenes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 </code></pre></div>
-Ahora, metemos la imagen pre-procesada en el lote:</p>
+Ahora, metemos la imagen pre-procesada en el lote:<p></p>
 <div class="highlight"><pre><span></span><code><span class="n">lote_imagenes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">normalizada_imagen_array</span>
 </code></pre></div>
 <p>Para clasificar la imagen preprocesada, usamos el método <code>predict()</code> del modelo cargado en la <em>Fase 1</em> ('mi_modelo').</p>
@@ -878,12 +885,12 @@ Ahora, metemos la imagen pre-procesada en el lote:</p>
 <div class="highlight"><pre><span></span><code><span class="n">indice</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">resultados</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </code></pre></div>
 <p>Con este índice, podemos obtener la etiqueta correspondiente de la lista de etiquetas cargada en la Fase 1.</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">etiqueta</span> <span class="o">=</span> <span class="n">nombre_clases</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La imagen es de clase: &quot;</span><span class="p">,</span> <span class="n">etiqueta</span><span class="p">)</span>
+<p></p><div class="highlight"><pre><span></span><code><span class="n">etiqueta</span> <span class="o">=</span> <span class="n">nombre_clases</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"La imagen es de clase: "</span><span class="p">,</span> <span class="n">etiqueta</span><span class="p">)</span>
 </code></pre></div>
-y la probabilidad asociada:</p>
+y la probabilidad asociada:<p></p>
 <div class="highlight"><pre><span></span><code><span class="n">probabilidad</span> <span class="o">=</span> <span class="n">resultados</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">indice</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Con una probabilidad de: &quot;</span><span class="p">,</span> <span class="n">probabilidad</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Con una probabilidad de: "</span><span class="p">,</span> <span class="n">probabilidad</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="admonition question">
@@ -900,30 +907,30 @@ y la probabilidad asociada:</p>
 <li>En Google Drive, debemos tener una carpeta <code>test</code> que contiene las imágenes de prueba.</li>
 <li>Vamos a crear una variable que contenga un array con el nombre de cada imagen de prueba. Para ello, usaremos la librería <code>os</code> de Python.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="n">lista_archivos</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;&lt;TEST_CARPETA_PATH&gt;&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">lista_archivos</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">"&lt;TEST_CARPETA_PATH&gt;"</span><span class="p">)</span>
 </code></pre></div>
 <p>Si imprimimos <code>lista_archivos</code>, veremos que contiene el nombre de cada imagen en la carpeta de prueba <code>print(lista_archivos)</code>.</p>
 <ol>
 <li>Vamos a inicializar contadores para llevar la cuenta de aciertos y errores.</li>
 </ol>
-<p><div class="highlight"><pre><span></span><code><span class="n">total_predicciones</span> <span class="o">=</span> <span class="mi">0</span>
+<p></p><div class="highlight"><pre><span></span><code><span class="n">total_predicciones</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">aciertos</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">media_probabilidad_aciertos</span> <span class="o">=</span> <span class="mf">0.0</span>
 <span class="c1"># predicciones incorrectas contendrá una lista con los nombres de las imágenes mal clasificadas</span>
 <span class="n">predicciones_incorrectas</span> <span class="o">=</span> <span class="p">[]</span>
 </code></pre></div>
-4. Ahora deberíamos recorrer el array <code>lista_archivos</code> y para cada imagen, ejecutar las fases de inferencia vistas en la sección anterior. </p>
+4. Ahora deberíamos recorrer el array <code>lista_archivos</code> y para cada imagen, ejecutar las fases de inferencia vistas en la sección anterior. <p></p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">nombre_archivo</span> <span class="ow">in</span> <span class="n">lista_archivos</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">nombre_archivo</span><span class="p">:</span>
-        <span class="n">etiqueta_esperada</span> <span class="o">=</span> <span class="s2">&quot;gato&quot;</span>
+        <span class="n">etiqueta_esperada</span> <span class="o">=</span> <span class="s2">"gato"</span>
     <span class="k">elif</span> <span class="n">dog</span> <span class="ow">in</span> <span class="n">nombre_archivo</span><span class="p">:</span>
-        <span class="n">etiqueta_esperada</span> <span class="o">=</span> <span class="s2">&quot;perro&quot;</span>
+        <span class="n">etiqueta_esperada</span> <span class="o">=</span> <span class="s2">"perro"</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">continue</span>  <span class="c1"># Saltar archivos que no sean de gatos o perros</span>
 
     <span class="n">total_predicciones</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    <span class="n">ruta_imagen</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;&lt;TEST_CARPETA_PATH&gt;&quot;</span><span class="p">,</span> <span class="n">nombre_archivo</span><span class="p">)</span>
+    <span class="n">ruta_imagen</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"&lt;TEST_CARPETA_PATH&gt;"</span><span class="p">,</span> <span class="n">nombre_archivo</span><span class="p">)</span>
 
     <span class="c1"># Aquí obtendriamos la predicción del modelo llamando a una función que </span>
     <span class="c1"># implemente las fases de inferencia</span>
@@ -933,8 +940,8 @@ y la probabilidad asociada:</p>
         <span class="n">aciertos</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="n">media_probabilidad_aciertos</span> <span class="o">+=</span> <span class="n">probabilidad</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">info_error</span><span class="o">=</span> <span class="p">{</span><span class="s2">&quot;archivo&quot;</span><span class="p">:</span> <span class="n">nombre_archivo</span><span class="p">,</span> <span class="s2">&quot;prediccion&quot;</span><span class="p">:</span> <span class="n">etiqueta_predicha</span><span class="p">,</span> 
-             <span class="s2">&quot;probabilidad&quot;</span><span class="p">:</span> <span class="n">probabilidad</span><span class="p">}</span>
+        <span class="n">info_error</span><span class="o">=</span> <span class="p">{</span><span class="s2">"archivo"</span><span class="p">:</span> <span class="n">nombre_archivo</span><span class="p">,</span> <span class="s2">"prediccion"</span><span class="p">:</span> <span class="n">etiqueta_predicha</span><span class="p">,</span> 
+             <span class="s2">"probabilidad"</span><span class="p">:</span> <span class="n">probabilidad</span><span class="p">}</span>
         <span class="n">predicciones_incorrectas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">info_error</span><span class="p">)</span>
 </code></pre></div>
 <ol>
@@ -954,7 +961,7 @@ y la probabilidad asociada:</p>
 <ol>
 <li>Generamos el informe con los resultados obtenidos.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="n">informe</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">informe</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
 <span class="s2">Informe de Evaluación del Modelo</span>
 
 <span class="s2">Total de predicciones: </span><span class="si">{</span><span class="n">total_predicciones</span><span class="si">}</span>
@@ -963,11 +970,11 @@ y la probabilidad asociada:</p>
 <span class="s2">Probabilidad media de aciertos: </span><span class="si">{</span><span class="n">media_probabilidad_aciertos</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span>
 
 <span class="s2">Predicciones incorrectas:</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="k">for</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">predicciones_incorrectas</span><span class="p">:</span>
-    <span class="n">informe</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;Archivo: </span><span class="si">{</span><span class="n">error</span><span class="p">[</span><span class="s1">&#39;archivo&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">, Predicción: </span>
-        <span class="p">{</span><span class="n">error</span><span class="p">[</span><span class="s1">&#39;prediccion&#39;</span><span class="p">]},</span> <span class="n">Probabilidad</span><span class="p">:</span> <span class="p">{</span><span class="n">error</span><span class="p">[</span><span class="s1">&#39;probabilidad&#39;</span><span class="p">]:</span><span class="mf">.2</span><span class="o">%</span><span class="p">}</span>\<span class="n">n</span><span class="s2">&quot;</span>
+    <span class="n">informe</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">"Archivo: </span><span class="si">{</span><span class="n">error</span><span class="p">[</span><span class="s1">'archivo'</span><span class="p">]</span><span class="si">}</span><span class="s2">, Predicción: </span>
+        <span class="p">{</span><span class="n">error</span><span class="p">[</span><span class="s1">'prediccion'</span><span class="p">]},</span> <span class="n">Probabilidad</span><span class="p">:</span> <span class="p">{</span><span class="n">error</span><span class="p">[</span><span class="s1">'probabilidad'</span><span class="p">]:</span><span class="mf">.2</span><span class="o">%</span><span class="p">}</span>\<span class="n">n</span><span class="s2">"</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">informe</span><span class="p">)</span>
 </code></pre></div>
@@ -1070,7 +1077,7 @@ numpy
 <p>Introduce el siguiente código en el archivo àpp.py` para cargar las librerías necesarias y configurar el título de la aplicación:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="c1"># Esto obliga a TensorFlow a usar el modo compatibilidad con versiones antiguas</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TF_USE_LEGACY_KERAS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'TF_USE_LEGACY_KERAS'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'1'</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">keras</span>  
@@ -1078,10 +1085,10 @@ numpy
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Configuración de la página</span>
-<span class="n">st</span><span class="o">.</span><span class="n">set_page_config</span><span class="p">(</span><span class="n">page_title</span><span class="o">=</span><span class="s2">&quot;Reconocimiento Perros vs Gatos&quot;</span><span class="p">,</span> <span class="n">page_icon</span><span class="o">=</span><span class="s2">&quot;🐾&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">set_page_config</span><span class="p">(</span><span class="n">page_title</span><span class="o">=</span><span class="s2">"Reconocimiento Perros vs Gatos"</span><span class="p">,</span> <span class="n">page_icon</span><span class="o">=</span><span class="s2">"🐾"</span><span class="p">)</span>
 
-<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;🐶 Detector de Mascotas 🐱&quot;</span><span class="p">)</span>
-<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Usa la cámara para saber si es un perro o un gato.&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"🐶 Detector de Mascotas 🐱"</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"Usa la cámara para saber si es un perro o un gato."</span><span class="p">)</span>
 </code></pre></div>
 <p>Una vez guardados los cambios (<em>commit</em>), Streamlit Cloud detectará el cambio, reconstruirá y reiniciará la aplicación automáticamente.</p>
 <p>Verifica que la aplicación se carga correctamente en el navegador.</p>
@@ -1093,9 +1100,9 @@ numpy
 <span class="nd">@st</span><span class="o">.</span><span class="n">cache_resource</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">carga_modelo</span><span class="p">():</span>
     <span class="c1"># Cargamos el modelo</span>
-    <span class="n">modelo</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s2">&quot;st-app/keras_model.h5&quot;</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">modelo</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s2">"st-app/keras_model.h5"</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="c1"># Carga las etiquetas de las clases</span>
-    <span class="n">clases</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;st-app/labels.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">clases</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"st-app/labels.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">clases</span>
 
 
@@ -1103,7 +1110,7 @@ numpy
 <span class="k">try</span><span class="p">:</span>
     <span class="n">mi_modelo</span><span class="p">,</span> <span class="n">nombre_clases</span> <span class="o">=</span> <span class="n">carga_modelo</span><span class="p">()</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="n">st</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error al cargar el modelo: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error al cargar el modelo: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="n">st</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 </code></pre></div>
 <p>La directiva <code>@st.cache_resource</code> indica a Streamlit que almacene en caché el resultado de la función. De esta manera, el modelo solo se cargará una vez, mejorando el rendimiento de la aplicación.</p>
@@ -1111,11 +1118,11 @@ numpy
 <div class="admonition note">
 <p class="admonition-title">A107.5 - Desarrollo de la aplicación Streamlit III</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 2. CAPTURAMOS LA IMAGEN HACIENDO USO DE LA CÁMARA</span>
-<span class="n">imagen_camara</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">camera_input</span><span class="p">(</span><span class="s2">&quot;Haz una foto&quot;</span><span class="p">)</span>
+<span class="n">imagen_camara</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">camera_input</span><span class="p">(</span><span class="s2">"Haz una foto"</span><span class="p">)</span>
 
 <span class="c1"># 3. PREDICCIÓN</span>
 <span class="k">if</span> <span class="n">imagen_camara</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">imagen</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">imagen_camara</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">)</span>
+    <span class="n">imagen</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">imagen_camara</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">"RGB"</span><span class="p">)</span>
     <span class="n">imagen</span> <span class="o">=</span> <span class="n">ImageOps</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">imagen</span><span class="p">,</span> <span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">),</span> <span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="o">.</span><span class="n">LANCZOS</span><span class="p">)</span>
     <span class="n">imagen_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">imagen</span><span class="p">)</span>
     <span class="n">normalizada_imagen_array</span> <span class="o">=</span> <span class="p">(</span><span class="n">imagen_array</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">/</span> <span class="mf">127.5</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
@@ -1131,14 +1138,14 @@ numpy
 
 <span class="n">st</span><span class="o">.</span><span class="n">divider</span><span class="p">()</span> <span class="c1"># Línea separadora visual</span>
 
-<span class="k">if</span> <span class="s2">&quot;Perro&quot;</span> <span class="ow">in</span> <span class="n">etiqueta</span><span class="p">:</span>
-        <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;¡Es un **PERRO**! 🐶&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s2">"Perro"</span> <span class="ow">in</span> <span class="n">etiqueta</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="sa">f</span><span class="s2">"¡Es un **PERRO**! 🐶"</span><span class="p">)</span>
         <span class="n">st</span><span class="o">.</span><span class="n">balloons</span><span class="p">()</span> <span class="c1"># Efecto visual</span>
 <span class="k">else</span><span class="p">:</span>
-        <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;¡Es un **GATO**! 🐱&quot;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="sa">f</span><span class="s2">"¡Es un **GATO**! 🐱"</span><span class="p">)</span>
         <span class="n">st</span><span class="o">.</span><span class="n">snow</span><span class="p">()</span> <span class="c1"># Efecto visual</span>
 
-<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Estoy un </span><span class="si">{</span><span class="n">probabilidad</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2"> seguro.&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Estoy un </span><span class="si">{</span><span class="n">probabilidad</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2"> seguro."</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="admonition question">
@@ -1174,7 +1181,7 @@ numpy
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Volver al principio
 </button>
         
@@ -1214,5 +1221,7 @@ numpy
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
