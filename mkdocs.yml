@@ -54,6 +54,7 @@ nav:
 
 plugins:
   - search
+  - glightbox
 
 
 # --- Extensiones de Markdown ---
