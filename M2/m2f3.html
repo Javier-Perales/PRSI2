@@ -762,6 +762,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-asignacion-dinamica-de-direcciones-ip-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Asignación dinámica de direcciones IP: DHCP
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1024,6 +1033,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-asignacion-dinamica-de-direcciones-ip-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Asignación dinámica de direcciones IP: DHCP
+    </span>
+  </a>
   
 </li>
       
@@ -1573,6 +1591,24 @@ de la máscara que están en <code>1</code> indican la parte de la dirección IP
 <li>
 <p>Todos los equipos deben tener conectividad entre sí, es decir, deben poder hacer ping a todos los demás dispositivos de la red. Para ello, es necesario configurar correctamente el direccionamiento IP de cada dispositivo.</p>
 </li>
+</ol>
+</div>
+<h2 id="3-asignacion-dinamica-de-direcciones-ip-dhcp">3. Asignación dinámica de direcciones IP: DHCP</h2>
+<p>El <strong>Protocolo de Configuración Dinámica de Host (DHCP)</strong> es un protocolo de red que permite a los dispositivos obtener automáticamente una dirección IP y otros parámetros de configuración de red necesarios para comunicarse en una red, como la máscara de subred, la puerta de enlace predeterminada y los servidores DNS. </p>
+<p>Es especialmente útil en redes con un gran número de dispositivos, ya que evita la necesidad de configurar manualmente cada dispositivo con una dirección IP estática. Otra ventaja del DHCP es que permite reconfigurar la red de manera centralizada, ya que los cambios en la configuración de red se pueden realizar en el servidor DHCP sin necesidad de modificar la configuración de cada dispositivo individualmente, por ejemplo, si se cambia la puerta de enlace o los servidores DNS, solo es necesario actualizar la configuración en el servidor DHCP y los dispositivos obtendrán automáticamente la nueva configuración.</p>
+<p>En dispositivos inalámbricos, el DHCP es especialmente importante, ya que permite a los dispositivos móviles obtener una dirección IP y conectarse a la red de manera rápida y sencilla sin necesidad de configurar manualmente cada dispositivo.</p>
+<p>En el siguiente enlace puedes ver un vídeo explicativo sobre el funcionamiento del DHCP:</p>
+<ul>
+<li><a href="https://youtu.be/0T2eA-01w9Y?si=L3Fr1XOiOtPoAKiU">Vídeo explicativo sobre DHCP</a></li>
+</ul>
+<div class="admonition task">
+<p class="admonition-title">A208.2(CE1) - Configuración DHCP en Cisco Packet Tracert</p>
+<p>En esta actividad, deberás configurar un servidor DHCP en el router de tu red para que los dispositivos inalámbricos obtengan automáticamente su dirección IP y otros parámetros de configuración de red.</p>
+<p>Para ello, sigue los siguientes pasos:</p>
+<ol>
+<li>Accede a la configuración del router WRT300N y habilita el servicio DHCP.</li>
+<li>Configura un rango de direcciones IP que el servidor DHCP pueda asignar a los dispositivos. Asegúrate que el rango no interfiera con el rango de direcciones IP estáticas.</li>
+<li>Verifica que los dispositivos inalámbricos obtienen correctamente su dirección IP y otros parámetros de configuración de red mediante DHCP, haciendo ping entre ellos y al router.</li>
 </ol>
 </div>
 
