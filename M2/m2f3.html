@@ -762,6 +762,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-asignacion-dinamica-de-direcciones-ip-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Asignación dinámica de direcciones IP: DHCP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-redes-inalambricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Redes Inalámbricas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-caracteristicas-de-las-wlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Características de las WLAN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-elementos-y-conceptos-claves-de-las-redes-wi-fi" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Elementos y conceptos claves de las redes Wi-Fi
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1024,6 +1060,42 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-asignacion-dinamica-de-direcciones-ip-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Asignación dinámica de direcciones IP: DHCP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-redes-inalambricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Redes Inalámbricas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-caracteristicas-de-las-wlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Características de las WLAN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-elementos-y-conceptos-claves-de-las-redes-wi-fi" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Elementos y conceptos claves de las redes Wi-Fi
+    </span>
+  </a>
   
 </li>
       
@@ -1575,6 +1647,117 @@ de la máscara que están en <code>1</code> indican la parte de la dirección IP
 </li>
 </ol>
 </div>
+<h2 id="3-asignacion-dinamica-de-direcciones-ip-dhcp">3. Asignación dinámica de direcciones IP: DHCP</h2>
+<p>El <strong>Protocolo de Configuración Dinámica de Host (DHCP)</strong> es un protocolo de red que permite a los dispositivos obtener automáticamente una dirección IP y otros parámetros de configuración de red necesarios para comunicarse en una red, como la máscara de subred, la puerta de enlace predeterminada y los servidores DNS. </p>
+<p>Es especialmente útil en redes con un gran número de dispositivos, ya que evita la necesidad de configurar manualmente cada dispositivo con una dirección IP estática. Otra ventaja del DHCP es que permite reconfigurar la red de manera centralizada, ya que los cambios en la configuración de red se pueden realizar en el servidor DHCP sin necesidad de modificar la configuración de cada dispositivo individualmente, por ejemplo, si se cambia la puerta de enlace o los servidores DNS, solo es necesario actualizar la configuración en el servidor DHCP y los dispositivos obtendrán automáticamente la nueva configuración.</p>
+<p>En dispositivos inalámbricos, el DHCP es especialmente importante, ya que permite a los dispositivos móviles obtener una dirección IP y conectarse a la red de manera rápida y sencilla sin necesidad de configurar manualmente cada dispositivo.</p>
+<p>En el siguiente enlace puedes ver un vídeo explicativo sobre el funcionamiento del DHCP:</p>
+<ul>
+<li><a href="https://youtu.be/0T2eA-01w9Y?si=L3Fr1XOiOtPoAKiU">Vídeo explicativo sobre DHCP</a></li>
+</ul>
+<div class="admonition task">
+<p class="admonition-title">A208.2(CE1) - Configuración DHCP en Cisco Packet Tracert</p>
+<p>En esta actividad, deberás configurar un servidor DHCP en el router de tu red para que los dispositivos inalámbricos obtengan automáticamente su dirección IP y otros parámetros de configuración de red.</p>
+<p>Para ello, sigue los siguientes pasos:</p>
+<ol>
+<li>Accede a la configuración del router WRT300N y habilita el servicio DHCP.</li>
+<li>Configura un rango de direcciones IP que el servidor DHCP pueda asignar a los dispositivos. Asegúrate que el rango no interfiera con el rango de direcciones IP estáticas.</li>
+<li>Verifica que los dispositivos inalámbricos obtienen correctamente su dirección IP y otros parámetros de configuración de red mediante DHCP, haciendo ping entre ellos y al router.</li>
+</ol>
+</div>
+<h2 id="4-redes-inalambricas">4. Redes Inalámbricas</h2>
+<p>Una Red Inalámbrica consiste en un grupo de dispositivos “sin cable” (“dispositivos inalámbricos” o “dispositivos wireless”) que se comunican entre sí a través de ondas electromagnéticas y sin necesidad, por lo tanto, de cableado.</p>
+<p>Las Redes de Área Local Inalámbricas, normalmente se implementan como una extensión de la Red de Área Local cableada de la organización, para proporcionar movilidad a los usuarios, que no tendrán que estar en un puesto concreto como requiere una conexión física a la red.</p>
+<p>El uso de redes inalámbricas ofrecen múltiples ventajas. Entre ellas, el ahorro de costes que supone no tener que realizar un cableado entre los nodos de la red, como en las redes cableadas tradicionales. Otra de las ventajas es la no necesidad de estar en un sitio o puesto concreto para poder conectarse a los recursos de la organización. </p>
+<p>Siendo evidentes las ventajas que ofrece la tecnología inalámbrica, hay que tener muy en cuenta los riesgos de seguridad adicionales que añaden a los ya existentes en las redes cableadas.</p>
+<p>Existen muchos tipos de redes inalámbricas que difieren en arquitectura, tecnología, estándar de comunicación, etc. Nos centraremos en exclusiva a las Redes de Área Local Inalámbricas, también conocidas como WLAN (Wireless Local Area Network) o Redes Wi-Fi. Estas redes inalámbricas se basan en el estándar IEEE 802.11, y será a este tipo, al que se hará referencia a partir de ahora como redes inalámbricas.</p>
+<h2 id="41-caracteristicas-de-las-wlan">4.1 Características de las WLAN</h2>
+<p>Las redes inalámbricas tienen una serie de características que las diferencian de las redes cableadas tradicionales. Algunas de estas características son:</p>
+<ul>
+<li>
+<p><strong>Medio de transmisión compartido</strong>. En las redes inalámbricas, el medio de transmisión es compartido por todos los dispositivos que están conectados al mismo punto de acceso. Esto significa que solo un dispositivo puede transmitir datos en un momento dado, por lo que la <strong>velocidad de transmisión efectiva</strong> de la red podrá verse afectada por la cantidad de dispositivos conectados al mismo punto de acceso.</p>
+</li>
+<li>
+<p><strong>Atenuación de la señal</strong>. Las señales inalámbricas pueden verse afectadas por obstáculos físicos como paredes, muebles, etc., lo que puede reducir la calidad de la señal y la velocidad de transmisión de datos.</p>
+</li>
+<li>
+<p><strong>Saturación del espectro inalámbrico</strong>. Los principales estándares de redes inalambricas operan en las bandas de frecuencia de <strong>2,4 GHz y 5 GHz</strong>. Debido a la popularidad de las redes inalámbricas, estas bandas de frecuencia suelen estar saturadas, lo que puede generar interferencias y reducir el rendimiento de la red.</p>
+</li>
+<li>
+<p><strong>Seguridad</strong>. Las redes inalámbricas son más vulnerables a ataques de seguridad que las redes cableadas, ya que las señales inalámbricas pueden ser interceptadas por atacantes que se encuentren dentro del alcance de la señal. Por lo tanto, es fundamental implementar medidas de seguridad adecuadas para proteger la red inalámbrica, como el uso de contraseñas seguras, la encriptación de datos y la autenticación de usuarios.</p>
+</li>
+<li>
+<p><strong>Topologias</strong>. Existen dos tipos de topologías para las redes inalámbricas: la topología <strong>infraestructura</strong> y la topología <strong>ad-hoc</strong>. <br>
+    -- En el <strong>modo Ad Hoc</strong> no existen los AP y los dispositivos cliente se comunican entre sí directamente. <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/adhoc.jpg" data-desc-position="bottom"><img alt="Topología Ad Hoc" class="center" src="assets/adhoc.jpg" width="30%"></a>   </p>
+<p>-- <strong>Modo Infraestructura</strong>, en la que se utilizan AP para conectar los dispositivos cliente entre sí o con el sistema de distribución de red. <br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/infraestructura.jpg" data-desc-position="bottom"><img alt="Topología Infraestructura" class="center" src="assets/infraestructura.jpg" width="30%"></a></p>
+</li>
+</ul>
+<h2 id="42-elementos-y-conceptos-claves-de-las-redes-wi-fi">4.2 Elementos y conceptos claves de las redes Wi-Fi</h2>
+<p><strong>ESSID - SSID</strong> <br>
+Cada red wirelesss tiene un ESSID (Extended Service Set Identifier), que la identifica, viene a ser la identificación o nombre de la red WIFI. El ESSID consta de cómo máximo 32 caracteres y es case-sensitive. Es necesario conocer el ESSID del AP para poder formar parte de la red WIFI, es decir, el ESSID configurado en el dispositivo móvil tiene que coincidir con el ESSID del AP.</p>
+<p><strong>BBSID</strong> <br>
+Dirección MAC del punto de acceso, la emplean las tarjetas wireless para identificar y asociarse a redes inalámbricas.</p>
+<p><strong>Beacon Frames</strong> <br>
+Los puntos de acceso mandan constantemente anuncios de la red para que los clientes móviles puedan detectar su presencia y conectarse a la red inalámbrica. Estos “anuncios” son conocidos como BEACON FRAMES, si capturamos las tramas de una red inalámbrica podremos ver que normalmente el AP manda el ESSID de la red en BEACON FRAMES, aunque esto se puede deshabitar por software en la mayoría de los AP que se comercializan actualmente.</p>
+<p><strong>Estándares de redes inalámbricas</strong> <br>
+El <a href="https://www.ieee.org/">IEEE</a> es una organización internacional que desarrolla estándares técnicos en áreas como la informática, las telecomunicaciones, la electrónica y la ingeniería eléctrica. En el ámbito de las redes inalámbricas, el IEEE ha desarrollado una serie de estándares conocidos como <strong>IEEE 802.11</strong>, que definen las especificaciones técnicas para las redes Wi-Fi.</p>
+<p>Recursos:</p>
+<ul>
+<li>En el siguiente <a href="https://www.netspotapp.com/es/blog/wifi-standards/#IEEE_802_11_y_The_Standards_Body">enlace</a> puedes encontrar una tabla comparativa de los principales estándares de redes inalámbricas, incluyendo sus características técnicas, velocidades máximas de transmisión de datos y frecuencias de operación.   </li>
+<li><a href="https://www.youtube.com/watch?v=QSq1TYTiESA">Video Explaining Wi-Fi: 802.11 Standards &amp; Generations</a></li>
+</ul>
+<p><strong>Canales de comunicación</strong> <br>
+Los canales de comunicación en las redes inalámbricas <strong>se refieren a las frecuencias específicas dentro de la banda de frecuencia utilizada por el estándar de red inalámbrica</strong>. En la banda de <strong>2,4 GHz</strong>, por ejemplo, <strong>existen 14 canales</strong> disponibles, aunque en algunos países solo se permiten los canales del 1 al 11. En la banda de 5 GHz, hay muchos más canales disponibles, lo que permite una mayor capacidad y menor interferencia. </p>
+<p>En la siguiente imagen se pueden ver los canales disponibles en la banda de 2,4 GHZ, extraida de <a href="https://www.data-alliance.net/es/canales-wifi-gu%C3%ADa-completa-con-consejos-para-aumentar-el-rendimiento-de-la-se%C3%B1al-usos-ventajas-y-desventajas-de-los-rangos-de-24-ghz-5-ghz-900-mhz?srsltid=AfmBOoq3kqWMQ9umD4bGO3E_lVjUV23yl-oHWNGb8g0iQ4Uxq_vDt3d9"><em>Data Alliance</em></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/canaleswifi24.jpg" data-desc-position="bottom"><img alt="Canales de comunicación en la banda de 2,4 GHz" class="center" src="assets/canaleswifi24.jpg" width="50%"></a></p>
+<p>El ancho de banda de las <strong>redes WiFi de 5GHz</strong> es mucho más amplio que el de las de 2,4GHz, lo que permite tener hasta 24 canales que no se solapan entre sí. </p>
+<p>Otra característica de las redes wifi de 5GHz, es la posibilidad de combinar canales en 40, 80 y 160MHz, lo que permite aumentar la velocidad de transmisión de datos, aunque a costa de reducir el alcance de la señal.</p>
+<p><strong>Intensidad de la señal</strong></p>
+<p>Para medir la intensidad de la señal WiFi en un lugar determinado, no se utiliza la medida de vatios, ya que la potencia de la wifi es muy baja y al alejarnos del punto de acceso, la potencia de la señal disminuye rápidamente. En su lugar se utiliza el <strong><em>dBm</em></strong> (decibelio-miliperiodo) que indica cuánta potencia queda de la señal cuando llega a tu dispositivo.</p>
+<p>En redes WiFi, los valores de intensidad de la señal siempre son negativos. Cuanto más cerca de 0, más fuerte es la señal.</p>
+<p>La intensidad de la señal en las redes inalámbricas se mide en decibelios (dBm) y se refiere a la potencia de la señal recibida por un dispositivo. </p>
+<table>
+<thead>
+<tr>
+<th>Valor (dBm)</th>
+<th>Calidad de señal</th>
+<th>Experiencia de usuario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-30 dBm</td>
+<td>Máxima</td>
+<td>Estás pegado al router. Casi imposible de mejorar.</td>
+</tr>
+<tr>
+<td>-50 a -60 dBm</td>
+<td>Excelente</td>
+<td>Streaming 4K, juegos online sin lag y descargas rápidas.</td>
+</tr>
+<tr>
+<td>-67 a -70 dBm</td>
+<td>Mínimo aceptable</td>
+<td>Lo mínimo para una conexión estable. A partir de aquí, el video empieza a pixelar.</td>
+</tr>
+<tr>
+<td>-80 dBm</td>
+<td>Muy mala</td>
+<td>Conexión inestable, cortes frecuentes, solo texto o emails básicos.</td>
+</tr>
+<tr>
+<td>-90 dBm</td>
+<td>Ruido</td>
+<td>El dispositivo ve que hay WiFi, pero no puede conectar. Es "ruido" de fondo.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Relacion Señal-Ruido (SNR)</strong></p>
+<p>Para medir la calidad de la señal WiFi, no solo es importante medir la intensidad de la señal, sino también la cantidad de ruido presente en el entorno. </p>
+<p>Imaginate que estás en un concierto y que tu acompañante te está gritando al oído. Si tu amigo grita a -60dBm y la música está a -90dBm, la relación señal-ruido (SNR) es de 30dB, lo que significa que la señal de tu amigo es 1000 veces más fuerte que el ruido de fondo, por lo que podrás escuchar a tu amigo sin problemas.  Sin embargo, si la música está a -70dBm, la SNR es de 10dB, lo que significa que la señal de tu amigo es solo 10 veces más fuerte que el ruido de fondo, por lo que tendrás dificultades para escuchar a tu amigo debido al ruido de fondo.</p>
+<p><strong>En una red wifi se considera que una SNR de 20dB o más es buena, mientras que una SNR de 10dB o menos es mala y puede resultar en una conexión inestable o lenta.</strong></p>
 
 
 
