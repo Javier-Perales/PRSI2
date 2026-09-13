@@ -33,14 +33,8 @@ entregable: Informe técnico en formato pdf sobre la evolución de los paradigma
 
  La idea de la era exponencial se basa en que el ritmo del cambio tecnológico se acelera exponencialmente porque cada nueva generación de tecnología se construye sobre las capacidades de la anterior, haciéndola más poderosa y eficiente para crear la siguiente.
 
-```cardlink
-url: https://www.youtube.com/watch?v=4wMMk0JFmzY
-title: "[Review] The Exponential Age (Azeem Azhar) Summarized"
-description: "The Exponential Age (Azeem Azhar)- Amazon US Store: https://www.amazon.com/dp/B0945QKHSV?tag=9natree-20- Amazon Worldwide Store: https://global.buys.trade/Th..."
-host: www.youtube.com
-favicon: https://www.youtube.com/s/desktop/adccb25c/img/favicon_32x32.png
-image: https://i.ytimg.com/vi/4wMMk0JFmzY/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgVyhCMA8=&rs=AOn4CLDj7aQMgM4AZzJ03ewSYOMTriCzdA
-```
+[![https://www.youtube.com/watch?v=4wMMk0JFmzY](https://youtu.be/4wMMk0JFmzY?si=Z1NlaEw88XGjE6vR)
+
 
 La inteligencia artificial (IA) se ha consolidado como una fuerza transformadora a nivel mundial, redefiniendo la sociedad, la economía y las relaciones geopolíticas. Su impacto es comparable al de revoluciones tecnológicas anteriores como la máquina de vapor o la electricidad, y está reconfigurando el panorama global a una velocidad sin precedentes.
 
@@ -93,14 +87,7 @@ De hecho, la IA se ha convertido en la fuerza motriz que está convirtiendo el p
 
 >[!question]- La reinvención de la Inteligencia Artificial. Ponencia de Nuria Oliver
 > 
-> ```cardlink
-url: https://www.youtube.com/watch?v=DsN4mVFPkzM&list=PLaHkJt6iSQMlyeIsGIKesnRsVDxYIhUXf&index=4
-title: "Foro Empresarial 'La reinvención de la Inteligencia Artificial' | Ponencia de Nuria Oliver"
-description: "La Inteligencia Artificial (IA) está transformando todos los ámbitos de la sociedad. Esta tecnología trata de replicar las capacidades humanas como la visión..."
-host: www.youtube.com
-favicon: https://www.youtube.com/s/desktop/e60429bd/img/favicon_32x32.png
-image: https://i.ytimg.com/vi/DsN4mVFPkzM/maxresdefault.jpg
->```
+> ![https://youtu.be/DsN4mVFPkzM?si=YNApC1EsU2kUvJkX](https://youtu.be/DsN4mVFPkzM?si=YNApC1EsU2kUvJkX)
 >
 >
 > 1. ¿Cómo define la ponente la Inteligencia Artificial y cuál es su principal limitación inherente según esta definición? 
@@ -134,16 +121,10 @@ En 1967 se desarrolló el **Perceptrón Mark 1**, el primer sistema de red neuro
 
 El Perceptrón Mark 1 contaba con una única capa, lo que lo hacía apto únicamente para aprender datos que pudieran ser separados linealmente. Las pruebas realizadas con este sistema se centraron en entrenarlo para diferenciar entre imágenes de hombres y mujeres. Para ello, se introdujeron cientos de fotografías de hombres y mujeres con diferentes estilos de cabello y maquillaje durante el proceso de entrenamiento. Una vez completado el entrenamiento, se evaluó su desempeño utilizando imágenes de rostros que no había visto previamente. El sistema logró clasificar con éxito si una imagen correspondía a un hombre o a una mujer con una alta tasa de acierto.
 
-En el siguiente vídeo de la época se detalla el proceso:
+En el siguiente vídeo de la época se detalla el proceso.
 
-```cardlink
-url: https://www.youtube.com/watch?v=cNxadbrN_aI
-title: "Perceptron Research from the 50's & 60's, clip"
-description: "Short clip about perceptron research done in the 1950's and 1960's."
-host: www.youtube.com
-favicon: https://www.youtube.com/s/desktop/e60429bd/img/favicon_32x32.png
-image: https://i.ytimg.com/vi/cNxadbrN_aI/hqdefault.jpg
-```
+![https://youtu.be/cNxadbrN_aI?si=tqu_8kFEcDaismwL](https://youtu.be/cNxadbrN_aI?si=tqu_8kFEcDaismwL)
+
 
 En **1997** IBM desarrolló **Deep Blue**, un superordenador capaz de jugar al ajedrez a un nivel de competición. Deep Blue fue el primer sistema de IA en derrotar a un campeón mundial de ajedrez, Garry Kasparov, en una partida oficial. La victoria de Deep Blue marcó un hito en la historia de la IA y demostró que las máquinas podían superar a los humanos en tareas cognitivas complejas.
 
@@ -151,28 +132,10 @@ Deep Blue guardaba en su memoria millones de partidas disputadas desde el siglo 
 
 **Su éxito se basó en gran medida en la "fuerza bruta"**, es decir, su capacidad para calcular millones de movimientos posibles por segundo.
 
- 
-```cardlink
-url: https://www.youtube.com/watch?v=cNxadbrN_aI
-title: "Perceptron Research from the 50's & 60's, clip"
-description: "Short clip about perceptron research done in the 1950's and 1960's."
-host: www.youtube.com
-favicon: https://www.youtube.com/s/desktop/e60429bd/img/favicon_32x32.png
-image: https://i.ytimg.com/vi/cNxadbrN_aI/hqdefault.jpg
-```
+[![https://youtu.be/KF6sLCeBj0s?si=x7DbBygzEweuLWvz](https://youtu.be/KF6sLCeBj0s?si=x7DbBygzEweuLWvz)
  
 
-En **2011**, otro sistema de IA de IBM, **Watson**, ganó el concurso de televisión estadounidense Jeopardy!, en el que los concursantes debían responder preguntas en forma de enunciado. Watson fue capaz de interpretar las preguntas en lenguaje natural y generar respuestas precisas en tiempo real. Su victoria en Jeopardy! demostró que las máquinas podían comprender y procesar el lenguaje humano de manera efectiva.
-
-
-```cardlink
-url: https://www.youtube.com/watch?v=P18EdAKuC1U
-title: "Watson and the Jeopardy! Challenge"
-description: "See how Watson won Jeopardy! and what it meant for the future of cognitive systems.http://www.research.ibm.com/cognitive-computing/watson/index.shtml"
-host: www.youtube.com
-favicon: https://www.youtube.com/s/desktop/e60429bd/img/favicon_32x32.png
-image: https://i.ytimg.com/vi/P18EdAKuC1U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBUgLyh_MA8=&rs=AOn4CLBXQCsEvulwoTimVIpuYdFqjaUgXA
-```
+En **2011**, otro sistema de IA de IBM, **Watson**, ganó el concurso de televisión estadounidense Jeopardy!, en el que los concursantes debían responder preguntas en forma de enunciado. Watson fue capaz de interpretar las preguntas en lenguaje natural y generar respuestas precisas en tiempo real. Su victoria en Jeopardy! demostró que las máquinas podían comprender y procesar el lenguaje humano de manera efectiva. ([[https://youtu.be/P18EdAKuC1U?si=LVvA2MbTuJCjgFnP|Watson and the Jeopardy! Challenge]])
 
 
 En **2015**, Baidu (el google Chino), crea la supercomputadora **Minwa**, obtiene un nuevo récord en reconocimiento de imágenes superando la anterior marca de Google. Su procesamiento se basa en el concepto establecido hace décadas con el Perceptrón de Frank Rosenblatt, pero con una red de neuronas mucho más extensa y organizada en múltiples capas jerárquicas (***Deep Learning* - Aprendizaje Profundo**).
@@ -187,38 +150,23 @@ AlphaGo combina el Deep Learning con el aprendizaje por refuerzo. El aprendizaje
 
 AlphaGo fue entrenado utilizando una combinación de datos de partidas de Go de jugadores humanos y partidas simuladas por el propio programa. Durante el entrenamiento, AlphaGo jugó millones de partidas contra sí mismo, lo que le permitió mejorar su capacidad de anticipación y toma de decisiones. La victoria de AlphaGo sobre Lee Sedol fue un hito significativo en el desarrollo de la IA y demostró que las máquinas podían superar a los humanos en tareas cognitivas complejas.
 
- 
-```cardlink
-url: https://www.youtube.com/watch?v=WXuK6gekU1Y
-title: "AlphaGo - The Movie | Full award-winning documentary"
-description: "🎬 Now available, the follow up to AlphaGo: The Thinking Game https://youtu.be/d95J8yzvjbQ 🎬The Thinking Game takes you on a journey into the heart of DeepM..."
-host: www.youtube.com
-favicon: https://www.youtube.com/s/desktop/e60429bd/img/favicon_32x32.png
-image: https://i.ytimg.com/vi/WXuK6gekU1Y/hqdefault.jpg
-```
+![https://www.youtube.com/watch?v=WXuK6gekU1Y](https://www.youtube.com/watch?v=WXuK6gekU1Y)
  
 
 En **2017** se presenta **AlphaGo Zero**. A diferencia de las versión anterior de AlphaGo, AlphaGo Zero aprendió a jugar al Go únicamente a partir de las reglas del juego, no necesitó estudiar partidas humanas (aprendizaje supervisado).
 
-Tras entrenarse jugando contra sí mismo, en tan solo 3 días,los resultados fueron sorprendentes, AlphaGo Zero superó con creces el nivel de juego de los mejores jugadores humanos y barrió a la vesión predecesora, que había vencido al campeón Lee Sedol. ([Un AphaGo invencible - El País](https://youtu.be/tCpf5wDr0UE?si=x3HmH2clBK66-dkF)).
+Tras entrenarse jugando contra sí mismo, en tan solo 3 días,los resultados fueron sorprendentes, AlphaGo Zero superó con creces el nivel de juego de los mejores jugadores humanos y barrió a la vesión predecesora, que había vencido al campeón Lee Sedol.
 
-```cardlink
-url: https://www.youtube.com/watch?v=tCpf5wDr0UE
-title: "Un AlphaGo invencible"
-description: "AlphaGo Zero es la nueva versión de la inteligencia artificial que aprende sola a partir de las reglas básicas del juego del go hasta convertirse en un jugad..."
-host: www.youtube.com
-favicon: https://www.youtube.com/s/desktop/e60429bd/img/favicon_32x32.png
-image: https://i.ytimg.com/vi/tCpf5wDr0UE/maxresdefault.jpg
-```
+![https://youtu.be/tCpf5wDr0UE?si=KPiK-tUv3ylae_NI](https://youtu.be/tCpf5wDr0UE?si=KPiK-tUv3ylae_NI)
+
 
 
 # 2. Evolución de los paradigmas computacionales
 ### Software 1.0
 ```mermaid
 flowchart LR
-    A["Reglas / Algoritmo"] --> PLUS((+))
-    B["Datos de entrada"] --> PLUS
-    PLUS --> C["Respuestas / Resultados"]
+    A["Reglas / Algoritmo"] --> C["Respuestas / Resultados"];
+    B["Datos de entrada"] --> C;
 ```
 Es la computación clásica *artesanal*. Un programador analiza un problema, **descompone la lógica en pasos algorítmicos** discretos (instrucciones finitas, concretas y numerables, paso1, paso2, paso3) y codifica explícitamente las reglas en un lenguaje de programación (`C, Python, Java, JavaScript`). El ordenador procesa los datos de entrada siguiendo esas instrucciones. 
 Si el programa no considera determinados casos de entrada (*casos borde*), el programa falla.
@@ -226,18 +174,16 @@ Si el programa no considera determinados casos de entrada (*casos borde*), el pr
 ### Software 2.0
 ```mermaid
 flowchart LR
-    A["Datos de entrada"] --> PLUS((+))
-    B["Respuestas / Labels"] --> PLUS
-    PLUS --> C["Reglas / Modelo entrenado"]
+    A["Datos de entrada"] --> C["Reglas / Modelo entrenado"];
+    B["Respuestas / Labels"] --> C;
 ```
 Termino utilizado para definir el paradigma del ***Machine Learning*** y ***Deep Learning***. El programador no escribe la lógica interna paso a paso; en su lugar alimenta una red neuronal con conjuntos masivos de datos (datos de entrada) y sus resultados esperados, el ordenador u ordenadores infiere y optimiza millones de pesos/parámetros internos que constituyen el "código" o regla de decisión.
 
 ### Software 3.0
 ```mermaid
 flowchart LR
-    A["Prompts / Contexto"] --> PLUS((+))
-    B["Modelo preentrenado"] --> PLUS
-    PLUS --> C["Soluciones / Respuestas / Acciones"]
+    A["Prompts / Contexto"] --> C["Soluciones / Respuestas / Acciones"];
+    B["Modelo preentrenado"] --> C;
 ```
 
 Representa la era de los **modelos fundacionales[^1]** (LLMs, multimodales) y la programación contextual o agéntica. No se programa desde cero como en el paradigma 1.0, ni se entrena un modelo completo con millones de entradas de pares entrada-salida (2.0). Se toma un modelo base ya preentrenado y generalista, y se "programa" en lenguaje natural o estructurado mediante *prompting*, técnicas de contexto y llamadas a herramientas/APIs. **El foco del desarrollador cambia de la implementación sintáctica a:** 

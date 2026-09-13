@@ -74,3 +74,94 @@ article > h1:first-of-type,
 .article-title {
   margin-top: 0 !important;
 }
+
+/* Líneas y conectores en modo oscuro */
+:root[saved-theme="dark"] .mermaid {
+  /* Trazo de las líneas y conexiones */
+  .edgePath path,
+  .flowchart-link,
+  .link,
+  path.path {
+    stroke: #d1d5db !important; /* Gris claro visible */
+    stroke-width: 1.5px !important;
+  }
+
+  /* Relleno de las puntas de flecha */
+  marker path,
+  marker polygon,
+  .marker {
+    fill: #d1d5db !important;
+    stroke: #d1d5db !important;
+  }
+
+  /* Texto que acompaña a las líneas (etiquetas sobre enlaces) */
+  .edgeLabel rect {
+    fill: #1f2937 !important; /* Fondo de la etiqueta */
+    opacity: 0.9;
+  }
+  .edgeLabel span {
+    color: #f3f4f6 !important;
+  }
+}
+
+/* Forzar texto oscuro dentro de las cajas de Mermaid */
+svg[id^="mermaid-"],
+svg.mermaid,
+.mermaid {
+  /* Texto en contenedores HTML (foreignObject: div, span, p) */
+  .node foreignObject,
+  .node foreignObject * {
+    color: #111827 !important;
+  }
+
+  /* Texto en elementos vectoriales nativos (text, tspan) */
+  .node text,
+  .node text tspan,
+  text.nodeLabel {
+    fill: #111827 !important;
+  }
+}
+
+/* Corrección de colapso para callouts plegables */
+.callout {
+  /* Cuando está colapsado, oculta cualquier elemento que no sea el título */
+  &.is-collapsed {
+    //padding-bottom: 0 !important;
+    margin-bottom: 1rem;
+
+    /* Oculta hijos directos (párrafos, hr, tablas, listas) */
+    & > :not(.callout-title) {
+      display: none !important;
+    }
+
+    /* Oculta contenedor interno si tu tema lo agrupa */
+    & > .callout-content {
+      display: none !important;
+    }
+  }
+
+  /* Cursor interactivo en el título */
+  .callout-title {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+/* Eliminar artefacto de línea en el icono de colapso */
+.callout .callout-title {
+  .fold-callout-icon,
+  .callout-fold {
+    /* Evita que la máscara vectorial se repita por redondeo de subpíxeles */
+    mask-repeat: no-repeat !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-position: center !important;
+    -webkit-mask-position: center !important;
+
+    /* Si el tema usa background-image en lugar de mask */
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+
+    /* Corta cualquier línea que desborde el contenedor */
+    overflow: hidden !important;
+    outline: none !important;
+  }
+}
