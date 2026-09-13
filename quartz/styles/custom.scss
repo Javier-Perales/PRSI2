@@ -1,0 +1,76 @@
+@use "./variables.scss" as *;
+
+// put your custom CSS here!
+/* Control de tamaño y centrado para diagramas Excalidraw / SVG embebidos como <object> */
+object[type="image/svg+xml"],
+object[data*=".svg"],
+object[data*="excalidraw"] {
+  display: block !important;
+  margin: 1.5rem auto !important;
+  width: 100% !important;
+  max-width: 650px !important;    /* Ajusta aquí el ancho máximo deseado (ej. 500px, 600px, 700px) */
+  height: auto !important;
+}
+
+
+/* Visor Lightbox para diagramas Excalidraw */
+.diagram-zoom-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+
+  /* Capa transparente superior que captura el clic sobre el <object> */
+  .zoom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+    z-index: 2;
+  }
+}
+
+/* Ocultar fecha de publicación y tiempo de lectura */
+.content-meta {
+  display: none !important;
+}
+
+/* Reducir el espacio en blanco superior general */
+.page {
+  padding-top: 1.25rem !important; /* Por defecto suele estar entre 3rem y 4rem */
+}
+
+.page > #quartz-body {
+  margin-top: 0 !important;
+}
+
+/* Alinear la parte superior de las columnas con el contenido central */
+.sidebar, 
+.center {
+  padding-top: 0.5rem !important;
+}
+
+/* Alinear el bloque central arriba del todo con los laterales */
+.center,
+main,
+.page-header,
+header,
+article,
+.breadcrumb-container,
+.article-title {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Si breadcrumbs genera un hueco fantasma en la raíz */
+.breadcrumb-container:empty {
+  display: none !important;
+}
+
+/* Ajustar la separación del título del artículo */
+article > h1:first-of-type,
+.article-title {
+  margin-top: 0 !important;
+}
