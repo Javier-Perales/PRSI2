@@ -161,7 +161,8 @@ Tras entrenarse jugando contra sí mismo, en tan solo 3 días,los resultados fue
 
 
 
-# 2. Evolución de los paradigmas computacionales
+# 2. Macro-paradigmas computacionales
+Atendiendo a cómo se construye la lógica del sistema.
 ### Software 1.0
 ```mermaid
 flowchart LR
@@ -187,38 +188,62 @@ flowchart LR
 ```
 
 Representa la era de los **modelos fundacionales[^1]** (LLMs, multimodales) y la programación contextual o agéntica. No se programa desde cero como en el paradigma 1.0, ni se entrena un modelo completo con millones de entradas de pares entrada-salida (2.0). Se toma un modelo base ya preentrenado y generalista, y se "programa" en lenguaje natural o estructurado mediante *prompting*, técnicas de contexto y llamadas a herramientas/APIs. **El foco del desarrollador cambia de la implementación sintáctica a:** 
-- Estructuración de prompts: Definir lores, restricciones de formato, instrucciones y ejemplos guiados.
+- Estructuración de prompts: Definir roes, restricciones de formato, instrucciones y ejemplos guiados.
 - RAG(*Retrieval-Augmented Generation*): Diseñar conexiones de los modelos para buscar información en bases de datos e inyectarla dinámicamente en el contexto del modelo en tiempo de ejecución.
 - Gestión de la ventana de contexto: Decidir qué fragmentos de información, memoria de conversación o documentación deben priorizarse dentro del límite de *Tokens*
 [^1]: Termino (popularizado por la Universidad de Stanford en 2021) define a los modelos de IA de gran escala entrenados con volúmenes masivos de datos diversos (texto, código, audio, imágenes) mediante de aplicaciones distintas.
-# Sesión 2: 
-- [ ] Montaje de la estructura básica del código o hardware.
-- [ ] Primer hito funcional de la misión.
 
-# Sesión 3: 
-- [ ] Integración de mecánicas avanzadas, condiciones o sensores.
-- [ ] Pruebas intermedias de funcionamiento.
+# 3. Paradigmas de Lenguajes de Programación
+Atendiendo a cómo organizamos el código fuente.
 
-# Sesión 4: 
-- [ ] Integración de mecánicas avanzadas, condiciones o sensores.
-- [ ] Pruebas intermedias de funcionamiento.
+![[recursos/paradigmas_lenguajes.png]]
 
 
-# Sesión 5: 
-- [ ] Integración de mecánicas avanzadas, condiciones o sensores.
-- [ ] Pruebas intermedias de funcionamiento.
+>[!example] Lenguaje compilado. Versión en C++
+> 1. Crea un archivo de texto llamado `programa.cpp`
+> ```bash
+> nano programa.cpp
+> ```
+> 2. Escribe el siguiente código fuente.
+> ```cpp
+> #include <iostream>
+> 
+> int main() {
+>     std::cout << "--- INICIO DEL PROGRAMA ---\n";
+>     for (int i = 1; i <= 3; i++) {
+>         std::cout << "Procesando paso " << i << "...\n";
+>     }
+>     std::cout << "--- FIN CON ÉXITO ---\n";
+>     return 0;
+> }
+> ```
+> *(Guardar con `Ctrl + O`, confirmar con `Enter` y salir con `Ctrl + X`).*
 
-# Sesión 6: 
-- [ ] Integración de mecánicas avanzadas, condiciones o sensores.
-- [ ] Pruebas intermedias de funcionamiento.
+>[!example] Lenguaje interpretado. Versión en Python
+> 1. Crea un archivo de texto llamado `programa.py`
+> ```bash
+> nano programa.py
+> ```
+> 2. Escribe el siguiente código fuente.
+> ```python
+> print("--- INICIO DEL PROGRAMA ---") 
+> for i in range(1, 4): 
+> 	print(f"Procesando paso {i}...") 
+> print("--- FIN CON ÉXITO ---")
+> ```
+> *(Guardar con `Ctrl + O`, confirmar con `Enter` y salir con `Ctrl + X`).*
 
-# Sesión 7: 
-- [ ] Integración de mecánicas avanzadas, condiciones o sensores.
-- [ ] Pruebas intermedias de funcionamiento.
-
-# Sesión 8: 
-- [ ] Integración de mecánicas avanzadas, condiciones o sensores.
-- [ ] Pruebas intermedias de funcionamiento.
+> [!task] Ejecución de los programas
+> - Ejecución del programa de Python
+> `python3 programa.py`
+> - Ejecución del programa de C++
+> `g++ -Wall programa.cpp -o ejecutable_cpp`
+> - Lista los archivos generados
+> `ls -lh`
+> Ejecuta el binario generado
+> `./ejecutable_cpp`
 ---
 
 
+> [!warning] OJO
+> La divergencia fundamental entre ambos modelos radica en su grado de acoplamiento con la arquitectura física subyacente y la interfaz del núcleo del sistema operativo. Mientras que un lenguaje compilado (como C++ o Rust) traduce el código fuente directamente a instrucciones binarias nativas supeditadas al repertorio de instrucciones de la CPU concreta (ya sea x86_64, ARM o RISC-V) y empaqueta el ejecutable según el formato y las llamadas al sistema (_syscalls_) propios del sistema operativo anfitrión (como ELF en GNU/Linux o PE en Windows) —lo que inhabilita la portabilidad directa de un binario generado para una plataforma sin una recompilación previa específica—, un lenguaje interpretado (como Python) delega dicha ejecución en una capa de abstracción intermedia. En este segundo caso, es el propio software intérprete el que asume y neutraliza la heterogeneidad del hardware y del sistema operativo, permitiendo que el mismo fichero de código fuente se ejecute de manera transparente e idéntica en cualquier entorno que cuente con su motor de ejecución instalado, sacrificando el rendimiento en bruto del silicio a favor de una portabilidad y agilidad de desarrollo universales.
