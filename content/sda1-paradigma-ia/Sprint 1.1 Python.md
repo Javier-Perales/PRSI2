@@ -51,11 +51,13 @@ print(f"Mayúsculas: {nombre.upper()}")
 
 **Recurso:** [Py4E - Ejecución Condicional](https://www.py4e.com/lessons/logic)
 
-> [!exercise] Ejercicios
+>[!exercise] Condicionales 1
 > **Salario bruto v2.** Calcula el salario bruto de un trabajador sabiendo que se paga la tarifa por hora hasta las 35 horas semanales. Para todas las horas trabajadas por encima de 35 se debe pagar 1'5 veces la tarifa asignada. No es necesario realizar la verificación de errores en la entrada de usuario.
->  ---
+
+>[!Exercise] Condicionales 2
 > **Salario bruto v2 a prueba de errores**. Modifica el programa anterior para que si el usuario introduce texto en lugar de dígitos numéricos, el programa intercepte el error y advierta el fallo y finalice el programa.
->  ---
+
+>[!task] Condicionales 3
 > **Facturación dinámica con validación robusta de datos.** Se necesita un script de Python que calcule el coste de los servicios prestados por una determinada empresa donde se aplican descuentos según el perfil del cliente. 
 > 1. Solicitar
 > 	a. Número de horas realizadas.
@@ -70,4 +72,4 @@ print(f"Mayúsculas: {nombre.upper()}")
 > 	a. Si el código es `SOCIO` se aplica un 10% de descuento.
 > 	b. Si es `ESTUDIANTE`, se aplica un 15% de descuento.
 > 	c. Si es `GENERAL`, no se aplica descuento.
-> ---
+
