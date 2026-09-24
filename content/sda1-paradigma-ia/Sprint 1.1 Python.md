@@ -46,3 +46,28 @@ print(f"Cliente: {nombre}")
 print(f"Total: {precio * unidades} €")
 print(f"Mayúsculas: {nombre.upper()}")
 ```
+
+## 3. Condicionales
+
+**Recurso:** [Py4E - Ejecución Condicional](https://www.py4e.com/lessons/logic)
+
+> [!exercise] Ejercicios
+> **Salario bruto v2.** Calcula el salario bruto de un trabajador sabiendo que se paga la tarifa por hora hasta las 35 horas semanales. Para todas las horas trabajadas por encima de 35 se debe pagar 1'5 veces la tarifa asignada. No es necesario realizar la verificación de errores en la entrada de usuario.
+>  ---
+> **Salario bruto v2 a prueba de errores**. Modifica el programa anterior para que si el usuario introduce texto en lugar de dígitos numéricos, el programa intercepte el error y advierta el fallo y finalice el programa.
+>  ---
+> **Facturación dinámica con validación robusta de datos.** Se necesita un script de Python que calcule el coste de los servicios prestados por una determinada empresa donde se aplican descuentos según el perfil del cliente. 
+> 1. Solicitar
+> 	a. Número de horas realizadas.
+> 	b. Tarifa base por hora (en euros).
+> 	c. Código del cliente: `SOCIO`, `ESTUDIANTE`, `GENERAL`
+> 2. Blindaje de entrada: Si las horas o la tarifa no son valores numéricos, el programa debe capturar el error y mostrar `Error: Se requiere un valor numérico para horas y tarifas.`
+> 3. Validación de rango: Si las horas son menores o iguales a 0 o superan las 60 horas semanales, debe advertir: `Error El número de horas debe estar entre 1 y 60`
+> 4. Cálculo de liquidación base y horas extra:
+> 	a. Hasta 40 horas: se paga la tarifa regular.
+> 	b. Por encima de 40 horas, el exceso se liquida a 1.5 veces la tarifa regular.
+> 5. Modificador de perfil:
+> 	a. Si el código es `SOCIO` se aplica un 10% de descuento.
+> 	b. Si es `ESTUDIANTE`, se aplica un 15% de descuento.
+> 	c. Si es `GENERAL`, no se aplica descuento.
+> ---
