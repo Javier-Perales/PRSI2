@@ -1,0 +1,144 @@
+::Q1 Era exponencial::
+¿En qué se basa la idea de la "era exponencial" mencionada en el documento?
+{
+    =En que el ritmo del cambio se acelera porque cada nueva tecnología se construye sobre las capacidades de la anterior, haciéndola más poderosa.
+    ~%-100%En que la inteligencia artificial reemplazará exponencialmente a los trabajadores humanos en todos los sectores productivos.
+    ~%-100%En la necesidad de aumentar de forma exponencial el tamaño físico de los ordenadores para poder resolver problemas lógicos complejos.
+    ~%-100%En la cantidad exponencial de energía y recursos naturales que consumen los nuevos modelos de lenguaje a gran escala.
+}
+
+::Q2 Máquina de Turing::
+¿Qué concepto teórico fundamental demostró Alan Turing en 1936 con su Máquina Universal?
+{
+    =Que una única máquina programable puede ejecutar cualquier cálculo matemático computable mediante la manipulación de símbolos discretos.
+    ~%-100%Que es imposible que una máquina logre imitar el comportamiento humano a través de un terminal de ordenador.
+    ~%-100%La invención del primer circuito integrado, lo que permitió fabricar múltiples transistores sobre una única pastilla de silicio.
+    ~%-100%El desarrollo de la primera red de computadoras basada en conmutación de paquetes, precursora directa de Internet.
+}
+
+
+::Q7 Prueba de Turing::
+Según el documento, ¿cuál es la esencia de la Prueba de Turing concebida en 1950?
+{
+    =No se centra en cómo piensa la máquina, sino en su capacidad para comportarse de manera indistinguible de un humano ante un evaluador.
+    ~%-100%Evaluar mediante complejos algoritmos matemáticos si una máquina ha logrado alcanzar la Inteligencia Artificial General (AGI).
+    ~%-100%Determinar cuántos movimientos por segundo es capaz de calcular un ordenador en juegos de estrategia complejos como el ajedrez.
+    ~%-100%Verificar que la máquina tiene autoconciencia real y comprende profundamente el significado de las palabras que utiliza.
+}
+
+::Q8 Logic Theorist::
+¿Cuál se considera el primer programa de IA (1956) cuyo objetivo era demostrar teoremas de manera automática?
+{
+    =Logic Theorist.
+    ~%-100%Perceptrón Mark 1.
+    ~%-100%Deep Blue.
+    ~%-100%Watson de IBM.
+}
+
+::Q9 Limitaciones del Perceptrón Mark 1::
+¿Qué limitación significativa descubrieron los científicos en el Perceptrón Mark 1 de 1967?
+{
+    =Al contar con una única capa, solo era apto para aprender datos que pudieran ser separados linealmente, atascándose en patrones complejos.
+    ~%-100%Era incapaz de procesar imágenes, debiendo limitarse estrictamente a clasificar variables numéricas unidimensionales.
+    ~%-100%Requería una cantidad desorbitada de transistores bipolares que hacían que su construcción física fuese inasumible.
+    ~%-100%Únicamente funcionaba si los desarrolladores programaban manualmente todas las reglas algorítmicas (Software 1.0).
+}
+
+::Q10 Deep Blue vs Kasparov::
+¿En qué estrategia se basó principalmente el éxito del superordenador Deep Blue al derrotar a Garry Kasparov al ajedrez en 1997?
+{
+    =En gran medida en la "fuerza bruta", gracias a su capacidad de calcular hasta 200 millones de jugadas posibles por segundo.
+    ~%-100%En redes neuronales profundas (Deep Learning) que imitaban la intuición visual humana al mirar el tablero.
+    ~%-100%En la técnica de aprendizaje por refuerzo, ya que Deep Blue se entrenó jugando exclusivamente millones de partidas contra sí mismo.
+    ~%-100%En el uso del paradigma de programación contextual, mediante el cual recibía "prompts" de grandes maestros del ajedrez en tiempo real.
+}
+
+::Q11 Watson y Jeopardy::
+¿Qué demostró la victoria del sistema Watson de IBM en el concurso televisivo Jeopardy! en 2011?
+{
+    =Que las máquinas podían comprender y procesar el lenguaje humano de manera efectiva para generar respuestas precisas en tiempo real.
+    ~%-100%Que la Inteligencia Artificial superaba definitivamente a los humanos en juegos de tablero que requieren cálculo de movimientos.
+    ~%-100%Que la arquitectura clásica de Von Neumann estaba completamente obsoleta frente a las nuevas unidades de procesamiento gráfico (GPU).
+    ~%-100%Que era imprescindible utilizar imágenes y no solo texto para que un ordenador asimilara correctamente conocimientos humanos.
+}
+
+::Q12 Supercomputadora Minwa::
+¿Qué técnica de software empleó la supercomputadora Minwa (Baidu) en 2015 para ampliar drásticamente su base de datos de entrenamiento?
+{
+    =Modificó 1,2 millones de imágenes originales distorsionándolas, volteándolas o tocando el colorido, multiplicándolas a 2.000 millones.
+    ~%-100%Descargó directamente 2.000 millones de imágenes de las redes sociales empleando sofisticadas técnicas de Web Scraping automatizado.
+    ~%-100%Utilizó un motor de inteligencia artificial generativa de texto a imagen (similar a DALL-E) para crear fotografías sintéticas desde cero.
+    ~%-100%Conectó millones de nodos alrededor del mundo (computación distribuida) para que usuarios humanos subieran fotos de forma masiva.
+}
+
+::Q13 AlphaGo (2016)::
+El sistema AlphaGo que derrotó al campeón mundial Lee Sedol basaba su éxito en la combinación de Deep Learning y:
+{
+    =Aprendizaje por refuerzo, interactuando con un entorno y recibiendo recompensas por acciones correctas.
+    ~%-100%Programación algorítmica artesanal basada en millones de condiciones if/else.
+    ~%-100%Tokenización semántica y arquitecturas Transformer de última generación.
+    ~%-100%Lógica simbólica pura mediante la resolución de árboles heurísticos lineales.
+}
+
+::Q14 AlphaGo Zero (2017)::
+¿Cuál fue la principal novedad disruptiva que introdujo AlphaGo Zero en 2017 respecto a su predecesor AlphaGo?
+{
+    =Aprendió a jugar únicamente a partir de las reglas del juego mediante auto-juego (self-play), sin estudiar partidas de jugadores humanos.
+    ~%-100%Logró integrar modelos de lenguaje a gran escala para comentar sus propias partidas en lenguaje natural en tiempo real.
+    ~%-100%Redujo a cero su consumo energético apoyándose en redes de computación cuántica de baja latencia.
+    ~%-100%Requirió ser programado utilizando el paradigma clásico del Software 1.0 para garantizar que nunca cometiera un error matemático.
+}
+
+::Q15 Paradigma Software 1.0::
+¿Cómo se define el funcionamiento lógico del modelo clásico conocido como "Software 1.0"?
+{
+    =El programador descompone la lógica en pasos algorítmicos concretos, y el ordenador procesa los datos de entrada siguiendo esas instrucciones.
+    ~%-100%El programador suministra respuestas y datos masivos, y el ordenador infiere matemáticamente las reglas o pasos lógicos para resolver el problema.
+    ~%-100%Se toma un modelo preentrenado de forma generalista y se le instruye mediante lenguaje natural para que resuelva la tarea concreta.
+    ~%-100%El hardware físico del ordenador se modifica dinámicamente mediante transistores para adaptarse al tipo de datos introducidos por el usuario.
+}
+
+::Q16 Paradigma Software 2.0::
+Según el diagrama del Software 2.0 (Machine Learning / Deep Learning), ¿cuáles son los elementos que se introducen al ordenador para generar la regla o modelo entrenado?
+{
+    =Datos de entrada y Respuestas (Labels).
+    ~%-100%Reglas / Algoritmos y Datos de entrada.
+    ~%-100%Prompts de contexto y Modelos preentrenados.
+    ~%-100%Buses de entrada/salida y registros de la ALU.
+}
+
+::Q17 Foco en Software 3.0::
+En la era del Software 3.0 (modelos fundacionales), ¿hacia dónde cambia el foco principal del desarrollador?
+{
+    =A la estructuración de prompts, el diseño de sistemas RAG y la gestión eficiente de la ventana de contexto.
+    ~%-100%A la optimización manual del uso de la memoria RAM, los punteros y el ciclo de reloj de la CPU.
+    ~%-100%A la recopilación masiva y etiquetado manual de millones de imágenes para crear redes neuronales desde cero.
+    ~%-100%A la codificación explícita de árboles de decisión estructurados mediante bloques if/else para cada caso borde.
+}
+
+::Q18 Lenguaje interpretado vs compilado::
+¿Qué característica fundamental distingue a la ejecución de un lenguaje interpretado (como Python) frente a uno compilado (como C++) según el aviso de la SdA?
+{
+    =El software intérprete asume la heterogeneidad del hardware/SO, sacrificando rendimiento en bruto a cambio de portabilidad y agilidad sin recompilar.
+    ~%-100%Traduce el código fuente directamente a instrucciones binarias de la CPU, logrando una portabilidad total sin necesidad de intérpretes intermedios.
+    ~%-100%Se salta el sistema operativo por completo interactuando a bajo nivel con la memoria unificada de Von Neumann, lo que lo hace inestable pero muy veloz.
+    ~%-100%Solo puede ejecutarse correctamente en unidades de procesamiento gráfico (GPU) utilizando el entorno de computación paralela CUDA.
+}
+
+::Q19 Modelos Fundacionales::
+De los ejemplos mencionados en el documento, ¿cuáles se encuadran dentro de la categoría de "Modelos fundacionales" (Software 3.0)?
+{
+    =La familia GPT, Gemini, Llama y Claude.
+    ~%-100%El superordenador Deep Blue y Watson.
+    ~%-100%Logic Theorist y Perceptrón Mark 1.
+    ~%-100%AlphaGo y AlphaGo Zero.
+}
+
+::Q20 Concepto RAG::
+¿A qué hace referencia el término RAG (Retrieval-Augmented Generation) en el contexto de la programación agéntica actual?
+{
+    =A diseñar conexiones para que el modelo busque información en bases de datos y la inyecte dinámicamente en el contexto de la conversación.
+    ~%-100%A una técnica de entrenamiento donde una red neuronal convolucional genera imágenes falsas (Generación) para engañar a un evaluador (Augmented).
+    ~%-100%Al proceso de compilación donde se generan las llamadas al sistema (syscalls) exclusivas para plataformas GNU/Linux.
+    ~%-100%A la técnica empleada en ajedrez computacional consistente en recuperar miles de aperturas históricas de una memoria ROM de solo lectura.
+}

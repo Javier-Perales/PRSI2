@@ -1,0 +1,111 @@
+
+::Q1 Tipo de retorno de input::
+¿Qué tipo de dato devuelve por defecto la función input() en Python al recibir una entrada del usuario?
+{
+=Siempre devuelve una cadena de texto (str), requiriendo conversión explícita si se necesitan operar valores numéricos.
+~%-100%Infiere automáticamente el tipo de dato numérico (int o float) según los caracteres introducidos por el teclado.
+~%-100%Devuelve por defecto un número en coma flotante (float) para evitar la pérdida de precisión con decimales.
+~%-100%Devuelve None si el usuario introduce caracteres no alfanuméricos en la consola.
+}
+
+::Q2 Conversion con float::
+En un programa de cálculo salarial que solicita datos al usuario mediante input(), ¿cuál es el motivo principal para aplicar la función float()?
+{
+=Porque input() devuelve un objeto de tipo str y se necesita transformarlo a un número en coma flotante para realizar operaciones aritméticas.
+~%-100%Porque la función input() solo acepta números enteros y float() se encarga de añadirle la parte decimal.
+~%-100%Porque en Python es obligatorio declarar previamente el tipo estático de cualquier variable antes de usarla.
+~%-100%Porque float() comprueba si el usuario ha cometido un error ortográfico y lo corrige en tiempo de compilación.
+}
+
+
+::Q4 Evaluacion en tiempo de ejecucion::
+Según el documento, ¿cómo gestiona el intérprete de Python cualquier contenido encerrado entre llaves \{ \} dentro de una f-string?
+{
+=Se evalúa en tiempo de ejecución en el ámbito (scope) actual y su resultado se convierte a texto.
+~%-100%Se compila estáticamente antes de iniciar el script y su valor queda congelado de forma inmutable.
+~%-100%Se interpreta como un bloque de comentarios interno y no produce ninguna salida por pantalla.
+~%-100%Se delega directamente en el sistema operativo mediante una llamada al sistema (syscall) de bajo nivel.
+}
+
+::Q5 Formateo f-string 2 decimales::
+Dada la variable total \= 15.67894, ¿cuál será la salida por pantalla tras ejecutar print(f"Total\: \{total\:.2f\}")?
+{
+=Total\: 15.68
+~%-100%Total\: 15.67
+~%-100%Total\: 15.67894
+~%-100%Provoca un error de sintaxis (ValueError) porque el carácter dos puntos no está permitido dentro de llaves.
+}
+
+::Q6 Formateo f-string 4 decimales::
+Si disponemos de la asignación total \= 15.67894, ¿qué resultado exacto imprimirá la instrucción print(f"Total\: \{total\:.4f\}")?
+{
+=Total\: 15.6789
+~%-100%Total\: 15.6790
+~%-100%Total\: 15.68
+~%-100%Total\: 15.678940
+}
+
+::Q7 Expresiones complejas en f-strings::
+¿Qué elementos u operaciones es posible incrustar directamente dentro de las llaves \{ \} en una f-string?
+{
+=Operaciones aritméticas (como \{precio * unidades\}) y llamadas a métodos de clase (como \{nombre.upper()\}).
+~%-100%Únicamente nombres de variables simples preexistentes, estando prohibido el uso de operadores aritméticos.
+~%-100%Definiciones completas de funciones (def) y bucles for iterativos complejos.
+~%-100%Exclusivamente conversiones de tipo manuales mediante operadores de formato de C clásico (%s, %d).
+}
+
+::Q9 Manejo de excepciones en entrada::
+En el ejercicio "Salario bruto v2 a prueba de errores", ¿qué estructura de control en Python permite interceptar el fallo si el usuario teclea texto en lugar de dígitos numéricos?
+{
+=Un bloque de gestión de excepciones try...except que capture el error (ValueError).
+~%-100%Un bucle infinito while True que fuerce la repetición del código sin comprobar errores.
+~%-100%Una condición lógica if tipo \=\= float sin soporte para gestión de excepciones.
+~%-100%El uso forzado del método str.lower() sobre la entrada para transformar las letras en números.
+}
+
+
+::Q14 Estructura condicional multiple::
+Para programar la discriminación de descuentos según el código de cliente (SOCIO, ESTUDIANTE, GENERAL), ¿cuál es la construcción sintáctica habitual en Python?
+{
+=if ... elif ... else
+~%-100%switch ... case ... default (obligatorio en todas las versiones de Python sin excepciones)
+~%-100%select ... case ... end
+~%-100%try ... except ... finally
+}
+
+::Q15 Tipado dinamico en Python::
+Al ejecutar la instrucción precio \= 19.99, ¿cómo gestiona Python la asignación de tipos de dicha variable?
+{
+=Aplica tipado dinámico e infiere automáticamente en tiempo de ejecución que precio pertenece a la clase float.
+~%-100%Exige declarar explícitamente float precio \= 19.99 antes de poder asignarle cualquier valor numérico.
+~%-100%Trata el dato como una cadena de texto (str) inmutable hasta que se ejecuta una llamada a print().
+~%-100%Asigna de forma estática la variable a la memoria de instrucciones de la CPU impidiendo cualquier modificación posterior.
+}
+
+
+::Q17 Metodo upper en cadenas::
+En la expresión f"Mayúsculas\: \{nombre.upper()\}", ¿qué realiza el método upper() sobre el objeto de tipo string?
+{
+=Devuelve una nueva cadena con todos los caracteres alfabéticos convertidos a mayúsculas, sin alterar la variable original.
+~%-100%Modifica la variable original en memoria eliminando los espacios en blanco iniciales y finales.
+~%-100%Comprueba si la cadena está en mayúsculas devolviendo un valor booleano True o False.
+~%-100%Convierte la cadena de texto en un número entero calculando la sumatoria de sus códigos ASCII.
+}
+
+::Q18 Indentacion en bloques condicionales::
+¿De qué manera delimita el intérprete de Python el bloque de sentencias subordinado a una instrucción condicional if?
+{
+=Mediante la indentación o sangrado consistente de las líneas de código que componen el bloque subordinado.
+~%-100%Encerrando obligatoriamente el bloque entre llaves \{ \} como ocurre en lenguajes como C, C++ o Java.
+~%-100%Finalizando obligatoriamente cada instrucción con el carácter de punto y coma (;).
+~%-100%Delimitando el bloque mediante las palabras reservadas begin al inicio y end al cierre.
+}
+
+::Q20 Ventajas de las f-strings::
+¿Qué ventaja técnica y de legibilidad ofrecen las f-strings frente a la concatenación tradicional mediante el operador suma (+)?
+{
+=Permiten evaluar expresiones y formatear números directamente sin forzar la conversión manual explícita con str().
+~%-100%Convierten el código fuente de Python en código binario nativo que no precisa del software intérprete.
+~%-100%Evitan de forma automática que se produzcan excepciones de tipo ValueError en las entradas de usuario.
+~%-100%Bloquean las variables en la memoria RAM para que no puedan ser modificadas por otros procesos concurrentes.
+}
