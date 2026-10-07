@@ -128,9 +128,10 @@ Los elementos claves de la recursividad son:
 >2. Inverso de un número `invertir(3452)=2543`
 >3. Sucesión de Fibonacci. Debe visualizar por consola la lista de Fibonacci hasta la posición indicada
 >	- `sucFibo(1) - 1`
->	- `sucFibo(2) - 1 1`
->	- `sucFibo(3) - 1 1 2`
->	- `sucFibo(4) - 1 1 2 3`
->	- `sucFibo(5) - 1 1 2 3 5`
->	- `sucFibo(6) - 1 1 2 3 5 8`
+>	- `sucFibo(2) - 1`
+>	- `sucFibo(3) - 2`
+>	- `sucFibo(4) - 3`
+>	- `sucFibo(5) - 5`
+>	- `sucFibo(6) - 8`
 
+**Recurso:** [Actividades sobre cadenas](https://colab.research.google.com/drive/1Ych3o9W7XIDFCi0_0chhJO_DYBRqrSHo?usp=sharing)
