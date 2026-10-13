@@ -1,6 +1,6 @@
 ---
-title: "Sprint 1.1: Introducción a Python"
-sda: "Misión 1: Paradigma IA"
+title: "Sprint X.Y: Nombre del reto"
+sda: "Misión X: Nombre de la Misión"
 tags:
   - Python
 criterios_evaluacion:
@@ -135,3 +135,4 @@ Los elementos claves de la recursividad son:
 >	- `sucFibo(6) - 8`
 
 **Recurso:** [Actividades sobre cadenas](https://colab.research.google.com/drive/1Ych3o9W7XIDFCi0_0chhJO_DYBRqrSHo?usp=sharing)
+
