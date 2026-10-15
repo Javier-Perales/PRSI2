@@ -77,7 +77,79 @@ La distinción entre **mutable** e **inmutable** determina si ese valor interno 
   >	- Cada octeto debe encontrarse en el rango decimal de un byte: **$0 \le \text{octeto} \le 255$**.
   >**Utiliza la función `split` con la variabla `cadena`**
 
-## 2. Arrays (numpy)
+>[!tip]  Orientador Universitario 
+>Cada año, miles de estudiantes deben decidir qué grado universitario deben cursar. Para ayudarles vamos a desarrollar una aplicación que permita almacenar información sobre titulaciones, consultar sus notas de corte y localizar las opciones más adecuadas según determinados criterios.
+>El proyecto se desarrollará progresivamente. Comenzaremos introduciendo registros manualmente y terminaremos procesando un fichero real con notas de corte las universidades públicas Valencianas y Murciana.
+>**Estructura de datos**
+>Cada titulación se representará mediante una **lista de cuatro elementos**, siempre en este orden:
+>
+>| Posición | Campo         | Tipo    |
+>| -------- | ------------- | ------- |
+>| 0        | Universidad   | `str`   |
+>| 1        | Siglas        | `str`   |
+>| 2        | Carrera       | `str`   |
+>| 3        | Nota de corte | `float` |
+>
+>Ejemplo:
+>
+>```python
+>grado = [
+>    "Universidad de Alicante",
+>    "UA",
+>    "Ingeniería Informática",
+>    9.5
+>]
+>``` 
+> La aplicación almacenará los grados dentro de otra lista. 'grados = [ ]'
+
+>[!question] A101.1 Trabajando con cadenas multilínea
+>Vamos a utilizar una cadena de varias líneas para representar una titulación. Cada línea contendrá un campo.
+>``` python
+>dato1 = """Universidad de Alicante
+>UA
+>Ingeniería Informática
+>9.5"""
+>
+>datos2 = """Universitat Politècnica de València
+>UPV
+>Ingeniería Aeroespacial
+>12.8"""
+>
+>datos3 = """Universidad Miguel Hernández
+>UMH
+>Medicina
+>12.9"""
+>```
+>**Se pide:**
+>1. Crear la función `crear_grado(dato:str) ->list[str|float]:` que divida el contenido en líneas y las almacene en una lista. La función deberá comprobar el tipo de dato de cada elemento.
+>2. Crear la función `mostrar_grados(grados:list[list[str|float]]) ->None` que muestre el contenido por pantalla formateado.
+>
+>|**Campo**|**Ancho**|**Alineación**|
+>|---|---|---|
+>|**Universidad**|40 caracteres|Izquierda|
+>|**Siglas**|8 caracteres|Centrada|
+>|**Carrera**|55 caracteres|Izquierda|
+>|**Nota de corte**|8 caracteres|Derecha, 2 decimales|
+>`print(f"{nombre:<40} {siglas:^8} {carrera:<55} {nota:>8.2f}")`
+
+>[!question] A101.2 Carga de datos desde un fichero CSV
+>Vamos a sustituir los datos ficticios por información real de las universidades públicas valencianas.
+>El fichero [[py-app/notas_corte.csv|notas_corte.csv]] contiene cuatro columnas:
+>`universidad;siglas;carrera;nota_corte
+>**Se pide:**
+>- Crear la función `cargar_csv(nombre_fichero:str)->list[list[str|float]]`
+>- Una vez cargada se mostrará el número de registros totales.
+>``` python
+> import csv
+>
+>with open("notas_corte.csv", mode="r", encoding="utf-8") as fichero:
+>    lector = csv.reader(fichero, delimiter=";")
+>    for nombre, siglas, carrera, nota in lector:
+>        print(f"{nombre:<40} {siglas:^8} {carrera[:50]:<55} {float(nota.replace(',','.')):>8.2f}")
+>
+> ```
+
+
 
 
 
