@@ -102,7 +102,7 @@ La distinción entre **mutable** e **inmutable** determina si ese valor interno 
 >``` 
 > La aplicación almacenará los grados dentro de otra lista. 'grados = [ ]'
 
->[!question] A101.1 Trabajando con cadenas multilínea
+>[!tip] Trabajando con cadenas multilínea
 >Vamos a utilizar una cadena de varias líneas para representar una titulación. Cada línea contendrá un campo.
 >``` python
 >dato1 = """Universidad de Alicante
@@ -132,7 +132,7 @@ La distinción entre **mutable** e **inmutable** determina si ese valor interno 
 >|**Nota de corte**|8 caracteres|Derecha, 2 decimales|
 >`print(f"{nombre:<40} {siglas:^8} {carrera:<55} {nota:>8.2f}")`
 
->[!question] A101.2 Carga de datos desde un fichero CSV
+>[!tip] Carga de datos desde un fichero CSV
 >Vamos a sustituir los datos ficticios por información real de las universidades públicas valencianas.
 >El fichero [[py-app/notas_corte.csv|notas_corte.csv]] contiene cuatro columnas:
 >`universidad;siglas;carrera;nota_corte
@@ -150,7 +150,11 @@ La distinción entre **mutable** e **inmutable** determina si ese valor interno 
 > ```
 
 
-
+>[!question] Orientador Universitario (parte 1)
+>
+>![[recursos/menu_orientador_uni.png]]
+> 
+> Crea en Python el siguiente menú. Implementa la primera opción.
 
 
 ---
