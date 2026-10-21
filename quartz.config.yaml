@@ -1,13 +1,13 @@
-# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+﻿# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: "Programación y Redes de Sistemas Informáticos"
+  pageTitle: "ProgramaciÃ³n y Redes de Sistemas InformÃ¡ticos"
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: es-ES
-  baseUrl: javier-perales.github.io
+  baseUrl: "javier-perales.github.io/PRSI2"
   ignorePatterns:
     - private
     - templates
@@ -163,7 +163,7 @@ plugins:
       position: left
       priority: 50
   - source: "@quartz-community/graph"
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 40

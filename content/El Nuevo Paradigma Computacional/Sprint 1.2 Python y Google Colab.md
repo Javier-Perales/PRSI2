@@ -154,7 +154,8 @@ La distinción entre **mutable** e **inmutable** determina si ese valor interno 
 >
 >![[recursos/menu_orientador_uni.png]]
 > 
-> Crea en Python el siguiente menú. Implementa la primera opción.
+> - Crea en Python el siguiente menú. Por defecto, el programa deberá cargar todas las titulaciones antes de mostrar el menú.
+>- Implementa la opción `1. Mostrar todas las titulaciones`. Se debe mostrar las titulaciones en forma de tabla tabulada.
 
 
 ---

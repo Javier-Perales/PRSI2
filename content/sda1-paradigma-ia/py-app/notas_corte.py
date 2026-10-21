@@ -15,7 +15,7 @@ grados= []
 cargar_csv()
 
 
-opc=' '
+opc='  '
 while (opc!='0'):
     print('='*50)
     print(f"{'ORIENTADOR UNIVERSITARIO':^50}")
