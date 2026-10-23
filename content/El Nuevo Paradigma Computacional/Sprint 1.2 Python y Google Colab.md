@@ -1,6 +1,6 @@
 ---
 title: Sprint 1.2 Python y Google Colab
-sda: "Misión 1: El nuevo paradigma computacional"
+sda: El nuevo paradigma computacional
 tags:
 criterios_evaluacion:
 entregable:
@@ -150,14 +150,37 @@ La distinción entre **mutable** e **inmutable** determina si ese valor interno 
 > ```
 
 
->[!question] Orientador Universitario (parte 1)
+>[!question] A101(CE1) - Orientador Univeritario 
 >
+>Desarrolla una aplicación en **Python** que permita consultar y filtrar información sobre las titulaciones universitarias utilizando **listas** como estructura de datos.
+>
+>Al iniciar el programa, se cargarán automáticamente todas las titulaciones disponibles y se mostrará el siguiente menú:
 >![[recursos/menu_orientador_uni.png]]
-> 
-> - Crea en Python el siguiente menú. Por defecto, el programa deberá cargar todas las titulaciones antes de mostrar el menú.
->- Implementa la opción `1. Mostrar todas las titulaciones`. Se debe mostrar las titulaciones en forma de tabla tabulada.
+>
+>Funcionamiento del programa:
+>
+>El programa deberá cumplir los siguientes requisitos:
+>
+>1. **Carga inicial:** al comenzar la ejecución, se cargarán todas las titulaciones universitarias en una lista.
+>2. **Filtros acumulativos:** las opciones de búsqueda y filtrado se aplicarán sobre los resultados de la selección anterior, no sobre la lista original. De esta forma, se podrá realizar búsquedas progresivamente más específicas.
+>3. **Mostrar todas las titulaciones (opción 1):** mostrará la lista completa de titulaciones y eliminará todos los filtros aplicados anteriormente.
+>4. **Buscar por universidad (opción 2):** solicitará las siglas de una universidad y mostrará únicamente las titulaciones que coincidan con la búsqueda.
+>5. **Buscar por nombre de grado (opción 3):** solicitará una cadena de texto y mostrará las titulaciones cuyo nombre la contenga, sin distinguir entre mayúsculas y minúsculas.
+>6. **Filtrar por nota de admisión (opción 4):** solicitará una nota y mostrará únicamente las titulaciones cuya nota de corte sea igual o inferior a la introducida.
+>7. **Salir (opción 0):** finalizará la ejecución del programa.
+>### Consideraciones adicionales
+>
+>- El menú deberá mostrarse repetidamente hasta que el usuario seleccione la opción de salir.
+>    
+>- Los resultados deberán visualizarse de forma tabulada, mostrando universidad, siglas, titulación y nota de corte.
+>    
+>- Después de cada búsqueda, se indicará el número de titulaciones encontradas.
+>    
+>- Si una búsqueda no devuelve resultados, se mostrará un mensaje informativo. Los filtros seguirán activos hasta que el usuario seleccione la opción 1.
+>    
+>- El programa deberá organizarse mediante **funciones**, separando las operaciones de búsqueda, filtrado y visualización.
+>
+>
 
-
----
 
 

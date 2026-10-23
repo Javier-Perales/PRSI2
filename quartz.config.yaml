@@ -1,6 +1,6 @@
-﻿# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: "ProgramaciÃ³n y Redes de Sistemas InformÃ¡ticos"
+  pageTitle: "Programación y Redes de Sistemas Informáticos"
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -289,5 +289,4 @@ layout:
         right: []
     canvas: {}
     bases: {}
-
 

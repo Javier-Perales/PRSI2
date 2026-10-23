@@ -1,6 +1,6 @@
 ---
-title: "Sprint X.Y: Nombre del reto"
-sda: "Misión X: Nombre de la Misión"
+title: "Sprint 1.1: Introducción a Python"
+sda: El nuevo paradigma computacional
 tags:
   - Python
 criterios_evaluacion:

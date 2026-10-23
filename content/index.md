@@ -16,7 +16,7 @@ tags:
 ## 🗺️ Mapa de Situaciones de Aprendizaje (SdA)
 
 ### 🧠 SdA 1: El Nuevo Paradigma Computacional
-* **Sprint 1.1:** [[El Nuevo Paradigma Computacional/Sprint 1.1 La era de los datos|Sprint 1.1a La era de los datos]]. [[El Nuevo Paradigma Computacional/Sprint 1.1 Python|Sprint 1.1b Python]]
+* **Sprint 1.1:** [[El Nuevo Paradigma Computacional/Sprint 1.1 La era de los datos|Sprint 1.1a La era de los datos]]. [[El Nuevo Paradigma Computacional/Sprint 1.1 Introducción a Python|Sprint 1.1b Python]]
 * **Sprint 1.2:** [[El Nuevo Paradigma Computacional/Sprint 1.2 Python y Google Colab|Python y Google Colab]]
 * **Sprint 1.3:** Deconstrucción algorítmica de un Perceptrón simple desde cero.
 * **Sprint 1.4:** Sesgos en datasets, huella digital y soberanía del dato (RGPD).
