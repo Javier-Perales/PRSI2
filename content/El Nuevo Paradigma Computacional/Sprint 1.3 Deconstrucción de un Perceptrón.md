@@ -90,3 +90,100 @@ Una vez conocidos los pesos y el sesgo, el Perceptrón realiza una suma ponderad
   >  print("Salida del perceptrón (1: Vamos a la playa, 0: No vamos a la playa):", output)
 >```
 >
+
+# 2. Perceptrón en Python
+Vamos a implementar un perceptrón simple en Python utilizando _Numpy_ y _Matplotlib_ para visualizar los resultados. El perceptrón será capaz de aprender a clasificar puntos en un espacio bidimensional, por lo que recibirá como entrada _x1_ y _x2_, que corresponderán a las coordenadas de los puntos en un plano cartesiano.
+
+![[recursos/perceptron_coord.png]]
+
+Si el perceptrón devuelve un valor negativo, clasificaremos el punto en la clase 0 (por ejemplo, color azul). Si devuelve un valor positivo, lo clasificaremos en la clase 1 (color naranja).
+
+![[recursos/grafica_coord.png|400]]
+
+Como vimos anteriormente, para que el perceptrón tome una decisión, deberá ajustar los parámetros de los pesos(_w1 , w2_) y el sesgo (_b_). Esto es es la idea del problema a resolver y a continuación vamos a ver como funciona internamente el perceptrón.
+
+>[!example] Fase 1: Perceptron en Python 1.
+>- Crea un nuevo cuaderno en Google Colab y nómbralo "Perceptron en Python".
+>- Importa las bibliotecas necesarias: `numpy` como `np` para cálculos numéricos y `matplotlib.pyplot` como `plt` para visualización.
+>- Copia y pega el siguiente código y ejecutalo.
+>``` python
+># Datos estáticos para la Clase 0
+>    class_0 = np.array([
+>        [0.1745, 0.6976], [0.2799, 0.7828], [0.4983, 1.2015], [0.8281, 1.0315],
+>        [0.7770, 1.5834], [0.4316, 0.8576], [0.4897, 1.2523], [0.6931, 1.3653],
+>        [0.8953, 1.6119], [1.0863, 1.8986], [1.2721, 1.8596], [1.3435, 2.4287],
+>        [1.7224, 2.3023], [1.7081, 2.4461], [1.9125, 2.7663], [0.9785, 1.7225],
+>        [1.1105, 1.9444], [1.4924, 2.2265], [1.7377, 2.4571], [-0.0123, 0.7481]
+>    ])
+>
+>    # Clase 1 (roja)
+>    class_1 = np.array([
+>        [0.2869, -0.9575], [0.1711, -0.4289], [0.4639, -0.4998], [0.6413, -0.1982],
+>        [0.7431, 0.0401], [0.1584, -0.9995], [0.452, -0.5633], [0.7490, -0.2185],
+>        [0.7854, -0.0175], [1.0898, -0.0683], [1.1785, 0.4474], [1.6701, 0.7713],
+>        [1.6723, 1.3858], [1.8800, 1.2988], [1.1344, 0.2818], [1.2138, 0.6139],
+>        [1.3835, 0.5055], [1.5458, 1.0895], [1.9452, 1.3496], [-0.0134, -1.0373]
+>    ])
+>
+>
+>    # Dibuja los puntos de cada clase
+>    plt.scatter(class_0[:, 0], class_0[:, 1], label='Clase 0')
+>    plt.scatter(class_1[:, 0], class_1[:, 1], label='Clase 1')
+>
+>    # Añade una leyenda para identificar las clases
+>    plt.legend()
+>
+>    # Muestra la gráfica
+>    plt.show()
+>```
+>
+> - Los datos de los arrays `class_0` y `class_1` representan las coordenadas (x1, x2) de los puntos en el espacio bidimensional. Cada punto en `class_0` pertenece a la clase 0 (color azul) y cada punto en `class_1` pertenece a la clase 1 (color naranja).
+>- La función `plt.scatter()` se utiliza para dibujar los puntos en la gráfica. Recuerda que `class_0[:, 0]` obtiene los valores de la primera columna (x1) y `class_0[:, 1]` obtiene los valores de la segunda columna (x2). Igualmente para `class_1`.
+>- La función `plt.legend()` añade una leyenda a la gráfica para identificar las clases.
+>- Finalmente, `plt.show()` muestra la gráfica con los puntos de ambas clases.
+
+Una vez entendida la estructura de datos para almacenar los puntos de cada clase, vamos a implementar la lógica del perceptrón.
+
+>[!example] Fase 2: Perceptrón en Python 2
+>Continuando con el cuaderno "Perceptron en Python", añade una nueva celda de código y copia el siguiente código para implementar la lógica del perceptrón. Ejecuta la celda para ver los resultados.
+>- **Modifica los parámetros , hasta obtener una buena clasificación de los puntos.**
+>
+>``` python
+># Funcion activación  
+>    def f_activacion(x1, x2, w1, w2, b):
+>        z = w1 * x1 + w2 * x2 + b
+>        # Función de activación  if z >= 0, devolver 1, sino devolver 0
+>        return 1 if z >= 0 else 0
+>
+>
+>    # Modifica las variables a valores deseados
+>    w1 = 1
+>    w2 = 1
+>    b = 0
+>
+>    # Evalua la clasificación para la class_0
+>    aciertos_class_0 = 0
+>    for punto in class_0:
+>        z = f_activacion(punto[0], punto[1], w1, w2, b)
+>        if z == 0:  # Class 0 cuando f_activación devuelve 0
+>            aciertos_class_0 += 1
+>
+>    # Evalua la clasificación para la class_1
+>    aciertos_class_1 = 0
+>    for punto in class_1:
+>        z = f_activacion(punto[0], punto[1], w1, w2, b)
+>        if z == 1: # Class 1 cuando f_activación devuelve 1
+>            aciertos_class_1 += 1
+>
+>    # Cálculo de porcentajes de aciertos
+>    total_class_0 = len(class_0)
+>    total_class_1 = len(class_1)
+>    tasa_aciertos_class_0 = aciertos_class_0 / total_class_0
+>    tasa_aciertos_class_1 = aciertos_class_1 / total_class_1
+>
+>
+>    print(f"-Tasa aciertos para clase 0: {aciertos_class_0} ({tasa_aciertos_class_0 *100}%)")
+>    print(f"-Tasa aciertos para clase 0: {aciertos_class_1} ({tasa_aciertos_class_1*100}%)")
+>```
+
+
