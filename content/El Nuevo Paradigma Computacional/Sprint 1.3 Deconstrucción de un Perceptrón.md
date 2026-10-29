@@ -92,6 +92,11 @@ Una vez conocidos los pesos y el sesgo, el Perceptrón realiza una suma ponderad
 >
 
 # 2. Perceptrón en Python
+
+**Recursos:**
+- [w3School numpy](https://www.w3schools.com/python/numpy/default.asp)
+- [w3schools matplotlib](https://www.w3schools.com/python/matplotlib_intro.asp) 
+
 Vamos a implementar un perceptrón simple en Python utilizando _Numpy_ y _Matplotlib_ para visualizar los resultados. El perceptrón será capaz de aprender a clasificar puntos en un espacio bidimensional, por lo que recibirá como entrada _x1_ y _x2_, que corresponderán a las coordenadas de los puntos en un plano cartesiano.
 
 ![[recursos/perceptron_coord.png]]
