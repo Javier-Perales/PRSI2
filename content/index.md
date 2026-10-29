@@ -18,7 +18,7 @@ tags:
 ### 🧠 SdA 1: El Nuevo Paradigma Computacional
 * **Sprint 1.1:** [[El Nuevo Paradigma Computacional/Sprint 1.1 La era de los datos|Sprint 1.1a La era de los datos]]. [[El Nuevo Paradigma Computacional/Sprint 1.1 Introducción a Python|Sprint 1.1b Python]]
 * **Sprint 1.2:** [[El Nuevo Paradigma Computacional/Sprint 1.2 Python y Google Colab|Python y Google Colab]]
-* **Sprint 1.3:** Deconstrucción algorítmica de un Perceptrón simple desde cero.
+* **Sprint 1.3:** [[El Nuevo Paradigma Computacional/Sprint 1.3 Deconstrucción de un Perceptrón|Deconstrucción de un Perceptrón]] 
 * **Sprint 1.4:** Sesgos en datasets, huella digital y soberanía del dato (RGPD).
 * **Sprint 1.5:** Aplicación interactiva de simulación de sesgos con Streamlit.
 * **Sprint 1.6:** Despliegue en la nube, Code Review cruzado con Issues y README técnico.
