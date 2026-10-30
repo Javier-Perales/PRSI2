@@ -192,3 +192,45 @@ Una vez entendida la estructura de datos para almacenar los puntos de cada clase
 >```
 
 
+>[!example] Fase 3: Perceptrón en Python 3
+>Vamos a representar gráficamente la frontera de decisión del perceptrón representando los valores de _z_. Modificaremos los valores por medio de un deslizador (_slider_), para ver cómo afecta a la clasificación de los puntos cada uno de los puntos.
+>
+>Añade una celda nueva y copia el siguiente código. Ejecuta la totalidad de las celdas del cuaderno.
+>``` python
+>from ipywidgets import interact
+>@interact(
+>    w0=(-4.0, 4.0, 0.1),
+>    w1=(-4.0, 4.0, 0.1),
+>    b=(-3.0, 3.0, 0.1)
+>)
+># --- 3. Definimos la función que se ejecutará con cada cambio ---
+>def actualizar_grafica(w0= 0, w1= 0, b= 0):
+>    """
+>    Esta función recalcula 'z' y redibuja la gráfica
+>    cada vez que se mueve un slider.
+>    """
+>    w = np.array([w0, w1])
+>    z = np.dot(X, w) + b
+>
+>    z_class_0 = z[:len(class_0)]
+>    z_class_1 = z[len(class_0):]
+>
+>    # Creamos una figura nueva para la gráfica
+>    plt.figure(figsize=(10, 2))
+>
+>    # Dibuja los puntos
+>    plt.scatter(z_class_0, np.zeros_like(z_class_0), label='Clase 0', zorder=3, >c='skyblue')
+>    plt.scatter(z_class_1, np.zeros_like(z_class_1), label='Clase 1', zorder=3, >c='salmon')
+>
+>    # Dibuja la línea de referencia en el cero
+>    plt.axvline(0, color='grey', linestyle='--', alpha=0.8)
+>
+>    # Estilo
+>    plt.yticks([])
+>    plt.xlabel("Dimensión z")
+>    plt.title(f"Proyección en z para w=[{w0:.1f}, {w1:.1f}] y b={b:.1f}")
+>    plt.legend()
+>    plt.grid(axis='x', linestyle=':', alpha=0.5)
+>    plt.xlim(z.min() -1, z.max() + 1) # Ajusta los límites para que no salten tanto
+>    plt.show()
+>```
