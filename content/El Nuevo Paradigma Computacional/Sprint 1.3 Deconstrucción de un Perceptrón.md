@@ -196,6 +196,9 @@ Una vez entendida la estructura de datos para almacenar los puntos de cada clase
 >Vamos a representar gráficamente la frontera de decisión del perceptrón representando los valores de _z_. Modificaremos los valores por medio de un deslizador (_slider_), para ver cómo afecta a la clasificación de los puntos cada uno de los puntos.
 >
 >Añade una celda nueva y copia el siguiente código. Ejecuta la totalidad de las celdas del cuaderno.
+> - **Analiza el código. Comenta las líneas donde se calcula `w`, `X` y `z`**
+> - **Utiliza los sliders para que el perceptrón converja en una solución. **
+> 
 >``` python
 >from ipywidgets import interact
 >@interact(
@@ -210,8 +213,9 @@ Una vez entendida la estructura de datos para almacenar los puntos de cada clase
 >    cada vez que se mueve un slider.
 >    """
 >    w = np.array([w0, w1])
+>    X = np.vstack((class_0, class_1))
 >    z = np.dot(X, w) + b
->
+>   
 >    z_class_0 = z[:len(class_0)]
 >    z_class_1 = z[len(class_0):]
 >
@@ -219,8 +223,8 @@ Una vez entendida la estructura de datos para almacenar los puntos de cada clase
 >    plt.figure(figsize=(10, 2))
 >
 >    # Dibuja los puntos
->    plt.scatter(z_class_0, np.zeros_like(z_class_0), label='Clase 0', zorder=3, >c='skyblue')
->    plt.scatter(z_class_1, np.zeros_like(z_class_1), label='Clase 1', zorder=3, >c='salmon')
+>    plt.scatter(z_class_0, np.zeros_like(z_class_0), label='Clase 0', zorder=3, c='skyblue')
+>    plt.scatter(z_class_1, np.zeros_like(z_class_1), label='Clase 1', zorder=3, c='salmon')
 >
 >    # Dibuja la línea de referencia en el cero
 >    plt.axvline(0, color='grey', linestyle='--', alpha=0.8)
@@ -234,3 +238,192 @@ Una vez entendida la estructura de datos para almacenar los puntos de cada clase
 >    plt.xlim(z.min() -1, z.max() + 1) # Ajusta los límites para que no salten tanto
 >    plt.show()
 >```
+
+# 3. Entrenamiento automático del perceptrón
+
+Nuestro objetivo es modificar el código del perceptrón desarrollado en las fases anteriores para conseguir que aprenda automáticamente a clasificar los puntos, sin necesidad de modificar los pesos o el sesgo.
+
+Hasta ahora hemos ajustado los parámetros `w1`, `w2` y `b` mediante prueba y error. Sin embargo, la principal característica del aprendizaje automático es que un algoritmo puede aprender estos parámetros a partir de ejemplos.
+
+En nuestro caso, utilizaremos un algoritmo de **aprendizaje supervisado**, ya que conocemos de antemano la clase correcta a la que pertenece cada punto.
+
+El procedimiento consiste en:
+
+1. **Realizar una predicción:** el perceptrón recibe las coordenadas de un punto y determina a qué clase pertenece.
+2. **Calcular el error:** se compara la predicción con la clase correcta.
+3. **Actualizar los parámetros:** si el perceptrón se equivoca, se modifican los pesos y el sesgo para corregir su comportamiento.
+4. **Repetir el proceso:** se continúa utilizando los ejemplos de entrenamiento para mejorar la clasificación.
+
+De esta forma, el perceptrón puede aprender progresivamente una frontera de decisión que permita separar ambas clases.
+
+## 3.1 La regla de aprendizaje del perceptrón
+
+Recordemos que nuestro perceptrón recibe dos entradas, `x1` y `x2`, correspondientes a las coordenadas de un punto, y calcula una suma ponderada:
+$$
+z=w_1x_1+w_2x_2+b  
+$$
+A continuación, aplica una función de activación de tipo escalón para obtener una predicción:
+$$
+\hat{y}=  
+\begin{cases}  
+1 & \text{si }z\geq 0\\  
+0 & \text{si }z<0  
+\end{cases}  
+$$
+Donde ($\hat{y}$) representa la clase predicha por el perceptrón.
+
+Durante el entrenamiento conocemos también la clase correcta, que representaremos mediante ($y$). Por tanto, podemos calcular el error de predicción:
+$$
+error=y-\hat{y}  
+$$
+Como estamos trabajando con un problema de clasificación binaria, el error únicamente puede tomar tres valores:
+
+|Error|Significado|
+|---|---|
+|0|El perceptrón ha clasificado correctamente el punto.|
+|1|El punto pertenece a la clase 1, pero el perceptrón ha predicho la clase 0.|
+|-1|El punto pertenece a la clase 0, pero el perceptrón ha predicho la clase 1.|
+Cuando el perceptrón comete un error, necesitamos modificar sus parámetros. Para ello, utilizaremos la **regla de aprendizaje del perceptrón**:
+$$ 
+w_1 \leftarrow w_1+\eta\cdot error\cdot x_1  
+$$
+$$
+w_2 \leftarrow w_2+\eta\cdot error\cdot x_2  
+$$
+$$
+b\leftarrow b+\eta\cdot error  
+$$
+La letra griega ($\eta$) (_eta_) representa la **tasa de aprendizaje**, un valor que controla la magnitud de las modificaciones realizadas sobre los parámetros.
+
+>[!tip] Observa
+>Cuando el error es cero, los parámetros no cambian. Por tanto, el perceptrón únicamente necesita corregir su comportamiento cuando realiza una clasificación incorrecta.
+
+>[!example] Aprendiendo de los errores
+>Antes de automatizar el entrenamiento completo, vamos a comprobar cómo funciona la regla de aprendizaje con un único punto.
+>Supongamos que tenemos un perceptrón con los siguientes parámetros iniciales:
+>- `w1 = 0`
+>- `w2 = 0`
+>- `b = 0`
+>- Tasa de aprendizaje `η = 0.1`
+>
+>Y queremos clasificar el punto `(0.5, 1.2)`, que pertenece a la clase 0
+>
+>**Realiza las siguientes tareas:**
+>1. Calcula manualmente el valor de `z` y determina la predicción inicial del perceptrón. 
+>2. Calcula el error cometido, sabiendo que la clase correcta es 0.
+>3. Aplica la regla de aprendizaje para obtener los nuevos valores de `w1`, `w2` y `b`.
+>4. Comprueba los resultados utilizando Python.
+>5. Vuelve a clasificar el mismo punto utilizando los nuevos parámetros. ¿Ha cambiado la predicción?
+>
+>**Reflexiona:** ¿Por qué hemos tenido que modificar los parámetros? ¿Qué ocurriría si el perceptrón hubiera clasificado correctamente el punto desde el principio?
+
+## 3.2 Los hiperparámetros del entrenamiento
+
+Antes de implementar el entrenamiento automático, debemos conocer algunos conceptos que nos permitirán configurar su funcionamiento.
+
+En el aprendizaje automático es importante distinguir entre **parámetros** e **hiperparámetros**:
+- **Parámetros:** son los valores internos del modelo que se modifican automáticamente durante el entrenamiento. En nuestro perceptrón son los pesos `w1`, `w2` y el sesgo `b`.
+- **Hiperparámetros:** son valores que establecemos para configurar cómo se realiza el entrenamiento. No se ajustan mediante la regla de aprendizaje del perceptrón.
+
+Vamos a conocer tres conceptos fundamentales.
+### Épocas (_epochs_)
+
+Una **época** es una pasada completa por todos los ejemplos que forman el conjunto de entrenamiento.
+
+En nuestro ejercicio disponemos de 40 puntos: 20 pertenecientes a la clase 0 y otros 20 a la clase 1.
+
+Por tanto, completar una época significa procesar los 40 puntos una vez.
+
+Si establecemos un máximo de 100 épocas, el algoritmo podrá recorrer el conjunto de entrenamiento hasta 100 veces.
+
+Sin embargo, no siempre será necesario completar todas las épocas. Si el perceptrón consigue clasificar correctamente todos los puntos, podemos detener el entrenamiento.
+
+### Tasa de aprendizaje (_learning rate_)
+
+La **tasa de aprendizaje** determina la magnitud de las correcciones realizadas sobre los parámetros cuando el perceptrón comete un error.
+
+En nuestro algoritmo utilizaremos inicialmente:
+
+`learning_rate = 0.1`
+
+Este valor interviene directamente en la regla de actualización de los pesos y el sesgo.
+
+### Tamaño del lote (_batch size_)
+
+El **tamaño del lote** indica cuántos ejemplos se agrupan para calcular una actualización de los parámetros.
+
+Podemos distinguir tres formas habituales de organizar el entrenamiento:
+
+- **Entrenamiento en línea (**_**online**_**):** los ejemplos se procesan individualmente y se actualizan los parámetros después de cada uno cuando corresponde realizar una corrección.
+- **Entrenamiento por mini-lotes (**_**mini-batch**_**):** los ejemplos se procesan en pequeños grupos y se calcula una actualización a partir de cada grupo.
+- **Entrenamiento por lotes completos (**_**batch**_**):** se utiliza todo el conjunto de entrenamiento para calcular cada actualización.
+
+En nuestro caso utilizaremos el **entrenamiento en línea**, característico del perceptrón clásico, en el que los parámetros pueden actualizarse después de cada ejemplo.
+
+## 3.3. Implementación del entrenamiento automático en Python
+
+Ahora que conocemos la regla de aprendizaje y los principales conceptos relacionados con el entrenamiento, vamos a modificar nuestro código para conseguir que el perceptrón aprenda automáticamente.
+
+Para ello, seguiremos utilizando el cuaderno de Google Colab creado en el apartado anterior.
+
+>[!question] A102.1(CE1) Implementación del algoritmo de entrenamiento
+>Vamos a desarrollar un algoritmo que recorra todos los puntos, realice una predicción y actualice automáticamente los pesos y el sesgo cuando exista un error.
+>
+>Para ello, utilizaremos la función `f_activacion()` que implementamos anteriormente.
+>Instrucciones:
+>
+>1. Inicializa los parámetros `w1`, `w2` y `b` a cero.  
+>2. Establece una tasa de aprendizaje de `0.1` y un máximo de `1000` épocas.
+>3. Utiliza un bucle para recorrer las épocas de entrenamiento.
+>4. Dentro de cada época, utiliza otro bucle para recorrer los puntos del conjunto de entrenamiento mediante sus índices.
+>5. Obtén las coordenadas del punto y su clase correcta a partir de los arrays `X` e `y`.
+>6. Calcula la predicción de cada punto y compárala con su clase correcta.
+>7. Implementa la regla de aprendizaje para actualizar los parámetros cuando se produzca un error.
+>8. Contabiliza los errores cometidos durante cada época.
+>9. Detén el entrenamiento cuando se complete una época sin errores.
+>
+>``` python
+>
+># Inicialización de los parámetros
+>w1 = 0.0
+>w2 = 0.0
+>b = 0.0
+>
+># Hiperparámetros
+>learning_rate = 0.1
+>max_epocas = 1000
+>
+># Entrenamiento del perceptrón
+>for epoca in range(max_epocas):
+>
+>    errores = 0
+>
+>    # Recorremos todos los puntos de entrenamiento
+>    for i in range(len(X)):
+>
+>        # Obtenemos las coordenadas del punto
+>        x1 = X[i, 0]
+>        x2 = X[i, 1]
+>
+>        # Obtenemos la clase correcta
+>        clase_correcta = y[i]
+>
+>        # TODO 1: Calcular la predicción
+>        prediccion = ...
+>
+>        # TODO 2: Calcular el error
+>        error = ...
+>
+>        # TODO 3: Actualizar los parámetros
+>        # utilizando la regla de aprendizaje
+>
+>        # TODO 4: Contabilizar los errores
+>        # cuando la clasificación sea incorrecta
+>
+>    print(f"Época {epoca + 1}: {errores} errores")
+>
+>    # TODO 5: Detener el entrenamiento
+>    # cuando no se haya cometido ningún error
+>
+>```
+
