@@ -366,7 +366,7 @@ Ahora que conocemos la regla de aprendizaje y los principales conceptos relacion
 
 Para ello, seguiremos utilizando el cuaderno de Google Colab creado en el apartado anterior.
 
->[!question] A102.1(CE1) Implementación del algoritmo de entrenamiento
+>[!question] A102(CE1) Implementación del algoritmo de entrenamiento
 >Vamos a desarrollar un algoritmo que recorra todos los puntos, realice una predicción y actualice automáticamente los pesos y el sesgo cuando exista un error.
 >
 >Para ello, utilizaremos la función `f_activacion()` que implementamos anteriormente.
