@@ -143,10 +143,10 @@ Una de sus ideas centrales es el **mecanismo de atención** (_attention_). Permi
 
 Compara estas dos frases:
 
-1. «Me senté en el **banco** junto al **río**».
-2. «Fui al **banco** para **ingresar dinero**».
+1. «Me **siento** en el **banco** del parque».
+2. «Pido un **préstamo** al **banco**».
 
-La palabra «banco» es la misma, pero las palabras «río» e «ingresar dinero» ayudan a interpretar su significado. Los Transformers calculan relaciones entre representaciones de tokens mediante mecanismos de atención. No siguen literalmente las reglas de un diccionario, sino que han aprendido patrones complejos durante su entrenamiento.
+La palabra «banco» es la misma, pero las palabras «siento» y «prestamo» ayudan a interpretar su significado. Los Transformers calculan relaciones entre representaciones de tokens mediante mecanismos de atención. No siguen literalmente las reglas de un diccionario, sino que han aprendido patrones complejos durante su entrenamiento.
 
 ![[recursos/embedding_transformer.png]]
 
