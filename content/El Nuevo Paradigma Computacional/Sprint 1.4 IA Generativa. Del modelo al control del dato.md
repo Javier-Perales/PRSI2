@@ -73,9 +73,8 @@ Para procesar texto, un LLM lo divide primero en unidades denominadas **tokens**
 **Por ejemplo**: pedir «resume este documento de 80 páginas» suele requerir más tokens de entrada que preguntar «¿qué es una variable?». Una respuesta de 3.000 palabras suele requerir más tokens de salida que una de 100 palabras.
 
 >[!example] Experimenta: ¿Cuántos tokens tiene una frase?
->### 🧪 Experimenta: ¿Cuántos tokens tiene una frase?
 >
-Accede a [MLHive Token Counter](https://www.mlhive.com/tools/token-counter) y selecciona el tokenizador `o200k_base`, utilizado por determinados modelos de OpenAI.
+>Accede a [MLHive Token Counter](https://www.mlhive.com/tools/token-counter) y selecciona el tokenizador `o200k_base`, utilizado por determinados modelos de OpenAI.
 >
 >1. Introduce la siguiente frase: `La inteligencia artificial está transformando nuestra sociedad.`
 >2. Observa el número de palabras, caracteres y tokens.  
