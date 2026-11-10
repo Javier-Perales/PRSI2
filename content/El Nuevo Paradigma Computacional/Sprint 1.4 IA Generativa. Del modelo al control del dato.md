@@ -154,6 +154,72 @@ La palabra «banco» es la misma, pero las palabras «siento» y «prestamo» ay
 > 
 >Esta es una de las razones por las que los Transformers pueden trabajar con palabras ambiguas.
 
-#### 1.2.4 Esquema de entrenamiento de un LLM
+### 1.2.4 ¿Qué es un MLLM o modelo de lenguaje multimodal?
+Un **MLLM** (_Multimodal Large Language Model_, también escrito a veces **MM-LLM**) es un gran modelo de lenguaje capaz de trabajar con **más de una modalidad de información**, como texto e imágenes; algunos sistemas también integran audio o vídeo.
 
-![[recursos/entrenamientoLLM.png]]
+### 1.2.5 Parámetros, ventana de contexto y memoria entre conversaciones
+
+Los **parámetros** son valores numéricos que se ajustan durante el entrenamiento y contribuyen a determinar el comportamiento de un modelo. En modelos abiertos, a veces verás nombres como **1B**, **7B** o **70B**: la letra **B** representa _billions_ en inglés, es decir, **miles de millones de parámetros**.
+
+Un modelo con más parámetros puede necesitar más memoria y capacidad de cálculo, pero **más parámetros no garantizan mejores respuestas**: importan la arquitectura, los datos, el entrenamiento y la tarea.
+
+La **ventana de contexto** es la cantidad máxima de información que el modelo puede utilizar en una interacción, expresada normalmente en tokens. Puede incluir instrucciones, mensajes anteriores, documentos y otros elementos procesados por el sistema.
+
+La **memoria entre conversaciones** es un sistema externo de persistencia a largo plazo que almacena información entre diferentes turnos o sesiones y la inyecta selectivamente cuando hace falta.
+
+>[!info] Analogía
+> La **ventana de contexto** es la capacidad máxima de procesamiento inmediato del modelo en una sola consulta (su «memoria RAM»), mientras que la **memoria de conversaciones** es un sistema externo de persistencia a largo plazo (su «disco duro») que almacena información entre diferentes turnos o sesiones y la inyecta selectivamente cuando hace falta.
+
+#### Ventana de contexto: el límite operativo inmediato
+
+Los modelos de lenguaje son por definición **sin estado (_stateless_)**: no recuerdan nada de una llamada a otra por sí mismos. Para dar la sensación de continuidad, cada vez que envías un mensaje, la aplicación reenvía todo el historial acumulado en el _prompt_.
+
+- **Límite de _tokens_:** Define cuánto texto combinado (instrucciones del sistema, historial previo, documentos adjuntos y la respuesta a generar) cabe en esa pasada. Varía según el modelo (ej. 8K, 32K, 128K o hasta 1M–2M tokens).
+- **Coste computacional:** A mayor ventana de contexto ocupada, mayor es la latencia y el consumo de cómputo, ya que cada token debe calcular su atención respecto a todos los demás.
+- **Degradación («Lost in the Middle»):** Aunque un modelo admita ventanas masivas, la precisión para localizar datos concretos suele decaer si la información crítica queda enterrada en medio de un contexto saturado.
+
+#### Memoria de conversaciones: persistencia selectiva
+
+La memoria de conversaciones no reside en los pesos del modelo ni en su ventana de atención; es una arquitectura construida alrededor del modelo para superar la amnesia entre sesiones y el límite de tokens.
+
+1. **Memoria de búfer o ventana deslizante:** Mantiene solo los últimos $N$ mensajes del chat y descarta los más antiguos a medida que avanza la charla.
+2. **Memoria por resumen progresivo (_Summary Memory_):** Un modelo auxiliar condensa los turnos anteriores en un párrafo sintético que se concatena al inicio del nuevo mensaje.
+3. **Memoria semántica / episódica (RAG):** Los datos relevantes (gustos, decisiones previas, código validado) se vectorizan y guardan en una base de datos. Cuando el usuario hace una pregunta, el sistema busca los recuerdos afines mediante similitud semántica.
+4. **Memoria explícita basada en entidades:** Extracción estructurada de pares clave-valor (ej. `nombre: Dani`, `rol: profesor`) que se inyectan en las instrucciones de sistema.
+
+### 1.2.6 ¿Por qué puede generar respuestas diferentes o erróneas?
+
+Al producir texto, los LLM calculan posibles continuaciones en función del contexto. Según el modelo y sus ajustes de generación, una misma pregunta puede recibir respuestas distintas. Además, **la fluidez no equivale a veracidad**: un modelo puede inventar un dato o interpretar mal una fuente.
+
+Recurso: -[Breve explicación de los modelos LLM](https://www.youtube.com/watch?v=LPZh9BOjkQs)
+
+
+# 2. El ecosistema de la IA Generativa
+
+|Concepto|¿Qué es?|Ejemplo|
+|---|---|---|
+|**Proveedor**|Empresa u organización que desarrolla o distribuye tecnología de IA|OpenAI, Google, Anthropic|
+|**Modelo**|Sistema matemático entrenado para procesar información y generar respuestas|Un modelo de la familia GPT, Gemini o Claude|
+|**Aplicación**|Programa o servicio con el que interactúa el usuario|ChatGPT, Gemini, Claude, Copilot|
+|**Herramienta o función conectada**|Capacidad adicional para consultar fuentes o actuar sobre otros sistemas|Buscador web, ejecución de código, acceso autorizado a archivos|
+
+**Ejemplo 1: OpenAI y ChatGPT**
+
+- **OpenAI** desarrolla modelos de la familia **GPT**.
+- **ChatGPT** es una aplicación para interactuar con modelos y utilizar funciones adicionales.
+- La aplicación puede incorporar búsqueda web, análisis de archivos y otras herramientas, según sus funciones y permisos.
+
+En la siguiente tabla aparecen algunos de los proveedores y aplicaciones más relevantes. **No es una clasificación de cuál es mejor** ni pretende recoger todas las empresas del sector.
+
+|Empresa u organización|Aplicación o servicio conocido|Familia de modelos o tecnología destacada|Sitio web|
+|---|---|---|---|
+|**OpenAI**|ChatGPT|GPT|[https://chatgpt.com](https://chatgpt.com)|
+|**Google**|Gemini|Gemini; también desarrolla Gemma|[https://gemini.google.com](https://gemini.google.com)|
+|**Anthropic**|Claude|Claude|[https://claude.ai](https://claude.ai)|
+|**Microsoft**|Copilot|Integra distintos modelos, propios o de terceros según el producto|[https://copilot.microsoft.com](https://copilot.microsoft.com)|
+|**Mistral AI**|Vibe (**antes Le Chat**)|Mistral|[https://chat.mistral.ai](https://chat.mistral.ai)|
+|**Grok / ecosistema xAI**|Grok|Grok|[https://grok.com](https://grok.com)|
+|**DeepSeek**|DeepSeek|DeepSeek|[https://www.deepseek.com/en/](https://www.deepseek.com/en/)|
+|**Alibaba**|Qwen|Qwen|[https://qwen.ai](https://qwen.ai)|
+|**Meta**|Meta AI y herramientas de desarrollo|Llama|[https://www.meta.ai](https://www.meta.ai)|
+
