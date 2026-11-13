@@ -211,15 +211,35 @@ Recurso: -[Breve explicación de los modelos LLM](https://www.youtube.com/watch?
 
 En la siguiente tabla aparecen algunos de los proveedores y aplicaciones más relevantes. **No es una clasificación de cuál es mejor** ni pretende recoger todas las empresas del sector.
 
-|Empresa u organización|Aplicación o servicio conocido|Familia de modelos o tecnología destacada|Sitio web|
-|---|---|---|---|
-|**OpenAI**|ChatGPT|GPT|[https://chatgpt.com](https://chatgpt.com)|
-|**Google**|Gemini|Gemini; también desarrolla Gemma|[https://gemini.google.com](https://gemini.google.com)|
-|**Anthropic**|Claude|Claude|[https://claude.ai](https://claude.ai)|
-|**Microsoft**|Copilot|Integra distintos modelos, propios o de terceros según el producto|[https://copilot.microsoft.com](https://copilot.microsoft.com)|
-|**Mistral AI**|Vibe (**antes Le Chat**)|Mistral|[https://chat.mistral.ai](https://chat.mistral.ai)|
-|**Grok / ecosistema xAI**|Grok|Grok|[https://grok.com](https://grok.com)|
-|**DeepSeek**|DeepSeek|DeepSeek|[https://www.deepseek.com/en/](https://www.deepseek.com/en/)|
-|**Alibaba**|Qwen|Qwen|[https://qwen.ai](https://qwen.ai)|
-|**Meta**|Meta AI y herramientas de desarrollo|Llama|[https://www.meta.ai](https://www.meta.ai)|
+| Empresa u organización    | Aplicación o servicio conocido       | Familia de modelos o tecnología destacada                          | Sitio web                                                      |
+| ------------------------- | ------------------------------------ | ------------------------------------------------------------------ | -------------------------------------------------------------- |
+| **OpenAI**                | ChatGPT                              | GPT                                                                | [https://chatgpt.com](https://chatgpt.com)                     |
+| **Google**                | Gemini                               | Gemini; también desarrolla Gemma                                   | [https://gemini.google.com](https://gemini.google.com)         |
+| **Anthropic**             | Claude                               | Claude                                                             | [https://claude.ai](https://claude.ai)                         |
+| **Microsoft**             | Copilot                              | Integra distintos modelos, propios o de terceros según el producto | [https://copilot.microsoft.com](https://copilot.microsoft.com) |
+| **Mistral AI**            | Vibe (**antes Le Chat**)             | Mistral                                                            | [https://chat.mistral.ai](https://chat.mistral.ai)             |
+| **Grok / ecosistema xAI** | Grok                                 | Grok                                                               | [https://grok.com](https://grok.com)                           |
+| **DeepSeek**              | DeepSeek                             | DeepSeek                                                           | [https://www.deepseek.com/en/](https://www.deepseek.com/en/)   |
+| **Alibaba**               | Qwen                                 | Qwen                                                               | [https://qwen.ai](https://qwen.ai)                             |
+| **Meta**                  | Meta AI y herramientas de desarrollo | Llama                                                              | [https://www.meta.ai](https://www.meta.ai)                     |
+
+>[!question] A103.1(CE1) - Comparativa de modelos
+>Completa la siguiente tabla por cada aplicación asignada.
+>Campo
+>- Empresa
+>- Nombre del desarrollador
+>- Familia: GPT, Claude, Gemini, etc.
+>- Modelo / versión: Identificador exacto
+>- Número de parámetros: Totales y activos, si se conocen
+>- Ventana de contexto: Tokens
+>- Máximo de salida
+>- Tokens
+>- Razonamiento: Sí / No / No especificado
+>- Multimodalidad: Texto, imágenes, audio, vídeo, etc.
+>- Precio de suscripción.
+>
+>**Recursos**:
+>- [Artificial Analysis](https://artificialanalysis.ai/es/models/comparisons)
+>- [Arena AI](https://arena.ai/leaderboard/chat/text)
+
 
