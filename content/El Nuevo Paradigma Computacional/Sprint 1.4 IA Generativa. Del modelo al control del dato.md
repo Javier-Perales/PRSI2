@@ -223,23 +223,39 @@ En la siguiente tabla aparecen algunos de los proveedores y aplicaciones más re
 | **Alibaba**               | Qwen                                 | Qwen                                                               | [https://qwen.ai](https://qwen.ai)                             |
 | **Meta**                  | Meta AI y herramientas de desarrollo | Llama                                                              | [https://www.meta.ai](https://www.meta.ai)                     |
 
->[!question] A103.1(CE1) - Comparativa de modelos
->Completa la siguiente tabla por cada aplicación asignada.
->Campo
->- Empresa
->- Nombre del desarrollador
->- Familia: GPT, Claude, Gemini, etc.
->- Modelo / versión: Identificador exacto
->- Número de parámetros: Totales y activos, si se conocen
->- Ventana de contexto: Tokens
->- Máximo de salida
->- Tokens
->- Razonamiento: Sí / No / No especificado
->- Multimodalidad: Texto, imágenes, audio, vídeo, etc.
->- Precio de suscripción.
+>[!question] A103(CE1) - Investigación y comparativa de modelos de IA generativa
+>Cinvestiga el modelo de IA generativa asignado y complementa la hoja de cálculo compartida en Aules.
 >
->**Recursos**:
+>**Parte 1. Identificación y características del modelo**
+>- Empresa desarrolladora. Nombre de la aplicación que permite utilizarlo.
+>- Familia a la que pertenece.
+>- Nombre y versión exacta del modelo.
+>- Ventana máxima de contexto, expresada en tokens.
+>- Número máximo de tokens de salida.
+>- Capacidad de razonamiento y niveles de esfuerzo disponibles.
+>- Modalidades de entrada y salida: texto, imágenes, audio, vídeo, etc.
+>- Tipo de licencia: propietaria o de pesos abiertos.
+>
+>**Parte 2. Rendimiento y evaluación**
 >- [Artificial Analysis](https://artificialanalysis.ai/es/models/comparisons)
+>	- Intelligence Index
+>	- Tiempo por tarea
+>	- Tiempo hasta el primer token de respuesta
 >- [Arena AI](https://arena.ai/leaderboard/chat/text)
+>	- Arena Score
+>	- Posición en la clasificación (Rank)
+>	- Número de votos
+> 
+> **Parte 3. Características comerciales**. Consulta la página oficial de la aplicación
+> - Existencia de una versión gratuita.
+> - Precio mensual de suscripción.
+>- Modelos accesibles mediante la suscripción.
+>- Precio por millón de tokens de entrada mediante API.
+>- Precio por millón de tokens de salida mediante API.
+
+>
+
+
+
 
 
