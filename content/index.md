@@ -20,7 +20,7 @@ tags:
 * **Sprint 1.2:** [[El Nuevo Paradigma Computacional/Sprint 1.2 Python y Google Colab|Python y Google Colab]]
 * **Sprint 1.3:** [[El Nuevo Paradigma Computacional/Sprint 1.3 Deconstrucción de un Perceptrón|Deconstrucción de un Perceptrón]] 
 * **Sprint 1.4:** [[El Nuevo Paradigma Computacional/Sprint 1.4 IA Generativa. Del modelo al control del dato|IA Generativa. Del modelo al control del dato]]
-* **Sprint 1.5:** Aplicación interactiva de simulación de sesgos con Streamlit.
+* **Sprint 1.5:** [[El Nuevo Paradigma Computacional/Sprint 1.5 Aplicación Sesgada| Aplicación Sesgada]]
 * **Sprint 1.6:** Despliegue en la nube, Code Review cruzado con Issues y README técnico.
 
 ### 🌐 SdA 2: Geopolítica del Chip, Sistemas y Redes
