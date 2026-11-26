@@ -21,7 +21,7 @@ tags:
 * **Sprint 1.3:** [[El Nuevo Paradigma Computacional/Sprint 1.3 Deconstrucción de un Perceptrón|Deconstrucción de un Perceptrón]] 
 * **Sprint 1.4:** [[El Nuevo Paradigma Computacional/Sprint 1.4 IA Generativa. Del modelo al control del dato|IA Generativa. Del modelo al control del dato]]
 * **Sprint 1.5:** [[El Nuevo Paradigma Computacional/Sprint 1.5 Aplicación Sesgada| Aplicación Sesgada]]
-* **Sprint 1.6:** Despliegue en la nube, Code Review cruzado con Issues y README técnico.
+* **Sprint 1.6:** Despliegue en la nube, Code Review cruzado con Issues y README.
 
 ### 🌐 SdA 2: Geopolítica del Chip, Sistemas y Redes
 * **Sprint 2.1:** Cadena de semiconductores, arquitectura HW y eficiencia por vatio.
